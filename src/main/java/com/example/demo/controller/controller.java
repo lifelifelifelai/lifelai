@@ -28,7 +28,10 @@ public class controller {
 	
 	@RequestMapping("/greeting")
   public String hello(@RequestBody String h) {
-System.out.println(h);
+		String kk=null;
+		System.out.println(h.indexOf("\"text\":\""+8)+"...."+h.indexOf("\"}}],"));
+System.out.println(kk=h.substring(h.indexOf(",\"text\"")+9, h.indexOf("\"}}],")));
+rep.sett(kk);
     return("dd"); // 根據view resolver mapping至hello.jsp
   }
 	
