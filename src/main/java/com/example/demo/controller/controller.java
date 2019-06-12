@@ -51,4 +51,10 @@ rep.sett(kk);
 		
 	
 	
+	@RequestMapping("/yulun")
+  public String hello1() {
+		 return(rep.findAll().get(0).getPas());
+  // 根據view resolver mapping至hello.jsp
+  }
+	
 }
