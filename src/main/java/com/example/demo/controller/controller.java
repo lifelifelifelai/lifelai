@@ -37,13 +37,13 @@ public class controller {
   }
 	
 	@RequestMapping(value="/gg")
-	  public String hello2(@RequestBody eventwraper events) {	
+	  public String hello2(@RequestBody Event event) {	
 	String gg=null;
 	System.out.println("efef");
-	for (Event event:events.getEvents())
-	{
-		System.out.println(gg=event.getReplytoken());
-	}
+	System.out.println(event);
+        Event ee=new Event();
+		System.out.println(gg=ee.getReplytoken());
+	
 	System.out.println("efef");
 		rep.sett(gg);
 	    return(gg); // 根據view resolver mapping至hello.jsp
