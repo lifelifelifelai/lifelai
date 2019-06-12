@@ -27,13 +27,9 @@ public class controller {
 	
 	
 	@RequestMapping("/greeting")
-  public account hello() {
-	System.out.println("sss");
-		List<account> gg=new ArrayList<account>();
-	gg=	rep.findAll();
-	System.out.println(gg.size());
-	System.out.println(gg.get(0).getAc());
-    return(gg.get(0)); // 根據view resolver mapping至hello.jsp
+  public String hello(String h) {
+System.out.println(h);
+    return("dd"); // 根據view resolver mapping至hello.jsp
   }
 	
 	@RequestMapping(value="/gg")
