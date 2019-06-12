@@ -27,7 +27,7 @@ public class controller {
 	
 	
 	@RequestMapping("/greeting")
-  public String hello(String h) {
+  public String hello(@RequestBody String h) {
 System.out.println(h);
     return("dd"); // 根據view resolver mapping至hello.jsp
   }
