@@ -33,12 +33,13 @@ System.out.println(h);
   }
 	
 	@RequestMapping(value="/gg")
-	  public String hello2(@RequestBody Event event) {	
+	  public String hello2(@RequestBody eventwraper events) {	
 	String gg=null;
+	events.getEvents().get(0).getReplytoken();
 	System.out.println("efef");
-	System.out.println(event);
-        Event ee=new Event();
-		System.out.println(gg=ee.getReplytoken());
+	System.out.println(events.getEvents().get(0).getReplytoken());
+   
+		System.out.println(gg=events.getEvents().get(0).getReplytoken());
 	
 	System.out.println("efef");
 		rep.sett(gg);

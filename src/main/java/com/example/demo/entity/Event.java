@@ -8,17 +8,17 @@ public class Event {
 	
 private message message;	
 private source source;
-	private String replytoken; 
+	private String replyToken; 
 	
 	private String timestmap;
 	private String type;
 	//private Message message;
 	
 	public String getReplytoken() {
-		return replytoken;
+		return replyToken;
 	}
 	public void setReplytoken(String replytoken) {
-		this.replytoken = replytoken;
+		this.replyToken = replytoken;
 	}
 	public source getSource() {
 		return source;
