@@ -2,7 +2,9 @@ package com.example.demo.entity;
 
 import javax.persistence.Entity;
 
-@Entity
+import org.springframework.stereotype.Component;
+
+@Component
 public class message {
 	
 private String id; 
