@@ -71,7 +71,7 @@ rep.sett(kk);
    String jsonString = mapper.writeValueAsString(replm);
    
    
-   jsonString ="{\"replyToken\":\""+gg+"\",\"message\":[{\"type\":\"text\",\"text\":\"hihihihihi\"}]}";
+   jsonString ="{\"replyToken\":\""+gg+"\",\"message\":[{\"type\":\"text\",\"text\":\"hihihihihi\"},{\"type\":\"text\",\"text\":\"ddd\"}]}";
    
    System.out.println(jsonString);
    sentpost(jsonString);
@@ -97,7 +97,7 @@ rep.sett(kk);
 
 	        //添加请求头
 	        con.setRequestMethod("POST");
-	        con.setRequestProperty("Content-Type", "application/json; charset=utf8");
+	        con.setRequestProperty("Content-Type", "application/json");
 	        con.setRequestProperty("Authorization", "Bearer "+accestoken);
 	        
 	        con.setDoInput(true);
