@@ -106,7 +106,7 @@ rep.sett(kk);
 	        //发送Post请求
 	 System.out.println("sentnttt");
 	        DataOutputStream wr = new DataOutputStream(con.getOutputStream());
-	        wr.write(message.getBytes(Charset.forName("utf8")));
+	        wr.writeBytes(message);
 	        wr.flush();
 	        wr.close();
 	        
