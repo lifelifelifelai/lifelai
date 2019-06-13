@@ -99,24 +99,15 @@ rep.sett(kk);
 	        con.setDoOutput(true);
 
 	        //发送Post请求
-	 
+	 System.out.println("sentnttt");
 	        DataOutputStream wr = new DataOutputStream(con.getOutputStream());
 	        wr.write(message.getBytes(Charset.forName("utf8")));
 	        wr.flush();
 	        wr.close();
-
-	        int responseCode = con.getResponseCode();
+	   	 System.out.println("sentntttover");
+	      System.out.println( con.getResponseCode()+"==="+con.getResponseMessage());
 	     
 
-	        BufferedReader in = new BufferedReader(
-	                new InputStreamReader(con.getInputStream()));
-	        String inputLine;
-	        StringBuffer response = new StringBuffer();
-
-	        while ((inputLine = in.readLine()) != null) {
-	            response.append(inputLine);
-	        }
-	        in.close();
-	        System.out.println(response.toString());
+	       
 	}
 }
