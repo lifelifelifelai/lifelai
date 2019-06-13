@@ -93,7 +93,7 @@ rep.sett(kk);
 	        //添加请求头
 	        con.setRequestMethod("POST");
 	        con.setRequestProperty("Content-Type", "application/json; charset=utf8");
-	        con.setRequestProperty("Authorization", "Bearer"+accestoken);
+	        con.setRequestProperty("Authorization", "Bearer "+accestoken);
 	        
 	        con.setDoInput(true);
 	        con.setDoOutput(true);
