@@ -99,6 +99,7 @@ rep.sett(kk);
 	        con.setRequestMethod("POST");
 	        con.setRequestProperty("Content-Type", "application/json");
 	        con.setRequestProperty("Authorization", "Bearer "+accestoken);
+	        con.setRequestProperty("client_secret","a525c635ec4c6f0b26fda36dbb787525");
 	        
 	        con.setDoInput(true);
 	        con.setDoOutput(true);
