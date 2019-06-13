@@ -87,8 +87,10 @@ rep.sett(kk);
   }
 	
 	
-	private void sentpost(String message) throws IOException
+	private void sentpost(String message) 
 	{
+		
+		try {
 		 String accestoken="vgkScsbgE1PDWqyxdbX3LfnOEod9LyeALuardqhOBk1JPVlPZa2oLdh0eS5Ijn4Eg8ddT90tNHV9eMZ0yaeT48/qDB96YEISC1grArA8S6VNcwqyRgsiw1+c15YjtLsBbaAL0aQJIOL8ZCO1rDLqVAdB04t89/1O/w1cDnyilFU=";
 	        URL url= new URL("https://api.line.me/v2/bot/message/reply");
 	        HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
@@ -107,9 +109,17 @@ rep.sett(kk);
 	        wr.write(message.getBytes(Charset.forName("utf8")));
 	        wr.flush();
 	        wr.close();
-	   	 System.out.println("sentntttover");
-	      System.out.println( con.getResponseCode()+"==="+con.getResponseMessage());
-	     
+	        
+	        
+	      	 System.out.println("sentntttover");
+		      System.out.println( con.getResponseCode()+"==="+con.getResponseMessage());
+		     
+		}catch (Exception r)
+		{
+			System.out.println(r.toString());
+			System.out.println(r.getMessage());
+		}
+	
 
 	       
 	}
