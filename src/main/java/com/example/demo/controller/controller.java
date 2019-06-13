@@ -71,7 +71,7 @@ rep.sett(kk);
    String jsonString = mapper.writeValueAsString(replm);
    
    
-   jsonString ="{\"replyToken\":"+gg+",\"message\":[{\"type\":\"text\",\"text\":\"hihihihihi\"}]}";
+   jsonString ="{\"replyToken\":\""+gg+"\",\"message\":[{\"type\":\"text\",\"text\":\"hihihihihi\"}]}";
    
    System.out.println(jsonString);
    sentpost(jsonString);
