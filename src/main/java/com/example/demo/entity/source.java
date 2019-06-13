@@ -8,13 +8,13 @@ import org.springframework.stereotype.Component;
 public class source {
 
 	
-	private String userid; 
+	private String userId; 
 	private String type;
-	public String getUserid() {
-		return userid;
+	public String getUserId() {
+		return userId;
 	}
-	public void setUserid(String userid) {
-		this.userid = userid;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 	public String getType() {
 		return type;
@@ -22,5 +22,6 @@ public class source {
 	public void setType(String type) {
 		this.type = type;
 	}
+
 	
 }

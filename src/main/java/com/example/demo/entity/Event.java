@@ -6,19 +6,18 @@ import com.example.demo.entity.message;
 import com.example.demo.entity.source;
 public class Event {
 	
-private message message;	
-private source source;
+private message message=new message();	
+private source source=new source();
 	private String replyToken; 
 	
-	private String timestmap;
+	private String timestamp;
 	private String type;
 	//private Message message;
-	
-	public String getReplytoken() {
-		return replyToken;
+	public message getMessage() {
+		return message;
 	}
-	public void setReplytoken(String replytoken) {
-		this.replyToken = replytoken;
+	public void setMessage(message message) {
+		this.message = message;
 	}
 	public source getSource() {
 		return source;
@@ -26,11 +25,17 @@ private source source;
 	public void setSource(source source) {
 		this.source = source;
 	}
-	public String getTimestmap() {
-		return timestmap;
+	public String getReplyToken() {
+		return replyToken;
 	}
-	public void setTimestmap(String timestmap) {
-		this.timestmap = timestmap;
+	public void setReplyToken(String replyToken) {
+		this.replyToken = replyToken;
+	}
+	public String getTimestamp() {
+		return timestamp;
+	}
+	public void setTimestamp(String timestamp) {
+		this.timestamp = timestamp;
 	}
 	public String getType() {
 		return type;
@@ -38,11 +43,8 @@ private source source;
 	public void setType(String type) {
 		this.type = type;
 	}
-	public message getMessage() {
-		return message;
-	}
-	public void setMessage(message message) {
-		this.message = message;
-	}
+
+	
+
 
 }
