@@ -10,8 +10,6 @@ public class message {
 private String id; 
 private String type;
 private String text;
-
-
 public String getId() {
 	return id;
 }
@@ -30,4 +28,8 @@ public String getText() {
 public void setText(String text) {
 	this.text = text;
 }
+
+
+
+
 }

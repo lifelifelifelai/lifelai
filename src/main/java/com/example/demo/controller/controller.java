@@ -1,7 +1,15 @@
 package com.example.demo.controller;
 
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.net.ssl.HttpsURLConnection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,7 +23,11 @@ import org.springframework.web.servlet.ModelAndView;
 import com.example.demo.entity.Event;
 import com.example.demo.entity.account;
 import com.example.demo.entity.eventwraper;
+import com.example.demo.entity.messagee;
+import com.example.demo.entity.replymessage;
 import com.example.demo.repository.repository;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 //import com.example.demo.repository.repository;
 
 @RestController
@@ -36,25 +48,75 @@ rep.sett(kk);
   }
 	
 	@RequestMapping(value="/gg")
-	  public String hello2(@RequestBody eventwraper events) {	
+	  public String hello2(@RequestBody eventwraper events) throws IOException {	
 	String gg=null;
-	events.getEvents().get(0).getReplyToken();
+	gg=events.getEvents().get(0).getReplyToken();
 	System.out.println("efef");
 	System.out.println(events.getEvents().get(0).getReplyToken());
+   rep.sett(events.getEvents().get(0).getMessage().getText());
    
-		System.out.println(gg=events.getEvents().get(0).getReplyToken());
-	
-	System.out.println("efef");
-		rep.sett(gg);
+   List<messagee>mesgL=new ArrayList<messagee>();
+   messagee msg =new messagee();
+   msg.setType("text");
+   msg.setText("loveu");
+   mesgL.add(msg);
+   
+   replymessage replm= new replymessage();
+   replm.setMessage(mesgL);
+   replm.setReplyToken(gg);
+   
+  
+   
+   ObjectMapper mapper = new ObjectMapper();
+   String jsonString = mapper.writeValueAsString(replm);
+   
+   System.out.println(jsonString);
+   sentpost(jsonString);
 	    return(gg); // 根據view resolver mapping至hello.jsp
 	  }
 		
 	
 	
 	@RequestMapping("/yulun")
-  public String hello1() {
+  public String hello2() {
 		 return(rep.findAll().get(0).getPas());
   // 根據view resolver mapping至hello.jsp
   }
 	
+	
+	private void sentpost(String message) throws IOException
+	{
+		 String accestoken="vgkScsbgE1PDWqyxdbX3LfnOEod9LyeALuardqhOBk1JPVlPZa2oLdh0eS5Ijn4Eg8ddT90tNHV9eMZ0yaeT48/qDB96YEISC1grArA8S6VNcwqyRgsiw1+c15YjtLsBbaAL0aQJIOL8ZCO1rDLqVAdB04t89/1O/w1cDnyilFU=";
+	        URL url= new URL("https://api.line.me/v2/bot/message/reply");
+	        HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
+
+	        //添加请求头
+	        con.setRequestMethod("POST");
+	        con.setRequestProperty("Content-Type", "application/json; charset=utf8");
+	        con.setRequestProperty("Authorization", "Bearer"+accestoken);
+	        
+	        con.setDoInput(true);
+	        con.setDoOutput(true);
+
+	        //发送Post请求
+	 
+	        DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+	        wr.write(message.getBytes(Charset.forName("utf8")));
+	        wr.flush();
+	        wr.close();
+
+	        int responseCode = con.getResponseCode();
+	     
+
+	        BufferedReader in = new BufferedReader(
+	                new InputStreamReader(con.getInputStream()));
+	        String inputLine;
+	        StringBuffer response = new StringBuffer();
+
+	        while ((inputLine = in.readLine()) != null) {
+	            response.append(inputLine);
+	        }
+	        in.close();
+	        System.out.println(response.toString());
+	}
 }
