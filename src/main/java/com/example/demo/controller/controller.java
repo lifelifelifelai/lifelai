@@ -70,6 +70,9 @@ rep.sett(kk);
    ObjectMapper mapper = new ObjectMapper();
    String jsonString = mapper.writeValueAsString(replm);
    
+   
+   jsonString ="{\"replyToken\":"+gg+",\"message\":[{\"type\":\"text\",\"text\":\"hihihihihi\"}]}";
+   
    System.out.println(jsonString);
    sentpost(jsonString);
 	    return(gg); // 根據view resolver mapping至hello.jsp
