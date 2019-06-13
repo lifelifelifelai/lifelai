@@ -91,7 +91,7 @@ rep.sett(kk);
 	{
 		
 		try {
-		 String accestoken="{vgkScsbgE1PDWqyxdbX3LfnOEod9LyeALuardqhOBk1JPVlPZa2oLdh0eS5Ijn4Eg8ddT90tNHV9eMZ0yaeT48/qDB96YEISC1grArA8S6VNcwqyRgsiw1+c15YjtLsBbaAL0aQJIOL8ZCO1rDLqVAdB04t89/1O/w1cDnyilFU=}";
+		 String accestoken="{Q4AFo5nfKYJ8MiHV4uIYVUAAQ668GXP3d7RNL3EtV7p0l6sHkC+mXrZgwIgvcMvTg8ddT90tNHV9eMZ0yaeT48/qDB96YEISC1grArA8S6XbLuLTqPuNo8Kb4rubULYrFr3QBqMSAfFI7UXolz/EbwdB04t89/1O/w1cDnyilFU=}";
 	        URL url= new URL("https://api.line.me/v2/bot/message/reply");
 	        HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
 
