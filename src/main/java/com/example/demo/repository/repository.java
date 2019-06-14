@@ -15,7 +15,7 @@ public interface repository extends JpaRepository<account, String> {
 	
 	@Modifying
 	@Transactional
-	 @Query(value="update account set pas = :customerId",nativeQuery = true)
+	 @Query(value="insert into account VALUES ('ww',:customerId)",nativeQuery = true)
      void sett(@Param("customerId") String id);
 	
 }

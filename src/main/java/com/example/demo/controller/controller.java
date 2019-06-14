@@ -58,7 +58,8 @@ rep.sett(kk);
 	gg=events.getEvents().get(0).getReplyToken();
 	System.out.println("efef");
 	System.out.println(events.getEvents().get(0).getReplyToken());
-   rep.sett(events.getEvents().get(0).getMessage().getText());
+	String ggf;
+   rep.sett(ggf=events.getEvents().get(0).getMessage().getText());
    
 //   List<messagee>mesgL=new ArrayList<messagee>();
 //   messagee msg =new messagee();
@@ -72,11 +73,19 @@ rep.sett(kk);
 //     ObjectMapper mapper = new ObjectMapper();
 //   String jsonString = mapper.writeValueAsString(replm);
 //   
-   String [] uu= {"寶貝我最愛妳了","綸綸是我的公主","綸綸是我的女神",events.getEvents().get(0).getMessage().getText()};
-   
+   String [] uu= {"寶貝我最愛妳了","綸綸是我的公主","綸綸是我的女神",events.getEvents().get(0).getMessage().getText(),"沒有不學妳，笨笨"};
+   String [] uu1= {"寶貝要乖乖的喔","真的嗎??","好想你","現在時間大概是"+events.getEvents().get(0).getTimestamp(),"不學你惹~",events.getEvents().get(0).getMessage().getText()};
     LineMessagingClient client = LineMessagingClient.builder("Q4AFo5nfKYJ8MiHV4uIYVUAAQ668GXP3d7RNL3EtV7p0l6sHkC+mXrZgwIgvcMvTg8ddT90tNHV9eMZ0yaeT48/qDB96YEISC1grArA8S6XbLuLTqPuNo8Kb4rubULYrFr3QBqMSAfFI7UXolz/EbwdB04t89/1O/w1cDnyilFU=").build();
 
-	 TextMessage textMessage = new TextMessage(uu[(int)(Math.random()*4)]);
+    
+    TextMessage textMessage=null;
+    if (ggf.length()<=5)
+    {
+    	 textMessage = new TextMessage(uu1[(int)(Math.random()*6)]);
+    }else {
+    
+    
+	  textMessage = new TextMessage(uu[(int)(Math.random()*5)]);}
 	final ReplyMessage replyMessage = new ReplyMessage( gg,textMessage);
 
 	BotApiResponse botApiResponse=null;
