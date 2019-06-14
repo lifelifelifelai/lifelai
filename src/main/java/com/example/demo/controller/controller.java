@@ -72,10 +72,11 @@ rep.sett(kk);
 //     ObjectMapper mapper = new ObjectMapper();
 //   String jsonString = mapper.writeValueAsString(replm);
 //   
+   String [] uu= {"寶貝我最愛妳了","綸綸是我的公主","綸綸是我的女神",events.getEvents().get(0).getMessage().getText()};
    
     LineMessagingClient client = LineMessagingClient.builder("Q4AFo5nfKYJ8MiHV4uIYVUAAQ668GXP3d7RNL3EtV7p0l6sHkC+mXrZgwIgvcMvTg8ddT90tNHV9eMZ0yaeT48/qDB96YEISC1grArA8S6XbLuLTqPuNo8Kb4rubULYrFr3QBqMSAfFI7UXolz/EbwdB04t89/1O/w1cDnyilFU=").build();
 
-	 TextMessage textMessage = new TextMessage("hello");
+	 TextMessage textMessage = new TextMessage(uu[(int)Math.random()*4]);
 	final ReplyMessage replyMessage = new ReplyMessage( gg,textMessage);
 
 	BotApiResponse botApiResponse=null;
