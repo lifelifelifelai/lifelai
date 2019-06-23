@@ -30,6 +30,7 @@ import com.example.demo.repository.repository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.linecorp.bot.client.LineMessagingClient;
+import com.linecorp.bot.model.PushMessage;
 import com.linecorp.bot.model.ReplyMessage;
 //import com.example.demo.repository.repository;
 import com.linecorp.bot.model.message.TextMessage;
@@ -125,6 +126,91 @@ rep.sett(kk);
 			 
 	  // 根據view resolver mapping至hello.jsp
 	  }
+	
+	String qqw=null;
+	
+	
+	
+	@RequestMapping("/try")
+  public String hello33( String ff) {
+		
+		
+	    LineMessagingClient client = LineMessagingClient.builder("AYeucduzbLCNlLFM9KSL53gTya2WpONrZkB6PMc0TQ1MFYOmO1PP0hn0/JbTp6/Yn/JVEllpAp1F1ClZMELsCu1MCNquW0qobAxQzo2IIgt7F25ChEQ7CQUd8/G+0Uopxv75GP2a1+UMmM+WgVDghwdB04t89/1O/w1cDnyilFU=").build();
+
+	    
+		
+	    TextMessage textMessage = new TextMessage(ff);
+	    PushMessage pushMessage = new PushMessage(
+	            qqw,
+	            textMessage);
+
+	     BotApiResponse botApiResponse=null;
+	    try {
+	        botApiResponse = client.pushMessage(pushMessage).get();
+	    } catch (InterruptedException | ExecutionException e) {
+	        e.printStackTrace();
+	      
+	    }
+
+	    System.out.println(botApiResponse);
+	return "success";
+
+	
+	   
+  }
+
+	
+	
+	
+	
+	
+	@RequestMapping("/try1")
+	  public String hello11223(@RequestBody eventwraper events) throws IOException, ExecutionException {	
+		String gg=null;
+		gg=events.getEvents().get(0).getReplyToken();
+		System.out.println("efef");
+		System.out.println(events.getEvents().get(0).getReplyToken());
+		System.out.println(gg=events.getEvents().get(0).getMessage().getId());
+		qqw=gg;
+		String ggf;
+	   rep.sett(ggf=events.getEvents().get(0).getMessage().getText());
+	   
+
+	
+	    LineMessagingClient client = LineMessagingClient.builder("AYeucduzbLCNlLFM9KSL53gTya2WpONrZkB6PMc0TQ1MFYOmO1PP0hn0/JbTp6/Yn/JVEllpAp1F1ClZMELsCu1MCNquW0qobAxQzo2IIgt7F25ChEQ7CQUd8/G+0Uopxv75GP2a1+UMmM+WgVDghwdB04t89/1O/w1cDnyilFU=").build();
+
+	    
+	
+	    TextMessage textMessage = new TextMessage("hello");
+	    PushMessage pushMessage = new PushMessage(
+	            gg,
+	            textMessage);
+
+	     BotApiResponse botApiResponse=null;
+	    try {
+	        botApiResponse = client.pushMessage(pushMessage).get();
+	    } catch (InterruptedException | ExecutionException e) {
+	        e.printStackTrace();
+	      
+	    }
+
+	 
+	
+
+	    System.out.println(botApiResponse);
+	   
+	   
+	   
+	   
+	//   jsonString ="{\"replyToken\":\""+gg+"\",\"message\":[{\"type\":\"text\",\"text\":\"hihihihihi\"},{\"type\":\"text\",\"text\":\"ddd\"}]}";
+	   
+	//   System.out.println(jsonString);
+	//   sentpost(jsonString);
+		    return(gg); // 根據view resolver mapping至hello.jsp
+	  }
+
+			
+	
 		
 	
 	private void sentpost(String message) 
