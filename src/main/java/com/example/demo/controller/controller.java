@@ -170,7 +170,7 @@ rep.sett(kk);
 		gg=events.getEvents().get(0).getReplyToken();
 		System.out.println("efef");
 		System.out.println(events.getEvents().get(0).getReplyToken());
-		System.out.println(gg=events.getEvents().get(0).getMessage().getId());
+		System.out.println(gg=events.getEvents().get(0).getSource().getUserId());
 		qqw=gg;
 		String ggf;
 	   rep.sett(ggf=events.getEvents().get(0).getMessage().getText());
