@@ -23,10 +23,10 @@ public interface repositorystatus extends JpaRepository<status, String> {
 	
 	
 	
-	 @Query(value="select status from account where id='id' ",nativeQuery = true)
+	 @Query(value="select status from status where id='id' ",nativeQuery = true)
       String status();
 	 
-	 @Query(value="select * from account ",nativeQuery = true)
+	 @Query(value="select * from status ",nativeQuery = true)
      List<status> ww1();
 	 
 	 
