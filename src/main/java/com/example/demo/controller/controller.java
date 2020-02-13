@@ -80,7 +80,7 @@ System.out.println(kk=h.substring(h.indexOf(",\"text\"")+9, h.indexOf("\"}}],"))
 //   
    String [] uu= {"寶貝我最愛妳了","綸綸是我的公主","綸綸是我的女神",events.getEvents().get(0).getMessage().getText(),"沒有不學妳，笨笨"};
    String [] uu1= {"寶貝要乖乖的喔","真的嗎??","好想你","現在時間大概是"+events.getEvents().get(0).getTimestamp(),"不學你惹~",events.getEvents().get(0).getMessage().getText()};
-    LineMessagingClient client = LineMessagingClient.builder("Q4AFo5nfKYJ8MiHV4uIYVUAAQ668GXP3d7RNL3EtV7p0l6sHkC+mXrZgwIgvcMvTg8ddT90tNHV9eMZ0yaeT48/qDB96YEISC1grArA8S6XbLuLTqPuNo8Kb4rubULYrFr3QBqMSAfFI7UXolz/EbwdB04t89/1O/w1cDnyilFU=").build();
+    LineMessagingClient client = LineMessagingClient.builder("siyTXOs4UvFs4axEaIzKNPwfKupC0vWU3gC0ij7+vCHtX5gDgHe/5L8uIBaYHj0/wYE0iLP0ibgCv7m83ZBxhI9t06UVMDlNe7qx8xs/SSMnLnF6FnVPES2aEJBrWpMEJKDxKy+rhKOWYeTRiYP7/QdB04t89/1O/w1cDnyilFU=").build();
 
     
     TextMessage textMessage=null;
