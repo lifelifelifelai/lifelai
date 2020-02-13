@@ -84,7 +84,7 @@ public class controller {
     if((ggf.indexOf("喜歡妳")!=-1)||(ggf.indexOf("愛妳")!=-1)||(ggf.indexOf("想妳")!=-1)
     		||(ggf.indexOf("喜歡你")!=-1)||(ggf.indexOf("愛你")!=-1)||(ggf.indexOf("想你")!=-1)||(ggf.indexOf("抱抱")!=-1)) {
     	
-    	replymsg="聰明的妳已開啟隱藏劇情，首先第一個問題0~9選一個數字";
+    	replymsg="聰明的妳已開啟隱藏劇情總共有四個數字題，首先第一個問題0~9選一個數字";
     	rep2.sett("4");
     }
    else if (statusnow.equals("0"))
@@ -124,11 +124,11 @@ public class controller {
 	   }else {
 		   int ii=(int)( Math.random()*100);
 		   if(ii>33 &&ii<67) {
-		   replymsg="可能要再想想喔~(結束問答請打離開)";
+		   replymsg="可能要再想想喔~(若要結束問答請打離開)";
 		     }else if (ii<=33) {
-		    	 replymsg="再試試看~(結束問答請打離開)";
+		    	 replymsg="再試試看~(若要結束問答請打離開)";
 		     }else {
-		    	 replymsg="QQ again~(結束問答請打離開)";
+		    	 replymsg="QQ try again~(若要結束問答請打離開)";
 		     }
 	   }
 	//question1
@@ -142,24 +142,24 @@ public class controller {
 		   
 		   int ii=(int)( Math.random()*100);
 		   if(ii>=33&&ii<67) {
-		   replymsg="請分享妳覺得life的三個缺點(要一次打完送出不要分開打)";
+		   replymsg="答對了~最後一題，請分享妳覺得life的三個缺點(要一次打完送出不要分開打)";
 		   rep2.sett("3");
 		   }else if (ii<33){
-		   replymsg="請分享妳覺得喜歡的三個人格特質(要一次打完送出不要分開打)";
+		   replymsg="答對了~最後一題，請分享妳覺得喜歡的三個人格特質(要一次打完送出不要分開打)";
 		   rep2.sett("3");
 		   }else
 		   {
-			   replymsg="請分享妳覺得最不能接受的三件事(要一次打完送出不要分開打)";
+			   replymsg="答對了~最後一題，請分享妳覺得最不能接受的三件事(要一次打完送出不要分開打)";
 			   rep2.sett("3");
 		   }
 	   }else {
 		   int ii=(int)( Math.random()*100);
 		   if(ii>33 &&ii<67) {
-			   replymsg="可能要再想想喔~(結束問答請打離開)";
+			   replymsg="可能要再想想喔~(若要結束問答請打離開)";
 			     }else if (ii<=33) {
-			    	 replymsg="再試試看~(結束問答請打離開)";
+			    	 replymsg="再試試看~(若要結束問答請打離開)";
 			     }else {
-			    	 replymsg="QQ try again~(結束問答請打離開)";
+			    	 replymsg="QQ try again~(若要結束問答請打離開)";
 			     }
 	   }
 }else if (statusnow.equals("3")){
@@ -172,9 +172,9 @@ public class controller {
 	   {
 		   
 		
-			   replymsg="恭喜完成尬到不行問答(問答每次應該都會有點不一樣)~ 書岑，祝妳情人節快樂，雖然這個bot一點都不ai其實還蠻蠢的"
-			   		+ "，不過如果妳有從中得到那麼一丁點的樂趣(這樣應該算值得吧@@)。其實這個有隱藏版的吶，目的是為了拿到第二塊拼圖"+
-			   "，只是可能要腦洞大開才有辦法找到XDDD。";
+			   replymsg="恭喜完成尬到不行問答(問答每次應該都會有點不一樣)~        書岑，祝妳情人節快樂，雖然這個bot一點都不ai，而且好像還蠻蠢的"
+			   		+ "  ，不過如果妳有從中得到那麼一丁點的樂趣  (對我而言就算值得了吧@@ 這樣我是不是沒顧慮到妳的感受XD)。    其實這個有隱藏版的吶，目的是為了拿到第二塊拼圖"+
+			   "，只是可能要腦洞大開才有辦法找到XDDD。 (或是隨便問些問題搞不好會有線索)";
 			   rep2.sett("0");
 		   
 	   }else {
@@ -182,19 +182,57 @@ public class controller {
 		   if(ii>33 &&ii<67) {
 			   replymsg="字數不足喔~(結束問答請打離開)";
 			     }else if (ii<=33) {
-			    	 replymsg="字數不足喔再試試看~(結束問答請打離開)";
+			    	 replymsg= "字數不足喔再試試看~(結束問答請打離開)";
 			     }else {
 			    	 replymsg="字數不足喔try again~(結束問答請打離開)";
 			     }
 	   }
 }else if (statusnow.equals("4")){
+	if ((ggf.indexOf("4")!=-1))
+	{
+		replymsg="答案是4~因為是妳的幸運數字。 下一題00~99選一個數字(我們都有的)";
+		 rep2.sett("5");
+	}else {
+		replymsg="很可惜答錯了，已離開隱藏模式";
+		 rep2.sett("0");
+	}
+	
 	//回答4
 }else if (statusnow.equals("5")){
 	//回答32
+	if ((ggf.indexOf("32")!=-1))
+	{
+		replymsg="好聰明吶 ，答案是32~因為我們名字的筆畫都是32。 下一題000~999選一組數字";
+		 rep2.sett("6");
+	}else {
+		replymsg="很可惜答錯了，已離開隱藏模式";
+		 rep2.sett("0");
+	}
 }else if (statusnow.equals("6")){
 	//回答520
+	if ((ggf.indexOf("520")!=-1))
+	{
+		replymsg="答對了，答案是520~因為是情人節嘛////。  最後一題0000~9999選一組數字";
+		 rep2.sett("6");
+	}else {
+		replymsg="很可惜答錯了，已離開隱藏模式";
+		 rep2.sett("0");
+	}
 }else if (statusnow.equals("7")){
 	//回答0210
+	if ((ggf.indexOf("0210")!=-1))
+	{
+		replymsg="答對了，恭喜完成隱藏關卡!!!(有沒有覺得cp值很低)   其實我也不確定當妳看到這些的時候是幾月的事了，也許是"
+				+ "2月底、也許是3月或是根本沒有機會也說不定XD  不知道妳是否還記得在2月的時候妳說我有修過聊天學，好像蠻會找話題的。"
+				+ "@@現在看到有沒有覺得根本不是這麼回是齁，會想找話題其實只是因為不希望妳就這樣消失而已XDD，我不希望未來的我會回想當初因為"
+				+ "少做點了甚麼而感到後悔~，我的生活圈很小大概就像把自己框在一個圈圈裏面，一大段時間大概只會跟一個人聊天，"
+				+ "所以當然也沒有其他人會這樣跟我說瞜。 關卡的拼圖在這~ Second puzzle is LOVE.";
+		 rep2.sett("6");
+	}else {
+		replymsg="很可惜答錯了，已離開隱藏模式";
+		 rep2.sett("0");
+	}
+	
 }
 
    
