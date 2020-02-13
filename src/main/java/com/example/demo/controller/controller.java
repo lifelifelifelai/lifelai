@@ -78,8 +78,8 @@ public class controller {
  
   // String [] uu= {"寶貝我最愛妳了","綸綸是我的公主","綸綸是我的女神",events.getEvents().get(0).getMessage().getText(),"沒有不學妳，笨笨"};
    String [] uu1= {"真的嗎??","想妳","無此資料","不學你惹~",events.getEvents().get(0).getMessage().getText()
-		   ,events.getEvents().get(0).getMessage().getText(),events.getEvents().get(0).getMessage().getText(),"好"
-		   ,"可以打開始進入問答模式","怎麼會這樣"
+		   ,events.getEvents().get(0).getMessage().getText(),events.getEvents().get(0).getMessage().getText(),"好的"
+		   ,"可以打'開始'進入問答模式","怎麼會這樣","可以打'開始'進入問答模式"
    
    };
   
@@ -116,7 +116,7 @@ public class controller {
 		   replymsg="我是life_devil_bot出生於20200214，其實原本應該是要放有惡魔角的照片地說，可是我的創造者覺得太羞恥就作罷了";
 	   }else if ((ggf.indexOf("拼圖")!=-1)||(ggf.indexOf("目標")!=-1))
 	   {
-		   replymsg="拿到拼圖是這個bot的目標~";
+		   replymsg="找到拼圖是這個bot的目標~";
 	   }else if ((ggf.indexOf("隱藏")!=-1))
 	   {
 		   replymsg="隱藏模式需要不一樣的感受";
@@ -168,10 +168,13 @@ public class controller {
 	   }else if ((ggf.indexOf("妳好")!=-1)||(ggf.indexOf("你好")!=-1))
 	   {
 		   replymsg="妳過得呢";
+	   }else if ((ggf.indexOf("好慢")!=-1))
+	   {
+		   replymsg="因為伺服器是免費的每過15分鐘都要一點時間等待重啟";
 	   }else {
 		   
 		   
-		   int ii=(int)( Math.random()*7);
+		   int ii=(int)( Math.random()*11);
 		   replymsg=uu1[ii];
 	   }
 	   
