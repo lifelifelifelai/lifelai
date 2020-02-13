@@ -6,7 +6,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
@@ -61,25 +63,144 @@ public class controller {
 	  public String hello2(@RequestBody eventwraper events) throws IOException, ExecutionException {	
 	String gg=null;
 	  LineMessagingClient client = LineMessagingClient.builder("siyTXOs4UvFs4axEaIzKNPwfKupC0vWU3gC0ij7+vCHtX5gDgHe/5L8uIBaYHj0/wYE0iLP0ibgCv7m83ZBxhI9t06UVMDlNe7qx8xs/SSMnLnF6FnVPES2aEJBrWpMEJKDxKy+rhKOWYeTRiYP7/QdB04t89/1O/w1cDnyilFU=").build();
-	  
+	  SimpleDateFormat smd =new SimpleDateFormat("yyyy/MM/dd HH:mm:ss.SSS");
+	  Date date =new Date();
+	  String nowtime=smd.format(date);
+	 int qq2=1+(int)( Math.random()*100);
 	gg=events.getEvents().get(0).getReplyToken();
 
 	String ggf;
 	ggf=events.getEvents().get(0).getMessage().getText();
 	String replymsg="";
 	String statusnow="";
- 
-	statusnow=rep2.status();
+ 	statusnow=rep2.status();
 
  
    String [] uu= {"寶貝我最愛妳了","綸綸是我的公主","綸綸是我的女神",events.getEvents().get(0).getMessage().getText(),"沒有不學妳，笨笨"};
-   String [] uu1= {"寶貝要乖乖的喔","真的嗎??","好想你","現在時間大概是","不學你惹~",events.getEvents().get(0).getMessage().getText()};
+   String [] uu1= {"寶貝要乖乖的喔","真的嗎??","好想你","現在時間大概是"+nowtime,"不學你惹~",events.getEvents().get(0).getMessage().getText()};
   
     
     
-    
+    if((ggf.indexOf("喜歡妳")!=-1)||(ggf.indexOf("愛妳")!=-1)||(ggf.indexOf("想妳")!=-1)
+    		||(ggf.indexOf("喜歡你")!=-1)||(ggf.indexOf("愛你")!=-1)||(ggf.indexOf("想你")!=-1)||(ggf.indexOf("抱抱")!=-1)) {
+    	
+    	replymsg="聰明的妳已開啟隱藏劇情，首先第一個問題0~9選一個數字";
+    	rep2.sett("4");
+    }
+   else if (statusnow.equals("0"))
+{
+	//沒事狀太
+	   if((ggf.indexOf("開始")!=-1))
+	   {
+		   int ii=(int)( Math.random()*100);
+		   if(ii>33 &&ii<67) {
+			  replymsg="開始問答闖關瞜!!第一題，妳知道一年中總共有幾個情人節可以慶祝呢?(若要退出請打離開)";
+		   }else if (ii<=33) {
+		   replymsg="開始問答闖關瞜!!第一題，全世界中過最多情人節的是哪個國家?(若要退出請打離開)";
+		   }else {
+			   replymsg="開始問答闖關瞜!!第一題，情人節其實是在公元496年開始訂立的，那情人節的前身是甚麼節日呢?(若要退出請打離開)";
+		   }
+		   rep2.sett("1");
+	   }
+	
+}else if(statusnow.equals("1"))
+{
+	
+	if((ggf.indexOf("離開")!=-1))
+	   {
+		replymsg="已經離開問答狀態";	
+		 rep2.sett("0");
+	   }else if ((ggf.indexOf("13")!=-1)||(ggf.indexOf("韓國")!=-1)||(ggf.indexOf("牧神節")!=-1))
+	   {
+		   
+		   int ii=(int)( Math.random()*100);
+		   if(ii>50) {
+		   replymsg="nice 書岑，下一題~歌詞'你說我太過驕傲，不說也能感受彼此心跳' 是出自於彭于晏演的哪部電影的歌曲";
+		   rep2.sett("2");
+		   }else {
+		   replymsg="好聰明吶，下一題~歌詞'我們要互相虧欠，我們要藕斷絲連' 是出自於彭于晏演的哪部電影的歌曲";
+		   rep2.sett("2");
+		   }
+	   }else {
+		   int ii=(int)( Math.random()*100);
+		   if(ii>33 &&ii<67) {
+		   replymsg="可能要再想想喔~(結束問答請打離開)";
+		     }else if (ii<=33) {
+		    	 replymsg="再試試看~(結束問答請打離開)";
+		     }else {
+		    	 replymsg="QQ again~(結束問答請打離開)";
+		     }
+	   }
+	//question1
+}else if (statusnow.equals("2")){
+	if((ggf.indexOf("離開")!=-1))
+	   {
+		replymsg="已經離開問答狀態";	
+		 rep2.sett("0");
+	   }else if ((ggf.indexOf("匆匆那年")!=-1)||(ggf.indexOf("聽說")!=-1)||(ggf.indexOf("讀心術")!=-1))
+	   {
+		   
+		   int ii=(int)( Math.random()*100);
+		   if(ii>=33&&ii<67) {
+		   replymsg="請分享妳覺得life的三個缺點(要一次打完送出不要分開打)";
+		   rep2.sett("3");
+		   }else if (ii<33){
+		   replymsg="請分享妳覺得喜歡的三個人格特質(要一次打完送出不要分開打)";
+		   rep2.sett("3");
+		   }else
+		   {
+			   replymsg="請分享妳覺得最不能接受的三件事(要一次打完送出不要分開打)";
+			   rep2.sett("3");
+		   }
+	   }else {
+		   int ii=(int)( Math.random()*100);
+		   if(ii>33 &&ii<67) {
+			   replymsg="可能要再想想喔~(結束問答請打離開)";
+			     }else if (ii<=33) {
+			    	 replymsg="再試試看~(結束問答請打離開)";
+			     }else {
+			    	 replymsg="QQ try again~(結束問答請打離開)";
+			     }
+	   }
+}else if (statusnow.equals("3")){
+	//question3 給卡片
+	if((ggf.indexOf("離開")!=-1))
+	   {
+		replymsg="已經離開問答狀態";	
+		 rep2.sett("0");
+	   }else if (ggf.length()>6)
+	   {
+		   
+		
+			   replymsg="恭喜完成尬到不行問答(問答每次應該都會有點不一樣)~ 書岑，祝妳情人節快樂，雖然這個bot一點都不ai其實還蠻蠢的"
+			   		+ "，不過如果妳有從中得到那麼一丁點的樂趣(這樣應該算值得吧@@)。其實這個有隱藏版的吶，目的是為了拿到第二塊拼圖"+
+			   "，只是可能要腦洞大開才有辦法找到XDDD。";
+			   rep2.sett("0");
+		   
+	   }else {
+		   int ii=(int)( Math.random()*100);
+		   if(ii>33 &&ii<67) {
+			   replymsg="字數不足喔~(結束問答請打離開)";
+			     }else if (ii<=33) {
+			    	 replymsg="字數不足喔再試試看~(結束問答請打離開)";
+			     }else {
+			    	 replymsg="字數不足喔try again~(結束問答請打離開)";
+			     }
+	   }
+}else if (statusnow.equals("4")){
+	//回答4
+}else if (statusnow.equals("5")){
+	//回答32
+}else if (statusnow.equals("6")){
+	//回答520
+}else if (statusnow.equals("7")){
+	//回答0210
+}
+
    
- 
+   
+   
+   
     
     
    replymsg=statusnow;
@@ -104,7 +225,7 @@ public class controller {
    
    
 	  rep.sett(ggf,textMessage.getText());
-   rep2.sett("3");
+  
    
 //   jsonString ="{\"replyToken\":\""+gg+"\",\"message\":[{\"type\":\"text\",\"text\":\"hihihihihi\"},{\"type\":\"text\",\"text\":\"ddd\"}]}";
    
