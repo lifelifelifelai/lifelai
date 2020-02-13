@@ -1,5 +1,7 @@
 package com.example.demo.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -19,5 +21,14 @@ public interface repositorystatus extends JpaRepository<status, String> {
 	 @Query(value="update status set status=:sta ",nativeQuery = true)
      void sett(@Param("sta") String status);
 	
+	
+	
+	 @Query(value="select status from account where id='id' ",nativeQuery = true)
+      String status();
+	 
+	 @Query(value="select * from account ",nativeQuery = true)
+     List<status> ww1();
+	 
+	 
 	
 }

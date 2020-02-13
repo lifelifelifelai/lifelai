@@ -26,6 +26,7 @@ import com.example.demo.entity.account;
 import com.example.demo.entity.eventwraper;
 import com.example.demo.entity.messagee;
 import com.example.demo.entity.replymessage;
+import com.example.demo.entity.status;
 import com.example.demo.repository.repository;
 import com.example.demo.repository.repositorystatus;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -47,50 +48,48 @@ public class controller {
 	repositorystatus rep2;
 	
 	
-	@RequestMapping("/greeting")
-  public String hello(@RequestBody String h) {
-		String kk=null;
-		System.out.println(h.indexOf("\"text\":\""+8)+"...."+h.indexOf("\"}}],"));
-System.out.println(kk=h.substring(h.indexOf(",\"text\"")+9, h.indexOf("\"}}],")));
-//rep.sett(kk);
-    return("dd"); // 根據view resolver mapping至hello.jsp
-  }
-	
+//	@RequestMapping("/greeting")
+//  public String hello(@RequestBody String h) {
+//		String kk=null;
+//		System.out.println(h.indexOf("\"text\":\""+8)+"...."+h.indexOf("\"}}],"));
+//System.out.println(kk=h.substring(h.indexOf(",\"text\"")+9, h.indexOf("\"}}],")));
+////rep.sett(kk);
+//    return("dd"); // 根據view resolver mapping至hello.jsp
+//  }
+//	
 	@RequestMapping(value="/gg")
 	  public String hello2(@RequestBody eventwraper events) throws IOException, ExecutionException {	
 	String gg=null;
+	  LineMessagingClient client = LineMessagingClient.builder("siyTXOs4UvFs4axEaIzKNPwfKupC0vWU3gC0ij7+vCHtX5gDgHe/5L8uIBaYHj0/wYE0iLP0ibgCv7m83ZBxhI9t06UVMDlNe7qx8xs/SSMnLnF6FnVPES2aEJBrWpMEJKDxKy+rhKOWYeTRiYP7/QdB04t89/1O/w1cDnyilFU=").build();
+	  
 	gg=events.getEvents().get(0).getReplyToken();
-	System.out.println("efef");
-	System.out.println(events.getEvents().get(0).getReplyToken());
+
 	String ggf;
 	ggf=events.getEvents().get(0).getMessage().getText();
+	String replymsg="";
+	String statusnow="";
  
-   
-//   List<messagee>mesgL=new ArrayList<messagee>();
-//   messagee msg =new messagee();
-//   msg.setType("text");
-//   msg.setText("loveu");
-//   mesgL.add(msg);
-//   
-//   replymessage replm= new replymessage();
-//   replm.setMessage(mesgL);
-//   replm.setReplyToken(gg);
-//     ObjectMapper mapper = new ObjectMapper();
-//   String jsonString = mapper.writeValueAsString(replm);
-//   
-   String [] uu= {"寶貝我最愛妳了","綸綸是我的公主","綸綸是我的女神",events.getEvents().get(0).getMessage().getText(),"沒有不學妳，笨笨"};
-   String [] uu1= {"寶貝要乖乖的喔","真的嗎??","好想你","現在時間大概是"+events.getEvents().get(0).getTimestamp(),"不學你惹~",events.getEvents().get(0).getMessage().getText()};
-    LineMessagingClient client = LineMessagingClient.builder("siyTXOs4UvFs4axEaIzKNPwfKupC0vWU3gC0ij7+vCHtX5gDgHe/5L8uIBaYHj0/wYE0iLP0ibgCv7m83ZBxhI9t06UVMDlNe7qx8xs/SSMnLnF6FnVPES2aEJBrWpMEJKDxKy+rhKOWYeTRiYP7/QdB04t89/1O/w1cDnyilFU=").build();
+	statusnow=rep2.status();
 
+ 
+   String [] uu= {"寶貝我最愛妳了","綸綸是我的公主","綸綸是我的女神",events.getEvents().get(0).getMessage().getText(),"沒有不學妳，笨笨"};
+   String [] uu1= {"寶貝要乖乖的喔","真的嗎??","好想你","現在時間大概是","不學你惹~",events.getEvents().get(0).getMessage().getText()};
+  
     
+    
+    
+   
+ 
+    
+    
+   replymsg=statusnow;
+   
+   
     TextMessage textMessage=null;
-    if (ggf.length()<=5)
-    {
-    	 textMessage = new TextMessage(uu1[(int)(Math.random()*6)]);
-    }else {
+    textMessage = new TextMessage(replymsg);
     
     
-	  textMessage = new TextMessage(uu[(int)(Math.random()*5)]);}
+    
 	final ReplyMessage replyMessage = new ReplyMessage( gg,textMessage);
 
 	BotApiResponse botApiResponse=null;
@@ -101,11 +100,11 @@ System.out.println(kk=h.substring(h.indexOf(",\"text\"")+9, h.indexOf("\"}}],"))
 	 
 	}
 
-	System.out.println(botApiResponse);
+	//System.out.println(botApiResponse);
    
    
-	  rep.sett(ggf,textMessage.toString());
-   rep2.sett("1");
+	  rep.sett(ggf,textMessage.getText());
+   rep2.sett("3");
    
 //   jsonString ="{\"replyToken\":\""+gg+"\",\"message\":[{\"type\":\"text\",\"text\":\"hihihihihi\"},{\"type\":\"text\",\"text\":\"ddd\"}]}";
    
@@ -140,12 +139,11 @@ System.out.println(kk=h.substring(h.indexOf(",\"text\"")+9, h.indexOf("\"}}],"))
 	  
 		@RequestMapping("/y2")
 		@ResponseBody
-		  public List<account> ss3() {
+		  public List<status> ss3() {
 				
-			  List<account> ww=new ArrayList<account>();
-			  ww=rep.ww1();
-			  System.out.println(ww.get(2).getPas());
-			  System.out.println(ww.size());
+			  List<status> ww=new ArrayList<status>();
+			  ww=rep2.ww1();
+			
 			  return ww;
 				//return(rep.findAll().get(0).getPas());
 				 
