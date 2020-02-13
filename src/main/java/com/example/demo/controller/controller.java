@@ -78,7 +78,8 @@ public class controller {
  
   // String [] uu= {"寶貝我最愛妳了","綸綸是我的公主","綸綸是我的女神",events.getEvents().get(0).getMessage().getText(),"沒有不學妳，笨笨"};
    String [] uu1= {"真的嗎??","想妳","無此資料","不學你惹~",events.getEvents().get(0).getMessage().getText()
-		   ,events.getEvents().get(0).getMessage().getText(),events.getEvents().get(0).getMessage().getText()
+		   ,events.getEvents().get(0).getMessage().getText(),events.getEvents().get(0).getMessage().getText(),"好"
+		   ,"可以打開始進入問答模式","怎麼會這樣"
    
    };
   
@@ -151,16 +152,22 @@ public class controller {
 		   replymsg="抱歉，我不善於聊天";
 	   }else if ((ggf.indexOf("好煩")!=-1))
 	   {
-		   replymsg="拍拍~妳照照鏡子就不煩了吶";
+		   replymsg="拍拍~吃吃零食就不煩了吶";
 	   }else if ((ggf.indexOf("生氣")!=-1))
 	   {
-		   replymsg="不要生氣嘛~";
+		   replymsg="不要生氣嘛~給妳一個勾勾ˇ";
 	   }else if ((ggf.indexOf("吃飯")!=-1))
 	   {
 		   replymsg="我只需要充電";
 	   }else if ((ggf.indexOf("運動")!=-1))
 	   {
 		   replymsg="快來教我瑜珈";
+	   }else if ((ggf.indexOf("學我")!=-1))
+	   {
+		   replymsg="抱歉吶~太調皮了";
+	   }else if ((ggf.indexOf("妳好")!=-1)||(ggf.indexOf("你好")!=-1))
+	   {
+		   replymsg="妳過得呢";
 	   }else {
 		   
 		   
