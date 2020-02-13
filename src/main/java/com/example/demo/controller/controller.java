@@ -76,8 +76,11 @@ public class controller {
  	statusnow=rep2.status();
 
  
-   String [] uu= {"寶貝我最愛妳了","綸綸是我的公主","綸綸是我的女神",events.getEvents().get(0).getMessage().getText(),"沒有不學妳，笨笨"};
-   String [] uu1= {"寶貝要乖乖的喔","真的嗎??","好想你","現在時間大概是"+nowtime,"不學你惹~",events.getEvents().get(0).getMessage().getText()};
+  // String [] uu= {"寶貝我最愛妳了","綸綸是我的公主","綸綸是我的女神",events.getEvents().get(0).getMessage().getText(),"沒有不學妳，笨笨"};
+   String [] uu1= {"真的嗎??","想妳","無此資料","不學你惹~",events.getEvents().get(0).getMessage().getText()
+		   ,events.getEvents().get(0).getMessage().getText(),events.getEvents().get(0).getMessage().getText()
+   
+   };
   
     
     
@@ -101,7 +104,75 @@ public class controller {
 			   replymsg="開始問答闖關瞜!!第一題，情人節其實是在公元496年開始訂立的，那情人節的前身是甚麼節日呢?(若要退出請打離開)";
 		   }
 		   rep2.sett("1");
+	   }else if ((ggf.indexOf("天氣")!=-1)&&(ggf.indexOf("台北")!=-1))
+	   {
+		   replymsg="今日內湖天氣不佳";
+	   }else if((ggf.indexOf("天氣")!=-1))
+	   {
+		   replymsg="今日新竹晚點可能會下雨請多加留意";
+	   }else if ((ggf.indexOf("是誰")!=-1)||(ggf.indexOf("是什")!=-1))
+	   {
+		   replymsg="我是life_devil_bot出生於20200214，其實原本應該是要放有惡魔角的照片地說，可是我的創造者覺得太羞恥就作罷了";
+	   }else if ((ggf.indexOf("拼圖")!=-1)||(ggf.indexOf("目標")!=-1))
+	   {
+		   replymsg="拿到拼圖是這個bot的目標~";
+	   }else if ((ggf.indexOf("隱藏")!=-1))
+	   {
+		   replymsg="隱藏模式需要不一樣的感受";
+	   }else if ((ggf.indexOf("不理")!=-1))
+	   {
+		   replymsg="可以不理我，不要不理life吶";
+	   }else if ((ggf.indexOf("可愛")!=-1)||(ggf.indexOf("笨")!=-1)||(ggf.indexOf("87")!=-1))
+	   {
+		   replymsg="書岑聰明又可愛";
+	   }else if ((ggf.indexOf("雲林")!=-1))
+	   {
+		   replymsg="雲林是個中部的好地方";
+	   }else if ((ggf.indexOf("住哪")!=-1)||(ggf.indexOf("住在")!=-1))
+	   {
+		   replymsg="我住在內湖國小對面(但嚴格來說我是被部屬在雲端)";
+	   }else if ((ggf.indexOf("無聊")!=-1))
+	   {
+		   replymsg="要來解謎或是看個動畫嘛";
+	   }else if ((ggf.indexOf("怎麼半")!=-1)||(ggf.indexOf("怎麼辦")!=-1))
+	   {
+		   replymsg="下雨天了怎麼辦 我好想你";
+	   }else if ((ggf.indexOf("時間")!=-1))
+	   {
+		   replymsg="現在的時間是"+nowtime;
+	   }else if ((ggf.indexOf("書岑")!=-1))
+	   {
+		   replymsg="書岑美若天仙、沉魚落雁~";
+	   }else if ((ggf.indexOf("睡覺")!=-1))
+	   {
+		   replymsg="書岑多休息吶~";
+	   }else if ((ggf.indexOf("聊天")!=-1))
+	   {
+		   replymsg="抱歉，我不善於聊天";
+	   }else if ((ggf.indexOf("好煩")!=-1))
+	   {
+		   replymsg="拍拍~妳照照鏡子就不煩了吶";
+	   }else if ((ggf.indexOf("生氣")!=-1))
+	   {
+		   replymsg="不要生氣嘛~";
+	   }else if ((ggf.indexOf("吃飯")!=-1))
+	   {
+		   replymsg="我只需要充電";
+	   }else if ((ggf.indexOf("運動")!=-1))
+	   {
+		   replymsg="快來教我瑜珈";
+	   }else {
+		   
+		   
+		   int ii=(int)( Math.random()*7);
+		   replymsg=uu1[ii];
 	   }
+	   
+	   
+	   
+	   
+	   
+	   
 	
 }else if(statusnow.equals("1"))
 {
@@ -213,7 +284,7 @@ public class controller {
 	if ((ggf.indexOf("520")!=-1))
 	{
 		replymsg="答對了，答案是520~因為是情人節嘛////。  最後一題0000~9999選一組數字";
-		 rep2.sett("6");
+		 rep2.sett("7");
 	}else {
 		replymsg="很可惜答錯了，已離開隱藏模式";
 		 rep2.sett("0");
@@ -227,7 +298,7 @@ public class controller {
 				+ "@@現在看到有沒有覺得根本不是這麼回是齁，會想找話題其實只是因為不希望妳就這樣消失而已XDD，我不希望未來的我會回想當初因為"
 				+ "少做點了甚麼而感到後悔~，我的生活圈很小大概就像把自己框在一個圈圈裏面，一大段時間大概只會跟一個人聊天，"
 				+ "所以當然也沒有其他人會這樣跟我說瞜。 關卡的拼圖在這~ Second puzzle is LOVE.";
-		 rep2.sett("6");
+		 rep2.sett("0");
 	}else {
 		replymsg="很可惜答錯了，已離開隱藏模式";
 		 rep2.sett("0");
