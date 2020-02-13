@@ -203,7 +203,7 @@ public class controller {
    
     
     
-   replymsg=statusnow;
+   //replymsg=statusnow;
    
    
     TextMessage textMessage=null;
