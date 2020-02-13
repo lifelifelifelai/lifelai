@@ -1,7 +1,5 @@
 package com.example.demo.repository;
 
-import java.util.List;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -10,22 +8,16 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.entity.account;
+import com.example.demo.entity.status;
 
 @Repository
-public interface repository extends JpaRepository<account, String> {
+public interface repositorystatus extends JpaRepository<status, String> {
 
 	
 	@Modifying
 	@Transactional
-	 @Query(value="insert into account VALUES (:cust,:customerId)",nativeQuery = true)
-     void sett(@Param("customerId") String cusid,@Param("cust") String custid);
+	 @Query(value="update status set status=:sta ",nativeQuery = true)
+     void sett(@Param("sta") String status);
 	
 	
-	
-	 @Query(value="select * from account where pas!='已讀' ",nativeQuery = true)
-     List<account> ww();
- 	
-	 @Query(value="select * from account ",nativeQuery = true)
-     List<account> ww1();
-     
 }
