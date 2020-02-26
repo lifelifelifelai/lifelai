@@ -341,7 +341,7 @@ public class controller {
     	   rep2.sett("1");
     	   if (ggf.indexOf("點點")!=-1)
     	   {
-    		   replymsg="test::果然是書岑用點代替'.'吶";
+    		   replymsg="test::果然是用'點'代替'.'吶";
     	   }
     	   
     }else {
