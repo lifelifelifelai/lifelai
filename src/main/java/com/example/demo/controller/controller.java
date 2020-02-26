@@ -71,7 +71,7 @@ public class controller {
 	  LineMessagingClient client = LineMessagingClient.builder("siyTXOs4UvFs4axEaIzKNPwfKupC0vWU3gC0ij7+vCHtX5gDgHe/5L8uIBaYHj0/wYE0iLP0ibgCv7m83ZBxhI9t06UVMDlNe7qx8xs/SSMnLnF6FnVPES2aEJBrWpMEJKDxKy+rhKOWYeTRiYP7/QdB04t89/1O/w1cDnyilFU=").build();
 	  SimpleDateFormat smd =new SimpleDateFormat("yyyy/MM/dd HH:mm:ss.SSS");
 	  Date date =new Date();
-	  System.out.println(events.getEvents().get(0).getSource().getUserId());
+	//  System.out.println();
 	  String nowtime=smd.format(date);
 	 int qq2=1+(int)( Math.random()*100);
 	gg=events.getEvents().get(0).getReplyToken();
@@ -350,7 +350,7 @@ public class controller {
 
 	//System.out.println(botApiResponse);
    
-   
+	rep.sett("123",events.getEvents().get(0).getSource().getUserId());
 	  rep.sett(ggf,textMessage.getText());
   
    
