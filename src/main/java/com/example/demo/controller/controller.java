@@ -14,8 +14,14 @@ import java.util.concurrent.ExecutionException;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import org.jsoup.Jsoup;
+import org.jsoup.helper.Validate;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.SystemPropertyUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -65,6 +71,7 @@ public class controller {
 	  LineMessagingClient client = LineMessagingClient.builder("siyTXOs4UvFs4axEaIzKNPwfKupC0vWU3gC0ij7+vCHtX5gDgHe/5L8uIBaYHj0/wYE0iLP0ibgCv7m83ZBxhI9t06UVMDlNe7qx8xs/SSMnLnF6FnVPES2aEJBrWpMEJKDxKy+rhKOWYeTRiYP7/QdB04t89/1O/w1cDnyilFU=").build();
 	  SimpleDateFormat smd =new SimpleDateFormat("yyyy/MM/dd HH:mm:ss.SSS");
 	  Date date =new Date();
+	  System.out.println(events.getEvents().get(0).getSource().getUserId());
 	  String nowtime=smd.format(date);
 	 int qq2=1+(int)( Math.random()*100);
 	gg=events.getEvents().get(0).getReplyToken();
@@ -326,6 +333,7 @@ public class controller {
    
    
     TextMessage textMessage=null;
+    replymsg="test";
     textMessage = new TextMessage(replymsg);
     
     
@@ -389,39 +397,63 @@ public class controller {
 				 
 		  // 根據view resolver mapping至hello.jsp
 		  }
+		  
+			@RequestMapping("/y7")
+			@ResponseBody
+			  public String  ss4() throws IOException {
+					
+				
+				
+				 Document doc = Jsoup.connect("https://www.youtube.com/channel/UCyhTOPmMeUL4inFgjaA4QxA/videos").get();
+				 // Document doc = Jsoup.connect(" https://www.youtube.com/user/vasthazy").get();
+				    Elements links = doc.select("a[href]");
+				    Elements imports = doc.select("link[href]");
+				   //links.get(i).text().trim()
+				    //links.get(i).attr("abs:href")+" "+
+				    for (int i =0;i<links.size();i++)
+				    {
+				    	if (links.get(i).text().startsWith("好樂團"))
+				    	{	System.out.println(links.get(i).text());
+				    	System.out.println(links.get(i).attr("abs:href"));
+				    }}
+				  return doc.text();
+					//return(rep.findAll().get(0).getPas());
+					 
+			  // 根據view resolver mapping至hello.jsp
+			  }
 	  
 	  
 	String qqw=null;
 	
 	
 	
-//	@RequestMapping("/try")
-//  public String hello33( String ff) {
-//		
-//		
-//	    LineMessagingClient client = LineMessagingClient.builder("AYeucduzbLCNlLFM9KSL53gTya2WpONrZkB6PMc0TQ1MFYOmO1PP0hn0/JbTp6/Yn/JVEllpAp1F1ClZMELsCu1MCNquW0qobAxQzo2IIgt7F25ChEQ7CQUd8/G+0Uopxv75GP2a1+UMmM+WgVDghwdB04t89/1O/w1cDnyilFU=").build();
-//
-//	    
-//		
-//	    TextMessage textMessage = new TextMessage(ff);
-//	    PushMessage pushMessage = new PushMessage(
-//	            qqw,
-//	            textMessage);
-//
-//	     BotApiResponse botApiResponse=null;
-//	    try {
-//	        botApiResponse = client.pushMessage(pushMessage).get();
-//	    } catch (InterruptedException | ExecutionException e) {
-//	        e.printStackTrace();
-//	      
-//	    }
-//
-//	    System.out.println(botApiResponse);
-//	return "success";
-//
-//	
-//	   
-//  }
+	@RequestMapping("/try")
+  public String hello33( String ff) {
+		
+		
+	    LineMessagingClient client = LineMessagingClient.builder("siyTXOs4UvFs4axEaIzKNPwfKupC0vWU3gC0ij7+vCHtX5gDgHe/5L8uIBaYHj0/wYE0iLP0ibgCv7m83ZBxhI9t06UVMDlNe7qx8xs/SSMnLnF6FnVPES2aEJBrWpMEJKDxKy+rhKOWYeTRiYP7/QdB04t89/1O/w1cDnyilFU=").build();
+
+	    
+		
+	    TextMessage textMessage = new TextMessage(ff);
+	    PushMessage pushMessage = new PushMessage(
+	            qqw,
+	            textMessage);
+
+	     BotApiResponse botApiResponse=null;
+	    try {
+	        botApiResponse = client.pushMessage(pushMessage).get();
+	    } catch (InterruptedException | ExecutionException e) {
+	        e.printStackTrace();
+	      
+	    }
+
+	    System.out.println(botApiResponse);
+	return ff;
+
+	
+	   
+  }
 
 	
 	
