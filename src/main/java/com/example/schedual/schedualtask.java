@@ -5,10 +5,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class schedualtask {
-	@Scheduled(fixedRate = 5000, initialDelay = 1000)
+	@Scheduled(fixedRate = 600000, initialDelay = 1000)
 	public void qqq()
 	{
-		
+		System.out.println("notdying");
 		
 	}
 	
