@@ -37,6 +37,7 @@ import com.example.demo.entity.replymessage;
 import com.example.demo.entity.status;
 import com.example.demo.repository.repository;
 import com.example.demo.repository.repositorystatus;
+import com.example.service.AePlayWave;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.linecorp.bot.client.LineMessagingClient;
@@ -385,6 +386,22 @@ public class controller {
 		 
   // 根據view resolver mapping至hello.jsp
   }
+	
+	AePlayWave apw=new AePlayWave("./jrph6-5a58w.wav"); 
+	@RequestMapping("/yulun1")
+  public String hello3() {
+		
+	
+		apw.start();
+		
+	
+		return("true");
+		 
+  // 根據view resolver mapping至hello.jsp
+  }
+	
+	
+	
 	@RequestMapping("/y")
 	@ResponseBody
 	  public List<account> ss2() {
@@ -449,7 +466,7 @@ public class controller {
 	    LineMessagingClient client = LineMessagingClient.builder("siyTXOs4UvFs4axEaIzKNPwfKupC0vWU3gC0ij7+vCHtX5gDgHe/5L8uIBaYHj0/wYE0iLP0ibgCv7m83ZBxhI9t06UVMDlNe7qx8xs/SSMnLnF6FnVPES2aEJBrWpMEJKDxKy+rhKOWYeTRiYP7/QdB04t89/1O/w1cDnyilFU=").build();
 
 	    
-		
+		//Uf9ab298ecf4fd9df1c8c048dabdcf924書岑
 	    TextMessage textMessage = new TextMessage(ff);
 	    PushMessage pushMessage = new PushMessage(
 	            "Uc6b7fd1fbe5b8b979c52055709698fbb",
