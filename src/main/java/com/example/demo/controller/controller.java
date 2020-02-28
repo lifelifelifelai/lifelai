@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import javax.net.ssl.HttpsURLConnection;
+import javax.servlet.http.HttpServletRequest;
 
 import org.jsoup.Jsoup;
 import org.jsoup.helper.Validate;
@@ -21,6 +22,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.util.SystemPropertyUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -46,11 +48,15 @@ import com.linecorp.bot.model.ReplyMessage;
 //import com.example.demo.repository.repository;
 import com.linecorp.bot.model.message.TextMessage;
 import com.linecorp.bot.model.response.BotApiResponse;
-
-@RestController
+import com.example.demo.service.appservice;
+//@RestController
+@Controller
 @RequestMapping("/g")
 public class controller {
 
+	
+	@Autowired
+	appservice appservice;
 	@Autowired
 	repository rep;
 	@Autowired
@@ -387,19 +393,54 @@ public class controller {
   // 根據view resolver mapping至hello.jsp
   }
 	
-	AePlayWave apw=new AePlayWave("./jrph6-5a58w.wav"); 
-	@RequestMapping("/yulun1")
-  public String hello3() {
+	
+	@RequestMapping("/index")
+	public String helloThymeleaf(Model model){
+		model.addAttribute("name11", "login");
+		return "index";
+	}
+	
+	
+	
+	@RequestMapping("/song")
+	//@ResponseBody
+	public String song(HttpServletRequest request,Model model) {
 		
-	
-		apw.start();
+		model.addAttribute("nowrate", "0/0");
+		model.addAttribute("errormsg", "nothing");
 		
+		return "inind";
+	}
 	
-		return("true");
-		 
-  // 根據view resolver mapping至hello.jsp
-  }
+	@RequestMapping("/valid")
+	//@ResponseBody
+	public String Valid(HttpServletRequest request,Model model) {
+		//Model model=null;
+	String accountt =request.getParameter("name");
 	
+String password=   request.getParameter("password");
+	
+	
+String result = appservice.login(accountt, password);
+
+if (result.equals("yes"))
+{
+	
+	model.addAttribute("name11", "try12");
+	return "start";
+	
+	
+}else 
+{
+	model.addAttribute("name11", result);
+}
+	return "index"; 
+	
+//	
+	
+	
+	
+	}
 	
 	
 	@RequestMapping("/y")
