@@ -1,13 +1,28 @@
 
-
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<h1 th:text="'Hello, ' + ${name11}"></h1>
+	<table align="center"> 
+	    <tr> 
+	        <td> 
+	        <br>
+	        
+<h1 th:text="'Hi, ' + ${name11}"></h1>
 <!--<embed src="./jrph6-5a58w.wav" width=325 height=300 autostart=false></embed>--> 
 <!--表單提交目標連結和方法post-->  
-<form action="/g/valid" method="post">
-<input type="text" name="name" value="Shulife"  placeholder="account">
-<input type="password" name="password" placeholder="密碼為3個數字">
-<input type="submit" value="login">
+<br>
+<form action="/g/valid" method="post"  >
+Account :<input type="text" name="name" value="Shulife"  placeholder="account" style="font-size:20px" >
+<br>
+<br>
+Password:<input type="password" name="password" placeholder="密碼為3個數字(500以下)" style="font-size:20px">
+<input type="submit" value="login" style="font-size:20px">
 </form>
+
+	        </td>
+
+	    </tr> 
+ 
+	</table> 
+	 
 </html>

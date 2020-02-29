@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -30,14 +31,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
-
+import com.example.demo.entity.playstatus;
 import com.example.demo.entity.Event;
 import com.example.demo.entity.account;
 import com.example.demo.entity.eventwraper;
 import com.example.demo.entity.messagee;
 import com.example.demo.entity.replymessage;
 import com.example.demo.entity.status;
+import com.example.demo.entity.playplannlist;
 import com.example.demo.repository.repository;
+import com.example.demo.repository.repositoryplay;
+import com.example.demo.repository.repositoryplaystatus;
 import com.example.demo.repository.repositorystatus;
 import com.example.service.AePlayWave;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -61,7 +65,12 @@ public class controller {
 	repository rep;
 	@Autowired
 	repositorystatus rep2;
-	
+	@Autowired
+	repositoryplay rep3;
+	@Autowired
+	repositoryplaystatus rep4;
+	@Autowired
+	playstatus playstatus;
 	
 //	@RequestMapping("/greeting")
 //  public String hello(@RequestBody String h) {
@@ -91,7 +100,7 @@ public class controller {
 
  
   // String [] uu= {"寶貝我最愛妳了","綸綸是我的公主","綸綸是我的女神",events.getEvents().get(0).getMessage().getText(),"沒有不學妳，笨笨"};
-   String [] uu1= {"真的嗎??","想妳","無此資料","不學你惹~",events.getEvents().get(0).getMessage().getText()
+   String [] uu1= {"真的嗎??","想妳","無此資料","https://salty-forest-88943.herokuapp.com/g/index",events.getEvents().get(0).getMessage().getText()
 		   ,events.getEvents().get(0).getMessage().getText(),events.getEvents().get(0).getMessage().getText(),"好的"
 		   ,"可以打'開始'進入問答模式","怎麼會這樣","可以打'開始'進入問答模式"
    
@@ -99,238 +108,238 @@ public class controller {
   
     
     
-//    if((ggf.indexOf("喜歡妳")!=-1)||(ggf.indexOf("愛妳")!=-1)||(ggf.indexOf("想妳")!=-1)
-//    		||(ggf.indexOf("喜歡你")!=-1)||(ggf.indexOf("愛你")!=-1)||(ggf.indexOf("想你")!=-1)||(ggf.indexOf("抱抱")!=-1)) {
-//    	
-//    	replymsg="聰明的妳已開啟隱藏劇情總共有四個數字題，首先第一個問題0~9選一個數字";
-//    	rep2.sett("4");
-//    }
-//   else if (statusnow.equals("0"))
-//{
-//	//沒事狀太
-//	   if((ggf.indexOf("開始")!=-1))
-//	   {
-//		   int ii=(int)( Math.random()*100);
-//		   if(ii>33 &&ii<67) {
-//			  replymsg="開始問答闖關瞜!!第一題，妳知道一年中總共有幾個情人節可以慶祝呢?(若要退出請打離開)";
-//		   }else if (ii<=33) {
-//		   replymsg="開始問答闖關瞜!!第一題，全世界中過最多情人節的是哪個國家?(若要退出請打離開)";
-//		   }else {
-//			   replymsg="開始問答闖關瞜!!第一題，情人節其實是在公元496年開始訂立的，那情人節的前身是甚麼節日呢?(若要退出請打離開)";
-//		   }
-//		   rep2.sett("1");
-//	   }else if ((ggf.indexOf("天氣")!=-1)&&(ggf.indexOf("台北")!=-1))
-//	   {
-//		   replymsg="今日內湖天氣不佳";
-//	   }else if((ggf.indexOf("天氣")!=-1))
-//	   {
-//		   replymsg="今日新竹晚點可能會下雨請多加留意";
-//	   }else if ((ggf.indexOf("是誰")!=-1)||(ggf.indexOf("是什")!=-1))
-//	   {
-//		   replymsg="我是life_devil_bot出生於20200214，其實原本應該是要放有惡魔角的照片地說，可是我的創造者覺得太羞恥就作罷了";
-//	   }else if ((ggf.indexOf("拼圖")!=-1)||(ggf.indexOf("目標")!=-1))
-//	   {
-//		   replymsg="找到拼圖是這個bot的目標~";
-//	   }else if ((ggf.indexOf("隱藏")!=-1))
-//	   {
-//		   replymsg="隱藏模式需要不一樣的感受";
-//	   }else if ((ggf.indexOf("不理")!=-1))
-//	   {
-//		   replymsg="可以不理我，不要不理life吶";
-//	   }else if ((ggf.indexOf("可愛")!=-1)||(ggf.indexOf("笨")!=-1)||(ggf.indexOf("87")!=-1))
-//	   {
-//		   replymsg="書岑聰明又可愛";
-//	   }else if ((ggf.indexOf("雲林")!=-1))
-//	   {
-//		   replymsg="雲林是個中部的好地方";
-//	   }else if ((ggf.indexOf("住哪")!=-1)||(ggf.indexOf("住在")!=-1))
-//	   {
-//		   replymsg="我住在內湖國小對面(但嚴格來說我是被部屬在雲端)";
-//	   }else if ((ggf.indexOf("無聊")!=-1))
-//	   {
-//		   replymsg="要來解謎或是看個動畫嘛";
-//	   }else if ((ggf.indexOf("怎麼半")!=-1)||(ggf.indexOf("怎麼辦")!=-1))
-//	   {
-//		   replymsg="下雨天了怎麼辦 我好想你";
-//	   }else if ((ggf.indexOf("時間")!=-1))
-//	   {
-//		   replymsg="現在的時間是"+nowtime;
-//	   }else if ((ggf.indexOf("書岑")!=-1))
-//	   {
-//		   replymsg="書岑美若天仙、沉魚落雁~";
-//	   }else if ((ggf.indexOf("睡覺")!=-1))
-//	   {
-//		   replymsg="書岑多休息吶~";
-//	   }else if ((ggf.indexOf("聊天")!=-1))
-//	   {
-//		   replymsg="抱歉，我不善於聊天";
-//	   }else if ((ggf.indexOf("好煩")!=-1))
-//	   {
-//		   replymsg="拍拍~吃吃零食就不煩了吶";
-//	   }else if ((ggf.indexOf("生氣")!=-1))
-//	   {
-//		   replymsg="不要生氣嘛~給妳一個勾勾ˇ";
-//	   }else if ((ggf.indexOf("吃飯")!=-1))
-//	   {
-//		   replymsg="我只需要充電";
-//	   }else if ((ggf.indexOf("運動")!=-1))
-//	   {
-//		   replymsg="快來教我瑜珈";
-//	   }else if ((ggf.indexOf("學我")!=-1))
-//	   {
-//		   replymsg="抱歉吶~太調皮了";
-//	   }else if ((ggf.indexOf("妳好")!=-1)||(ggf.indexOf("你好")!=-1))
-//	   {
-//		   replymsg="妳過得呢";
-//	   }else if ((ggf.indexOf("好慢")!=-1))
-//	   {
-//		   replymsg="因為伺服器是免費的每過15分鐘都要一點時間等待重啟";
-//	   }else {
-//		   
-//		   
-//		   int ii=(int)( Math.random()*11);
-//		   replymsg=uu1[ii];
-//	   }
-//	   
-//	   
-//	   
-//	   
-//	   
-//	   
-//	
-//}else if(statusnow.equals("1"))
-//{
-//	
-//	if((ggf.indexOf("離開")!=-1))
-//	   {
-//		replymsg="已經離開問答狀態";	
-//		 rep2.sett("0");
-//	   }else if ((ggf.indexOf("13")!=-1)||(ggf.indexOf("韓國")!=-1)||(ggf.indexOf("牧神節")!=-1))
-//	   {
-//		   
-//		   int ii=(int)( Math.random()*100);
-//		   if(ii>50) {
-//		   replymsg="nice 書岑，下一題~歌詞'你說我太過驕傲，不說也能感受彼此心跳' 是出自於彭于晏演的哪部電影的歌曲";
-//		   rep2.sett("2");
-//		   }else {
-//		   replymsg="好聰明吶，下一題~歌詞'我們要互相虧欠，我們要藕斷絲連' 是出自於彭于晏演的哪部電影的歌曲";
-//		   rep2.sett("2");
-//		   }
-//	   }else {
-//		   int ii=(int)( Math.random()*100);
-//		   if(ii>33 &&ii<67) {
-//		   replymsg="可能要再想想喔~(若要結束問答請打離開)";
-//		     }else if (ii<=33) {
-//		    	 replymsg="再試試看~(若要結束問答請打離開)";
-//		     }else {
-//		    	 replymsg="QQ try again~(若要結束問答請打離開)";
-//		     }
-//	   }
-//	//question1
-//}else if (statusnow.equals("2")){
-//	if((ggf.indexOf("離開")!=-1))
-//	   {
-//		replymsg="已經離開問答狀態";	
-//		 rep2.sett("0");
-//	   }else if ((ggf.indexOf("匆匆那年")!=-1)||(ggf.indexOf("聽說")!=-1)||(ggf.indexOf("讀心術")!=-1))
-//	   {
-//		   
-//		   int ii=(int)( Math.random()*100);
-//		   if(ii>=33&&ii<67) {
-//		   replymsg="答對了~最後一題，請分享妳覺得life的三個缺點(要一次打完送出不要分開打)";
-//		   rep2.sett("3");
-//		   }else if (ii<33){
-//		   replymsg="答對了~最後一題，請分享妳覺得喜歡的三個人格特質(要一次打完送出不要分開打)";
-//		   rep2.sett("3");
-//		   }else
-//		   {
-//			   replymsg="答對了~最後一題，請分享妳覺得最不能接受的三件事(要一次打完送出不要分開打)";
-//			   rep2.sett("3");
-//		   }
-//	   }else {
-//		   int ii=(int)( Math.random()*100);
-//		   if(ii>33 &&ii<67) {
-//			   replymsg="可能要再想想喔~(若要結束問答請打離開)";
-//			     }else if (ii<=33) {
-//			    	 replymsg="再試試看~(若要結束問答請打離開)";
-//			     }else {
-//			    	 replymsg="QQ try again~(若要結束問答請打離開)";
-//			     }
-//	   }
-//}else if (statusnow.equals("3")){
-//	//question3 給卡片
-//	if((ggf.indexOf("離開")!=-1))
-//	   {
-//		replymsg="已經離開問答狀態";	
-//		 rep2.sett("0");
-//	   }else if (ggf.length()>6)
-//	   {
-//		   
-//		
-//			   replymsg="恭喜完成尬到不行問答(問答每次應該都會有點不一樣)~        書岑，祝妳情人節快樂，雖然這個bot一點都不ai，而且好像還蠻蠢的"
-//			   		+ "  ，不過如果妳有從中得到那麼一丁點的樂趣  (對我而言就算值得了吧@@ 這樣我是不是沒顧慮到妳的感受XD)。    其實這個有隱藏版的吶，目的是為了拿到第二塊拼圖"+
-//			   "，只是可能要腦洞大開才有辦法找到XDDD。 (或是隨便問些問題搞不好會有線索)";
-//			   rep2.sett("0");
-//		   
-//	   }else {
-//		   int ii=(int)( Math.random()*100);
-//		   if(ii>33 &&ii<67) {
-//			   replymsg="字數不足喔~(結束問答請打離開)";
-//			     }else if (ii<=33) {
-//			    	 replymsg= "字數不足喔再試試看~(結束問答請打離開)";
-//			     }else {
-//			    	 replymsg="字數不足喔try again~(結束問答請打離開)";
-//			     }
-//	   }
-//}else if (statusnow.equals("4")){
-//	if ((ggf.indexOf("4")!=-1))
-//	{
-//		replymsg="答案是4~因為是妳的幸運數字。 下一題00~99選一個數字(我們都有的)";
-//		 rep2.sett("5");
-//	}else {
-//		replymsg="很可惜答錯了，已離開隱藏模式";
-//		 rep2.sett("0");
-//	}
-//	
-//	//回答4
-//}else if (statusnow.equals("5")){
-//	//回答32
-//	if ((ggf.indexOf("32")!=-1))
-//	{
-//		replymsg="好聰明吶 ，答案是32~因為我們名字的筆畫都是32。 下一題000~999選一組數字";
-//		 rep2.sett("6");
-//	}else {
-//		replymsg="很可惜答錯了，已離開隱藏模式";
-//		 rep2.sett("0");
-//	}
-//}else if (statusnow.equals("6")){
-//	//回答520
-//	if ((ggf.indexOf("520")!=-1))
-//	{
-//		replymsg="答對了，答案是520~因為是情人節嘛////。  最後一題0000~9999選一組數字";
-//		 rep2.sett("7");
-//	}else {
-//		replymsg="很可惜答錯了，已離開隱藏模式";
-//		 rep2.sett("0");
-//	}
-//}else if (statusnow.equals("7")){
-//	//回答0210
-//	if ((ggf.indexOf("0210")!=-1))
-//	{
-//		replymsg="答對了，恭喜完成隱藏關卡!!!(有沒有覺得cp值很低)   其實我也不確定當妳看到這些的時候是幾月的事了，也許是"
-//				+ "2月底、也許是3月或是根本沒有機會也說不定XD  不知道妳是否還記得在2月的時候妳說我有修過聊天學，好像蠻會找話題的。"
-//				+ "@@現在看到有沒有覺得根本不是這麼回是齁，會想找話題其實只是因為不希望妳就這樣消失而已XDD，我不希望未來的我會回想當初因為"
-//				+ "少做點了甚麼而感到後悔~，我的生活圈很小大概就像把自己框在一個圈圈裏面，一大段時間大概只會跟一個人聊天，"
-//				+ "所以當然也沒有其他人會這樣跟我說瞜。 關卡的拼圖在這~ Second puzzle is LOVE.";
-//		 rep2.sett("0");
-//	}else {
-//		replymsg="很可惜答錯了，已離開隱藏模式";
-//		 rep2.sett("0");
-//	}
-//	
-//}
-//
-//   
+    if((ggf.indexOf("喜歡妳")!=-1)||(ggf.indexOf("愛妳")!=-1)||(ggf.indexOf("想妳")!=-1)
+    		||(ggf.indexOf("喜歡你")!=-1)||(ggf.indexOf("愛你")!=-1)||(ggf.indexOf("想你")!=-1)||(ggf.indexOf("抱抱")!=-1)) {
+    	
+    	replymsg="聰明的妳已開啟隱藏劇情總共有四個數字題，首先第一個問題0~9選一個數字";
+    	rep2.sett("4");
+    }
+   else if (statusnow.equals("0"))
+{
+	//沒事狀太
+	   if((ggf.indexOf("開始闖關")!=-1))
+	   {
+		   int ii=(int)( Math.random()*100);
+		   if(ii>33 &&ii<67) {
+			  replymsg="開始問答闖關瞜!!第一題，妳知道一年中總共有幾個情人節可以慶祝呢?(若要退出請打離開)";
+		   }else if (ii<=33) {
+		   replymsg="開始問答闖關瞜!!第一題，全世界中過最多情人節的是哪個國家?(若要退出請打離開)";
+		   }else {
+			   replymsg="開始問答闖關瞜!!第一題，情人節其實是在公元496年開始訂立的，那情人節的前身是甚麼節日呢?(若要退出請打離開)";
+		   }
+		   rep2.sett("1");
+	   }else if ((ggf.indexOf("天氣")!=-1)&&(ggf.indexOf("明天")!=-1))
+	   {
+		   replymsg="今日內湖天氣不佳";
+	   }else if((ggf.indexOf("天氣")!=-1))
+	   {
+		   replymsg="今日新竹晚點可能會下雨請多加留意";
+	   }else if ((ggf.indexOf("是誰")!=-1)||(ggf.indexOf("是什")!=-1))
+	   {
+		   replymsg="我是life_devil_bot出生於20200214，其實原本應該是要放有惡魔角的照片地說，可是我的創造者覺得太羞恥就作罷了";
+	   }else if ((ggf.indexOf("遊戲")!=-1)||(ggf.indexOf("目標")!=-1))
+	   {
+		   replymsg="找到拼圖是這個bot的目標~";
+	   }else if ((ggf.indexOf("隱藏")!=-1))
+	   {
+		   replymsg="隱藏模式需要不一樣的感受";
+	   }else if ((ggf.indexOf("不理")!=-1))
+	   {
+		   replymsg="可以不理我，不要不理life吶";
+	   }else if ((ggf.indexOf("可愛")!=-1)||(ggf.indexOf("笨")!=-1)||(ggf.indexOf("87")!=-1))
+	   {
+		   replymsg="書岑聰明又可愛";
+	   }else if ((ggf.indexOf("雲林")!=-1))
+	   {
+		   replymsg="雲林是個中部的好地方";
+	   }else if ((ggf.indexOf("住哪")!=-1)||(ggf.indexOf("住在")!=-1))
+	   {
+		   replymsg="我住在內湖國小對面(但嚴格來說我是被部屬在雲端)，現在被關進木柵了";
+	   }else if ((ggf.indexOf("無聊")!=-1))
+	   {
+		   replymsg="要來解謎或是看個動畫嘛";
+	   }else if ((ggf.indexOf("怎麼半")!=-1)||(ggf.indexOf("怎麼辦")!=-1))
+	   {
+		   replymsg="下雨天了怎麼辦 我好想你";
+	   }else if ((ggf.indexOf("時間")!=-1))
+	   {
+		   replymsg="現在的時間是"+nowtime;
+	   }else if ((ggf.indexOf("書岑")!=-1))
+	   {
+		   replymsg="書岑美若天仙、沉魚落雁~";
+	   }else if ((ggf.indexOf("睡覺")!=-1))
+	   {
+		   replymsg="書岑多休息吶~";
+	   }else if ((ggf.indexOf("聊天")!=-1))
+	   {
+		   replymsg="抱歉，我不善於聊天";
+	   }else if ((ggf.indexOf("好煩")!=-1))
+	   {
+		   replymsg="拍拍~吃吃零食就不煩了吶";
+	   }else if ((ggf.indexOf("生氣")!=-1))
+	   {
+		   replymsg="不要生氣嘛~給妳一個勾勾ˇ";
+	   }else if ((ggf.indexOf("吃飯")!=-1))
+	   {
+		   replymsg="我只需要充電";
+	   }else if ((ggf.indexOf("運動")!=-1))
+	   {
+		   replymsg="快來教我瑜珈";
+	   }else if ((ggf.indexOf("學我")!=-1))
+	   {
+		   replymsg="抱歉吶~太調皮了";
+	   }else if ((ggf.indexOf("妳好")!=-1)||(ggf.indexOf("你好")!=-1))
+	   {
+		   replymsg="妳過得好嗎";
+	   }else if ((ggf.indexOf("好慢")!=-1))
+	   {
+		   replymsg="因為伺服器是免費的每過15分鐘都要一點時間等待重啟";
+	   }else {
+		   
+		   
+		   int ii=(int)( Math.random()*11);
+		   replymsg=uu1[ii];
+	   }
+	   
+	   
+	   
+	   
+	   
+	   
+	
+}else if(statusnow.equals("1"))
+{
+	
+	if((ggf.indexOf("離開")!=-1))
+	   {
+		replymsg="已經離開問答狀態";	
+		 rep2.sett("0");
+	   }else if ((ggf.indexOf("13")!=-1)||(ggf.indexOf("韓國")!=-1)||(ggf.indexOf("牧神節")!=-1))
+	   {
+		   
+		   int ii=(int)( Math.random()*100);
+		   if(ii>50) {
+		   replymsg="nice 書岑，下一題~歌詞'你說我太過驕傲，不說也能感受彼此心跳' 是出自於彭于晏演的哪部電影的歌曲";
+		   rep2.sett("2");
+		   }else {
+		   replymsg="好聰明吶，下一題~歌詞'我們要互相虧欠，我們要藕斷絲連' 是出自於彭于晏演的哪部電影的歌曲";
+		   rep2.sett("2");
+		   }
+	   }else {
+		   int ii=(int)( Math.random()*100);
+		   if(ii>33 &&ii<67) {
+		   replymsg="可能要再想想喔~(若要結束問答請打離開)";
+		     }else if (ii<=33) {
+		    	 replymsg="再試試看~(若要結束問答請打離開)";
+		     }else {
+		    	 replymsg="QQ try again~(若要結束問答請打離開)";
+		     }
+	   }
+	//question1
+}else if (statusnow.equals("2")){
+	if((ggf.indexOf("離開")!=-1))
+	   {
+		replymsg="已經離開問答狀態";	
+		 rep2.sett("0");
+	   }else if ((ggf.indexOf("匆匆那年")!=-1)||(ggf.indexOf("聽說")!=-1)||(ggf.indexOf("讀心術")!=-1))
+	   {
+		   
+		   int ii=(int)( Math.random()*100);
+		   if(ii>=33&&ii<67) {
+		   replymsg="答對了~最後一題，請分享妳覺得life的三個缺點(要一次打完送出不要分開打)";
+		   rep2.sett("3");
+		   }else if (ii<33){
+		   replymsg="答對了~最後一題，請分享妳覺得喜歡的三個人格特質(要一次打完送出不要分開打)";
+		   rep2.sett("3");
+		   }else
+		   {
+			   replymsg="答對了~最後一題，請分享妳覺得最不能接受的三件事(要一次打完送出不要分開打)";
+			   rep2.sett("3");
+		   }
+	   }else {
+		   int ii=(int)( Math.random()*100);
+		   if(ii>33 &&ii<67) {
+			   replymsg="可能要再想想喔~(若要結束問答請打離開)";
+			     }else if (ii<=33) {
+			    	 replymsg="再試試看~(若要結束問答請打離開)";
+			     }else {
+			    	 replymsg="QQ try again~(若要結束問答請打離開)";
+			     }
+	   }
+}else if (statusnow.equals("3")){
+	//question3 給卡片
+	if((ggf.indexOf("離開")!=-1))
+	   {
+		replymsg="已經離開問答狀態";	
+		 rep2.sett("0");
+	   }else if (ggf.length()>6)
+	   {
+		   
+		
+			   replymsg="恭喜完成尬到不行問答(問答每次應該都會有點不一樣)~        書岑，祝妳情人節快樂，雖然這個bot一點都不ai，而且好像還蠻蠢的"
+			   		+ "  ，不過如果妳有從中得到那麼一丁點的樂趣  (對我而言就算值得了吧@@ 這樣我是不是沒顧慮到妳的感受XD)。    其實這個有隱藏版的吶，目的是為了拿到第二塊拼圖"+
+			   "，只是可能要腦洞大開才有辦法找到XDDD。 (或是隨便問些問題搞不好會有線索)";
+			   rep2.sett("0");
+		   
+	   }else {
+		   int ii=(int)( Math.random()*100);
+		   if(ii>33 &&ii<67) {
+			   replymsg="字數不足喔~(結束問答請打離開)";
+			     }else if (ii<=33) {
+			    	 replymsg= "字數不足喔再試試看~(結束問答請打離開)";
+			     }else {
+			    	 replymsg="字數不足喔try again~(結束問答請打離開)";
+			     }
+	   }
+}else if (statusnow.equals("4")){
+	if ((ggf.indexOf("4")!=-1))
+	{
+		replymsg="答案是4~因為是妳的幸運數字。 下一題00~99選一個數字(我們都有的)";
+		 rep2.sett("5");
+	}else {
+		replymsg="很可惜答錯了，已離開隱藏模式";
+		 rep2.sett("0");
+	}
+	
+	//回答4
+}else if (statusnow.equals("5")){
+	//回答32
+	if ((ggf.indexOf("32")!=-1))
+	{
+		replymsg="好聰明吶 ，答案是32~因為我們名字的筆畫都是32。 下一題000~999選一組數字";
+		 rep2.sett("6");
+	}else {
+		replymsg="很可惜答錯了，已離開隱藏模式";
+		 rep2.sett("0");
+	}
+}else if (statusnow.equals("6")){
+	//回答520
+	if ((ggf.indexOf("520")!=-1))
+	{
+		replymsg="答對了，答案是520~因為是情人節嘛////。  最後一題0000~9999選一組數字";
+		 rep2.sett("7");
+	}else {
+		replymsg="很可惜答錯了，已離開隱藏模式";
+		 rep2.sett("0");
+	}
+}else if (statusnow.equals("7")){
+	//回答0210
+	if ((ggf.indexOf("0210")!=-1))
+	{
+		replymsg="答對了，恭喜完成隱藏關卡!!!(有沒有覺得cp值很低)   其實我也不確定當妳看到這些的時候是幾月的事了，也許是"
+				+ "2月底、也許是3月或是根本沒有機會也說不定XD  不知道妳是否還記得在2月的時候妳說我有修過聊天學，好像蠻會找話題的。"
+				+ "@@現在看到有沒有覺得根本不是這麼回是齁，會想找話題其實只是因為不希望妳就這樣消失而已XDD，我不希望未來的我會回想當初因為"
+				+ "少做點了甚麼而感到後悔~，我的生活圈很小大概就像把自己框在一個圈圈裏面，一大段時間大概只會跟一個人聊天，"
+				+ "所以當然也沒有其他人會這樣跟我說瞜。 關卡的拼圖在這~ Second puzzle is LOVE.";
+		 rep2.sett("0");
+	}else {
+		replymsg="很可惜答錯了，已離開隱藏模式";
+		 rep2.sett("0");
+	}
+	
+}
+
+   
    
    
    
@@ -342,18 +351,7 @@ public class controller {
     TextMessage textMessage=null;
     
     
-    if (statusnow.equals("0"))
-    {
-    	replymsg="test";
-    	   rep2.sett("1");
-    	   if (ggf.indexOf("點點")!=-1)
-    	   {
-    		   replymsg="test::果然是用'點'代替'.'吶";
-    	   }
-    	   
-    }else {
-    	replymsg="thx已完成test";
-    }
+
     
     
     textMessage = new TextMessage(replymsg);
@@ -372,7 +370,7 @@ public class controller {
 
 	//System.out.println(botApiResponse);
    
-	rep.sett("123",events.getEvents().get(0).getSource().getUserId());
+//	rep.sett("123",events.getEvents().get(0).getSource().getUserId());
 	  rep.sett(ggf,textMessage.getText());
   
    
@@ -393,7 +391,130 @@ public class controller {
   // 根據view resolver mapping至hello.jsp
   }
 	
+	@RequestMapping("/testinng")
+	//@ResponseBody
+	public String testing2(Model model) {
+		
+		SimpleDateFormat sfd =new SimpleDateFormat("yyyy-MM-dd");
+		String aa = sfd.format(new Date());
+		System.out.println(aa);
+		model.addAttribute("name11", aa);
+		model.addAttribute("name113", " ");
+		
+		return "date1";
+	}
 	
+	
+	@RequestMapping("/random")
+	//@ResponseBody
+	public String testin323(Model model) {
+		
+		SimpleDateFormat sfd =new SimpleDateFormat("yyyy-MM-dd");
+		String aa = sfd.format(new Date());
+	
+		System.out.println(aa);
+		model.addAttribute("name11", aa);
+		model.addAttribute("name113", " ");
+
+	
+		return "date1";
+	}
+	
+	
+	@RequestMapping("/restart")
+	//回到start orstart2
+	public String testing2323(Model model) {
+		
+		rep4.updates1("0");
+		rep4.updates2("");
+		if (rep4.getstatus().getStatus3().equals("0"))
+		{
+			
+			return "start1";
+		}
+		else {
+		return "start";
+		}
+	}
+	
+	
+	
+	
+	
+	//指到起始date葉面
+	@RequestMapping("/date")
+	//@ResponseBody
+	public String testing(Model model) {
+		
+		SimpleDateFormat sfd =new SimpleDateFormat("yyyy-MM-dd");
+		String aa = sfd.format(new Date());
+		System.out.println(aa);
+		model.addAttribute("name11", aa);
+		model.addAttribute("name113", " ");
+
+		return "date1";
+	}
+	
+	//案新增的功能
+	@RequestMapping("/date2")
+	//@ResponseBody
+	public String testing2(HttpServletRequest request,Model model) throws ParseException {
+		
+		String  a,b,c,d,e; 
+		SimpleDateFormat sfd2 =new SimpleDateFormat("yyyymmddhhmmss");
+		String aa2 = sfd2.format(new Date());
+		Date startDate=new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("date"));
+		b=request.getParameter("YourLocation");
+		c=request.getParameter("dosomething");
+		d=request.getParameter("txarea");
+		SimpleDateFormat sfd =new SimpleDateFormat("yyyy-MM-dd");
+		System.out.println(a=sfd.format(startDate));
+		System.out.println(b);	System.out.println(c);	System.out.println(d);
+		
+		rep3.sett(aa2, a, b, c, d);
+		
+		
+		model.addAttribute("name11", a);
+		model.addAttribute("name113", "已新增成功");
+
+		
+		return "date1";
+	}
+	
+	
+	//總表的功能
+	@RequestMapping("/date3")
+	//@ResponseBody
+	public String testing3(HttpServletRequest request,Model model) throws ParseException {
+		
+		String[]kk= {"text1","text2","text3","text4","text5","text6","text7","text8","text9"};
+		List<playplannlist> playplanlist=new ArrayList<playplannlist>();
+		playplanlist=rep3.ww();
+	
+		
+		for(int i=0;i<playplanlist.size();i++)
+		{
+			model.addAttribute(kk[i],"日期: "+playplanlist.get(i).getDate()+"\n\n"+
+		"要出發去:  "+playplanlist.get(i).getGo2()+"\n\n"+
+					"intent:"+playplanlist.get(i).getHow()+"\n\n"+
+		"MEMO :"+playplanlist.get(i).getMemo());
+			
+			
+			
+		}	
+			
+		return "datelist";
+	}
+	
+	
+	//沒法刪除按鈕
+	@RequestMapping("/nocansle")
+	public String testing222(HttpServletRequest request,Model model) throws ParseException {
+		
+		 rep.sett("nocansle","qq");
+			
+		return "datex";
+	}
 	@RequestMapping("/index")
 	public String helloThymeleaf(Model model){
 		model.addAttribute("name11", "login");
@@ -406,10 +527,15 @@ public class controller {
 	//@ResponseBody
 	public String song(HttpServletRequest request,Model model) {
 		
-		model.addAttribute("nowrate", "0/0");
-		model.addAttribute("errormsg", "nothing");
+	
+		rep4.updates1("0");
+		rep4.updates2("");
+//	playstatus=rep4.getstatus();
+		model.addAttribute("nowrate", "0/5");
+		model.addAttribute("errormsg", "question1");
 		
-		return "inind";
+		
+		return "inind"+(int)(Math.random()*9);
 	}
 	
 	@RequestMapping("/valid")
@@ -419,15 +545,20 @@ public class controller {
 	String accountt =request.getParameter("name");
 	
 String password=   request.getParameter("password");
-	
+
+rep.sett(accountt,password);
 	
 String result = appservice.login(accountt, password);
 
 if (result.equals("yes"))
 {
-	
-	model.addAttribute("name11", "try12");
-	return "start";
+	playstatus=rep4.getstatus();
+	if (playstatus.getStatus3().equals("0"))
+	{ 
+		return "start1";}
+	else {
+		
+	return "start";}
 	
 	
 }else 
@@ -457,6 +588,8 @@ if (result.equals("yes"))
 	  }
 	
 	  
+	  
+	 //////////////////////////////////////////////////////////////////////////////
 	  
 		@RequestMapping("/y2")
 		@ResponseBody
