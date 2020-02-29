@@ -38,7 +38,7 @@ public interface repositoryplaystatus extends JpaRepository<playstatus, String> 
      void updatesall(@Param("status1") String status1,@Param("status2") String status2,@Param("status3") String status3);
 	
 	
-	 @Query(value="select * from playstatus with(nolock) ",nativeQuery = true)
+	 @Query(value="select * from playstatus",nativeQuery = true)
 	 playstatus getstatus();
  	
 	 
