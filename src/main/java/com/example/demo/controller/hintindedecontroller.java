@@ -476,7 +476,7 @@ public class hintindedecontroller {
 		playstatus =rep4.getstatus();
 	String songname=request.getParameter("歌曲名");
 	rep.sett("gcheck4",songname);
-		if (songname.indexOf("的约定")!=-1)
+		if (songname.indexOf("的約定")!=-1||songname.indexOf("蒲公英")!=-1)
 		{
 			if(playstatus.getStatus2().length()>=4)
 			{
