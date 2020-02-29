@@ -723,7 +723,7 @@ public class hintindedecontroller {
 				String ww="";
 				for (int ii=1;ii<2;ii++)
 				{			
-				 ww=(int)(Math.random()*10)+"";
+				 ww=(int)(Math.random()*9)+"";
 				if(qq.indexOf(ww)!=-1)
 				{
 					ii=ii-1;
