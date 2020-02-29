@@ -717,7 +717,7 @@ public class hintindedecontroller {
 			}else
 			{
 				rep4.updates1("0");
-				String qq =playstatus.getStatus2()+"9";
+				String qq =playstatus.getStatus2()+"8";
 				rep4.updates2(qq);
 				String qqa="inind";
 				String ww="";
