@@ -101,7 +101,7 @@ public class controller {
  
   // String [] uu= {"寶貝我最愛妳了","綸綸是我的公主","綸綸是我的女神",events.getEvents().get(0).getMessage().getText(),"沒有不學妳，笨笨"};
    String [] uu1= {"真的嗎??","想妳~","無此資料","抱歉吶我還太笨惹，不知道怎麼回答",events.getEvents().get(0).getMessage().getText()
-		   ,events.getEvents().get(0).getMessage().getText(),"我還太笨惹，不會回答","好的"
+		   ,events.getEvents().get(0).getMessage().getText(),"書岑美麗又善良","好的"
 		   ,"開始挑戰https://salty-forest-88943.herokuapp.com/g/index","怎麼會這樣","出去玩嗎https://salty-forest-88943.herokuapp.com/g/date"
    
    };
@@ -128,6 +128,18 @@ public class controller {
 			   replymsg="開始問答闖關瞜!!第一題，情人節其實是在公元496年開始訂立的，那情人節的前身是甚麼節日呢?(若要退出請打離開)";
 		   }
 		   rep2.sett("1");
+	   }else if ((ggf.indexOf("誇張")!=-1)||(ggf.indexOf("哪有")!=-1)||(ggf.indexOf("真的")!=-1)||(ggf.indexOf("最好是")!=-1))
+	   {
+		   replymsg="真的吶";
+	   }else if ((ggf.indexOf("出去玩")!=-1))
+	   {
+		   replymsg="https://salty-forest-88943.herokuapp.com/g/date";
+	   }else if ((ggf.indexOf("取消")!=-1))
+	   {
+		   replymsg="不能取消https://salty-forest-88943.herokuapp.com/g/date";
+	   }else if ((ggf.indexOf("謝謝")!=-1))
+	   {
+		   replymsg="不客氣^^";
 	   }else if ((ggf.indexOf("開始")!=-1))
 	   {
 		   replymsg="有點聰明吶https://salty-forest-88943.herokuapp.com/g/index";
@@ -143,7 +155,7 @@ public class controller {
 	   }else if((ggf.indexOf("天氣")!=-1))
 	   {
 		   replymsg="之後再新增這功能喔";
-	   }else if ((ggf.indexOf("是誰")!=-1)||(ggf.indexOf("是什")!=-1))
+	   }else if ((ggf.indexOf("是誰")!=-1)||(ggf.indexOf("是什")!=-1)||(ggf.indexOf("這啥")!=-1)||(ggf.indexOf("這什麼")!=-1))
 	   {
 		   replymsg="我是life_devil_bot出生於20200214，這次229不知道弄了什麼奇怪的東東";
 	   }else if ((ggf.indexOf("遊戲")!=-1)||(ggf.indexOf("目標")!=-1))
@@ -178,7 +190,7 @@ public class controller {
 		   replymsg="看動畫:https://ani.gamer.com.tw/animeVideo.php?sn=7612 看想見你https://pipitv.cc/detail/v9pnD.html";
 	   }else if ((ggf.indexOf("怎麼半")!=-1)||(ggf.indexOf("怎麼辦")!=-1))
 	   {
-		   replymsg="下雨天了怎麼辦 我好想你";
+		   replymsg="下雨天了怎麼辦 我好想妳";
 	   }else if ((ggf.indexOf("時間")!=-1)||(ggf.indexOf("今天")!=-1))
 	   {
 		   replymsg="現在的時間是"+nowtime;

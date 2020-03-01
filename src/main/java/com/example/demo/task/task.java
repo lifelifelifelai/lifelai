@@ -22,6 +22,8 @@ public class task {
 	
 	@Autowired	
 	repositoryplay rep4;
+	@Autowired	
+	repository rep;
 @Scheduled(initialDelay = 1000, fixedDelay = 600000)
 void ppp() throws IOException
 {
@@ -51,7 +53,7 @@ void ppp() throws IOException
 		    }
 
 		  //  System.out.println(botApiResponse);
-	
+	rep.sett("date", texx);
 	}
 	
 	rep4.upto0();
