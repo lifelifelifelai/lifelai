@@ -102,14 +102,14 @@ public class controller {
   // String [] uu= {"寶貝我最愛妳了","綸綸是我的公主","綸綸是我的女神",events.getEvents().get(0).getMessage().getText(),"沒有不學妳，笨笨"};
    String [] uu1= {"真的嗎??","想妳~","無此資料","抱歉吶我還太笨惹，不知道怎麼回答",events.getEvents().get(0).getMessage().getText()
 		   ,events.getEvents().get(0).getMessage().getText(),"我還太笨惹，不會回答","好的"
-		   ,"開始挑戰https://salty-forest-88943.herokuapp.com/g/index","怎麼會這樣","出去玩?https://salty-forest-88943.herokuapp.com/g/index"
+		   ,"開始挑戰https://salty-forest-88943.herokuapp.com/g/index","怎麼會這樣","出去玩嗎https://salty-forest-88943.herokuapp.com/g/date"
    
    };
   
     
     
-    if((ggf.indexOf("喜歡妳")!=-1)||(ggf.indexOf("愛妳")!=-1)||(ggf.indexOf("想妳")!=-1)
-    		||(ggf.indexOf("喜歡你")!=-1)||(ggf.indexOf("愛你")!=-1)||(ggf.indexOf("想你")!=-1)||(ggf.indexOf("抱抱")!=-1)) {
+    if((ggf.indexOf("喜歡妳")!=-1)||(ggf.indexOf("愛妳")!=-1)
+    		||(ggf.indexOf("喜歡你")!=-1)||(ggf.indexOf("愛你")!=-1)||(ggf.indexOf("抱抱")!=-1)) {
     	
     	replymsg="聰明的妳已開啟隱藏劇情總共有四個數字題，首先第一個問題0~9選一個數字";
     	rep2.sett("4");
@@ -131,6 +131,9 @@ public class controller {
 	   }else if ((ggf.indexOf("開始")!=-1))
 	   {
 		   replymsg="有點聰明吶https://salty-forest-88943.herokuapp.com/g/index";
+	   }else if ((ggf.indexOf("想妳")!=-1)||(ggf.indexOf("想你")!=-1))
+	   {
+		   replymsg="Life也想妳";
 	   }else if ((ggf.indexOf("..")!=-1)&&(ggf.indexOf("吼")!=-1))
 	   {
 		   replymsg="是我太笨惹嗎";
@@ -161,25 +164,28 @@ public class controller {
 	   }else if ((ggf.indexOf("可愛")!=-1)||(ggf.indexOf("笨")!=-1)||(ggf.indexOf("87")!=-1))
 	   {
 		   replymsg="書岑聰明又可愛";
+	   }else if ((ggf.indexOf("起床")!=-1)||(ggf.indexOf("早")!=-1))
+	   {
+		   replymsg="早安~";
 	   }else if ((ggf.indexOf("雲林")!=-1))
 	   {
 		   replymsg="雲林是個中部的好地方";
 	   }else if ((ggf.indexOf("住哪")!=-1)||(ggf.indexOf("住在")!=-1))
 	   {
 		   replymsg="我住在內湖國小對面(但嚴格來說我是被部屬在雲端)，現在被關進木柵了";
-	   }else if ((ggf.indexOf("無聊")!=-1)||(ggf.indexOf("動畫")!=-1))
+	   }else if ((ggf.indexOf("無聊")!=-1)||(ggf.indexOf("動畫")!=-1)||(ggf.indexOf("看")!=-1))
 	   {
 		   replymsg="看動畫:https://ani.gamer.com.tw/animeVideo.php?sn=7612 看想見你https://pipitv.cc/detail/v9pnD.html";
 	   }else if ((ggf.indexOf("怎麼半")!=-1)||(ggf.indexOf("怎麼辦")!=-1))
 	   {
 		   replymsg="下雨天了怎麼辦 我好想你";
-	   }else if ((ggf.indexOf("時間")!=-1))
+	   }else if ((ggf.indexOf("時間")!=-1)||(ggf.indexOf("今天")!=-1))
 	   {
 		   replymsg="現在的時間是"+nowtime;
 	   }else if ((ggf.indexOf("書岑")!=-1))
 	   {
 		   replymsg="書岑美若天仙、沉魚落雁~";
-	   }else if ((ggf.indexOf("睡覺")!=-1))
+	   }else if ((ggf.indexOf("睡覺")!=-1)||(ggf.indexOf("掰掰")!=-1))
 	   {
 		   replymsg="書岑多休息吶~";
 	   }else if ((ggf.indexOf("聊天")!=-1))
@@ -200,9 +206,9 @@ public class controller {
 	   }else if ((ggf.indexOf("學我")!=-1))
 	   {
 		   replymsg="抱歉吶~太調皮了";
-	   }else if ((ggf.indexOf("妳好")!=-1)||(ggf.indexOf("你好")!=-1))
+	   }else if ((ggf.indexOf("妳好")!=-1)||(ggf.indexOf("你好")!=-1)||(ggf.indexOf("嗨")!=-1))
 	   {
-		   replymsg="妳過得好嗎";
+		   replymsg="hi~妳過得好嗎";
 	   }else if ((ggf.indexOf("好慢")!=-1))
 	   {
 		   replymsg="免費的資料庫真的慢";
