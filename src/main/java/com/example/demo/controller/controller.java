@@ -534,8 +534,19 @@ public class controller {
 		model.addAttribute("nowrate", "0/5");
 		model.addAttribute("errormsg", "question1");
 		
+		int qqw=(int)(Math.random()*15);
+		if(qqw==9||qqw==10)
+		{
+			qqw=3;
+		}else if(qqw==11||qqw==12)
+		{
+			qqw=4;
+		}else if (qqw==13||qqw==14)
+		{
+			qqw=7;
+		}else {}
 		
-		return "inind"+(int)(Math.random()*9);
+		return "inind"+qqw;
 	}
 	
 	@RequestMapping("/valid")

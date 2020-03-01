@@ -258,7 +258,20 @@ public class hintindedecontroller {
 				String ww="";
 				for (int ii=1;ii<2;ii++)
 				{			
-				 ww=(int)(Math.random()*9)+"";
+					
+					int qqw=(int)(Math.random()*15);
+					if(qqw==9||qqw==10)
+					{
+						qqw=3;
+					}else if(qqw==11||qqw==12)
+					{
+						qqw=4;
+					}else if (qqw==13||qqw==14)
+					{
+						qqw=7;
+					}else {}
+								
+				 ww=qqw+"";
 				if(qq.indexOf(ww)!=-1)
 				{
 					ii=ii-1;
@@ -317,7 +330,20 @@ public class hintindedecontroller {
 				String ww="";
 				for (int ii=1;ii<2;ii++)
 				{			
-				 ww=(int)(Math.random()*9)+"";
+
+					int qqw=(int)(Math.random()*15);
+					if(qqw==9||qqw==10)
+					{
+						qqw=3;
+					}else if(qqw==11||qqw==12)
+					{
+						qqw=4;
+					}else if (qqw==13||qqw==14)
+					{
+						qqw=7;
+					}else {}
+								
+				 ww=qqw+"";
 				if(qq.indexOf(ww)!=-1)
 				{
 					ii=ii-1;
@@ -375,7 +401,20 @@ public class hintindedecontroller {
 				String ww="";
 				for (int ii=1;ii<2;ii++)
 				{			
-				 ww=(int)(Math.random()*9)+"";
+
+					int qqw=(int)(Math.random()*15);
+					if(qqw==9||qqw==10)
+					{
+						qqw=3;
+					}else if(qqw==11||qqw==12)
+					{
+						qqw=4;
+					}else if (qqw==13||qqw==14)
+					{
+						qqw=7;
+					}else {}
+								
+				 ww=qqw+"";
 				if(qq.indexOf(ww)!=-1)
 				{
 					ii=ii-1;
@@ -433,7 +472,20 @@ public class hintindedecontroller {
 				String ww="";
 				for (int ii=1;ii<2;ii++)
 				{			
-				 ww=(int)(Math.random()*9)+"";
+
+					int qqw=(int)(Math.random()*15);
+					if(qqw==9||qqw==10)
+					{
+						qqw=3;
+					}else if(qqw==11||qqw==12)
+					{
+						qqw=4;
+					}else if (qqw==13||qqw==14)
+					{
+						qqw=7;
+					}else {}
+								
+				 ww=qqw+"";
 				if(qq.indexOf(ww)!=-1)
 				{
 					ii=ii-1;
@@ -491,7 +543,20 @@ public class hintindedecontroller {
 				String ww="";
 				for (int ii=1;ii<2;ii++)
 				{			
-				 ww=(int)(Math.random()*10)+"";
+
+					int qqw=(int)(Math.random()*15);
+					if(qqw==9||qqw==10)
+					{
+						qqw=3;
+					}else if(qqw==11||qqw==12)
+					{
+						qqw=4;
+					}else if (qqw==13||qqw==14)
+					{
+						qqw=7;
+					}else {}
+								
+				 ww=qqw+"";
 				if(qq.indexOf(ww)!=-1)
 				{
 					ii=ii-1;
@@ -549,7 +614,20 @@ public class hintindedecontroller {
 				String ww="";
 				for (int ii=1;ii<2;ii++)
 				{			
-				 ww=(int)(Math.random()*9)+"";
+
+					int qqw=(int)(Math.random()*15);
+					if(qqw==9||qqw==10)
+					{
+						qqw=3;
+					}else if(qqw==11||qqw==12)
+					{
+						qqw=4;
+					}else if (qqw==13||qqw==14)
+					{
+						qqw=7;
+					}else {}
+								
+				 ww=qqw+"";
 				if(qq.indexOf(ww)!=-1)
 				{
 					ii=ii-1;
@@ -607,7 +685,20 @@ public class hintindedecontroller {
 				String ww="";
 				for (int ii=1;ii<2;ii++)
 				{			
-				 ww=(int)(Math.random()*9)+"";
+
+					int qqw=(int)(Math.random()*15);
+					if(qqw==9||qqw==10)
+					{
+						qqw=3;
+					}else if(qqw==11||qqw==12)
+					{
+						qqw=4;
+					}else if (qqw==13||qqw==14)
+					{
+						qqw=7;
+					}else {}
+								
+				 ww=qqw+"";
 				if(qq.indexOf(ww)!=-1)
 				{
 					ii=ii-1;
@@ -665,7 +756,20 @@ public class hintindedecontroller {
 				String ww="";
 				for (int ii=1;ii<2;ii++)
 				{			
-				 ww=(int)(Math.random()*9)+"";
+
+					int qqw=(int)(Math.random()*15);
+					if(qqw==9||qqw==10)
+					{
+						qqw=3;
+					}else if(qqw==11||qqw==12)
+					{
+						qqw=4;
+					}else if (qqw==13||qqw==14)
+					{
+						qqw=7;
+					}else {}
+								
+				 ww=qqw+"";
 				if(qq.indexOf(ww)!=-1)
 				{
 					ii=ii-1;
@@ -723,7 +827,20 @@ public class hintindedecontroller {
 				String ww="";
 				for (int ii=1;ii<2;ii++)
 				{			
-				 ww=(int)(Math.random()*9)+"";
+
+					int qqw=(int)(Math.random()*15);
+					if(qqw==9||qqw==10)
+					{
+						qqw=3;
+					}else if(qqw==11||qqw==12)
+					{
+						qqw=4;
+					}else if (qqw==13||qqw==14)
+					{
+						qqw=7;
+					}else {}
+								
+				 ww=qqw+"";
 				if(qq.indexOf(ww)!=-1)
 				{
 					ii=ii-1;
@@ -781,7 +898,20 @@ public class hintindedecontroller {
 				String ww="";
 				for (int ii=1;ii<2;ii++)
 				{			
-				 ww=(int)(Math.random()*10)+"";
+
+					int qqw=(int)(Math.random()*15);
+					if(qqw==9||qqw==10)
+					{
+						qqw=3;
+					}else if(qqw==11||qqw==12)
+					{
+						qqw=4;
+					}else if (qqw==13||qqw==14)
+					{
+						qqw=7;
+					}else {}
+								
+				 ww=qqw+"";
 				if(qq.indexOf(ww)!=-1)
 				{
 					ii=ii-1;
