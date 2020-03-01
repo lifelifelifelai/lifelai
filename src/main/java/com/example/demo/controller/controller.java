@@ -534,7 +534,7 @@ public class controller {
 		model.addAttribute("nowrate", "0/5");
 		model.addAttribute("errormsg", "question1");
 		
-		int qqw=(int)(Math.random()*15);
+		int qqw=(int)(Math.random()*17);
 		if(qqw==9||qqw==10)
 		{
 			qqw=3;
@@ -544,6 +544,9 @@ public class controller {
 		}else if (qqw==13||qqw==14)
 		{
 			qqw=7;
+		}else if (qqw==15||qqw==16)
+		{
+			qqw=6;
 		}else {}
 		
 		return "inind"+qqw;

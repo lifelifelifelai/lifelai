@@ -8,10 +8,10 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 @Component
 public class task {
-@Scheduled(initialDelay = 1000, fixedDelay = 600000)
+@Scheduled(initialDelay = 1000, fixedDelay = 1000000)
 void ppp() throws IOException
 {
-	Document doc = Jsoup.connect("https://salty-forest-88943.herokuapp.com/g/index").get();
-	System.out.println(doc.text());
+	//Document doc = Jsoup.connect("https://salty-forest-88943.herokuapp.com/g/index").get();
+	System.out.println("test");
 }
 }

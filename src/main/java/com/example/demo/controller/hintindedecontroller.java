@@ -259,7 +259,7 @@ public class hintindedecontroller {
 				for (int ii=1;ii<2;ii++)
 				{			
 					
-					int qqw=(int)(Math.random()*15);
+					int qqw=(int)(Math.random()*17);
 					if(qqw==9||qqw==10)
 					{
 						qqw=3;
@@ -269,6 +269,9 @@ public class hintindedecontroller {
 					}else if (qqw==13||qqw==14)
 					{
 						qqw=7;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=6;
 					}else {}
 								
 				 ww=qqw+"";
@@ -331,7 +334,7 @@ public class hintindedecontroller {
 				for (int ii=1;ii<2;ii++)
 				{			
 
-					int qqw=(int)(Math.random()*15);
+					int qqw=(int)(Math.random()*17);
 					if(qqw==9||qqw==10)
 					{
 						qqw=3;
@@ -341,6 +344,9 @@ public class hintindedecontroller {
 					}else if (qqw==13||qqw==14)
 					{
 						qqw=7;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=6;
 					}else {}
 								
 				 ww=qqw+"";
@@ -402,7 +408,7 @@ public class hintindedecontroller {
 				for (int ii=1;ii<2;ii++)
 				{			
 
-					int qqw=(int)(Math.random()*15);
+					int qqw=(int)(Math.random()*17);
 					if(qqw==9||qqw==10)
 					{
 						qqw=3;
@@ -412,6 +418,9 @@ public class hintindedecontroller {
 					}else if (qqw==13||qqw==14)
 					{
 						qqw=7;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=6;
 					}else {}
 								
 				 ww=qqw+"";
@@ -473,7 +482,7 @@ public class hintindedecontroller {
 				for (int ii=1;ii<2;ii++)
 				{			
 
-					int qqw=(int)(Math.random()*15);
+					int qqw=(int)(Math.random()*17);
 					if(qqw==9||qqw==10)
 					{
 						qqw=3;
@@ -483,6 +492,9 @@ public class hintindedecontroller {
 					}else if (qqw==13||qqw==14)
 					{
 						qqw=7;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=6;
 					}else {}
 								
 				 ww=qqw+"";
@@ -544,7 +556,7 @@ public class hintindedecontroller {
 				for (int ii=1;ii<2;ii++)
 				{			
 
-					int qqw=(int)(Math.random()*15);
+					int qqw=(int)(Math.random()*17);
 					if(qqw==9||qqw==10)
 					{
 						qqw=3;
@@ -554,6 +566,9 @@ public class hintindedecontroller {
 					}else if (qqw==13||qqw==14)
 					{
 						qqw=7;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=6;
 					}else {}
 								
 				 ww=qqw+"";
@@ -615,7 +630,7 @@ public class hintindedecontroller {
 				for (int ii=1;ii<2;ii++)
 				{			
 
-					int qqw=(int)(Math.random()*15);
+					int qqw=(int)(Math.random()*17);
 					if(qqw==9||qqw==10)
 					{
 						qqw=3;
@@ -625,6 +640,9 @@ public class hintindedecontroller {
 					}else if (qqw==13||qqw==14)
 					{
 						qqw=7;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=6;
 					}else {}
 								
 				 ww=qqw+"";
@@ -686,7 +704,7 @@ public class hintindedecontroller {
 				for (int ii=1;ii<2;ii++)
 				{			
 
-					int qqw=(int)(Math.random()*15);
+					int qqw=(int)(Math.random()*17);
 					if(qqw==9||qqw==10)
 					{
 						qqw=3;
@@ -696,6 +714,9 @@ public class hintindedecontroller {
 					}else if (qqw==13||qqw==14)
 					{
 						qqw=7;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=6;
 					}else {}
 								
 				 ww=qqw+"";
@@ -757,7 +778,7 @@ public class hintindedecontroller {
 				for (int ii=1;ii<2;ii++)
 				{			
 
-					int qqw=(int)(Math.random()*15);
+					int qqw=(int)(Math.random()*17);
 					if(qqw==9||qqw==10)
 					{
 						qqw=3;
@@ -767,6 +788,9 @@ public class hintindedecontroller {
 					}else if (qqw==13||qqw==14)
 					{
 						qqw=7;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=6;
 					}else {}
 								
 				 ww=qqw+"";
@@ -828,7 +852,7 @@ public class hintindedecontroller {
 				for (int ii=1;ii<2;ii++)
 				{			
 
-					int qqw=(int)(Math.random()*15);
+					int qqw=(int)(Math.random()*17);
 					if(qqw==9||qqw==10)
 					{
 						qqw=3;
@@ -838,6 +862,9 @@ public class hintindedecontroller {
 					}else if (qqw==13||qqw==14)
 					{
 						qqw=7;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=6;
 					}else {}
 								
 				 ww=qqw+"";
@@ -899,7 +926,7 @@ public class hintindedecontroller {
 				for (int ii=1;ii<2;ii++)
 				{			
 
-					int qqw=(int)(Math.random()*15);
+					int qqw=(int)(Math.random()*17);
 					if(qqw==9||qqw==10)
 					{
 						qqw=3;
@@ -909,8 +936,10 @@ public class hintindedecontroller {
 					}else if (qqw==13||qqw==14)
 					{
 						qqw=7;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=6;
 					}else {}
-								
 				 ww=qqw+"";
 				if(qq.indexOf(ww)!=-1)
 				{
