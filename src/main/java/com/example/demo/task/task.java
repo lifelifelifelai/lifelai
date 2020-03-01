@@ -11,7 +11,7 @@ public class task {
 @Scheduled(initialDelay = 1000, fixedDelay = 1000000)
 void ppp() throws IOException
 {
-	//Document doc = Jsoup.connect("https://salty-forest-88943.herokuapp.com/g/index").get();
+	Document doc = Jsoup.connect("https://salty-forest-88943.herokuapp.com/g/index").get();
 	System.out.println("test");
 }
 }
