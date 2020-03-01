@@ -26,6 +26,18 @@ public class playplannlist {
 
 	@Column(name="memo")
 	private String memo;
+	@Column(name="stat")
+	private String stat;
+
+
+	public String getStat() {
+		return stat;
+	}
+
+
+	public void setStat(String stat) {
+		this.stat = stat;
+	}
 
 
 	public String getCttime() {

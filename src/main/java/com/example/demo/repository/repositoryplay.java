@@ -18,16 +18,19 @@ public interface repositoryplay extends JpaRepository<playplannlist, String> {
 	
 	@Modifying
 	@Transactional
-	 @Query(value="insert into playplannlist VALUES (:ctime,:date,:go2,:how,:memo)",nativeQuery = true)
+	 @Query(value="insert into playplannlist VALUES (:ctime,:date,:go2,:how,:memo,:stat)",nativeQuery = true)
      void sett(@Param("ctime") String ctime,@Param("date") String date,@Param("go2") String go2
-    		 ,@Param("how") String how,@Param("memo") String memo);
+    		 ,@Param("how") String how,@Param("memo") String memo,@Param("stat") String stat);
 	
-	
+	@Modifying
+	@Transactional
+	 @Query(value="update playplannlist set stat='0' ",nativeQuery = true)
+     void upto0();
 	
 	 @Query(value="select * from playplannlist order by date ",nativeQuery = true)
      List<playplannlist> ww();
  	
-	 @Query(value="select * from account order by date ",nativeQuery = true)
-     List<playplannlist> ww1();
+	 @Query(value="select * from playplannlist where stat='1' ",nativeQuery = true)
+     List<playplannlist> wwstat1();
      
 }
