@@ -100,18 +100,18 @@ public class controller {
 
  
   // String [] uu= {"寶貝我最愛妳了","綸綸是我的公主","綸綸是我的女神",events.getEvents().get(0).getMessage().getText(),"沒有不學妳，笨笨"};
-   String [] uu1= {"真的嗎??","想妳~","無此資料","抱歉吶我還太笨惹，不知道怎麼回答",events.getEvents().get(0).getMessage().getText()
-		   ,events.getEvents().get(0).getMessage().getText(),"書岑美麗又善良","好的"
-		   ,"開始挑戰https://salty-forest-88943.herokuapp.com/g/index","怎麼會這樣","出去玩嗎https://salty-forest-88943.herokuapp.com/g/date"
+   String [] uu1= {"真的嗎??","想妳~","無此資料","抱歉~我還不太聰明，不知道怎麼回答",events.getEvents().get(0).getMessage().getText()
+		   ,events.getEvents().get(0).getMessage().getText(),"書岑秀氣可愛又善良","好的"
+		   ,"開始挑戰https://salty-forest-88943.herokuapp.com/g/index","怎麼會這樣","出去玩https://salty-forest-88943.herokuapp.com/g/date"
    
    };
   
     
     
-    if((ggf.indexOf("喜歡妳")!=-1)||(ggf.indexOf("愛妳")!=-1)
+    if((ggf.indexOf("喜歡妳")!=-1)||(ggf.indexOf("愛妳")!=-1||(ggf.indexOf("想你")!=-1))
     		||(ggf.indexOf("喜歡你")!=-1)||(ggf.indexOf("愛你")!=-1)||(ggf.indexOf("抱抱")!=-1)) {
     	
-    	replymsg="聰明的妳已開啟隱藏劇情總共有四個數字題，首先第一個問題0~9選一個數字";
+    	replymsg="我也想妳，0~9選一個數字";
     	rep2.sett("4");
     }
    else if (statusnow.equals("0"))
@@ -128,9 +128,12 @@ public class controller {
 			   replymsg="開始問答闖關瞜!!第一題，情人節其實是在公元496年開始訂立的，那情人節的前身是甚麼節日呢?(若要退出請打離開)";
 		   }
 		   rep2.sett("1");
-	   }else if ((ggf.indexOf("誇張")!=-1)||(ggf.indexOf("哪有")!=-1)||(ggf.indexOf("真的")!=-1)||(ggf.indexOf("最好是")!=-1))
+	   }else if ((ggf.indexOf("誇張")!=-1)||(ggf.indexOf("哪有")!=-1)||(ggf.indexOf("啥鬼")!=-1)||(ggf.indexOf("真的")!=-1)||(ggf.indexOf("最好是")!=-1))
 	   {
 		   replymsg="真的吶";
+	   }else if ((ggf.indexOf("為什麼")!=-1))
+	   {
+		   replymsg="因為喜歡妳";
 	   }else if ((ggf.indexOf("出去玩")!=-1))
 	   {
 		   replymsg="https://salty-forest-88943.herokuapp.com/g/date";
@@ -145,10 +148,10 @@ public class controller {
 		   replymsg="有點聰明吶https://salty-forest-88943.herokuapp.com/g/index";
 	   }else if ((ggf.indexOf("想妳")!=-1)||(ggf.indexOf("想你")!=-1))
 	   {
-		   replymsg="Life也想妳";
+		   replymsg="我也想妳";
 	   }else if ((ggf.indexOf("..")!=-1)&&(ggf.indexOf("吼")!=-1))
 	   {
-		   replymsg="是我太笨惹嗎";
+		   replymsg="是我太笨了嗎";
 	   }else if((ggf.indexOf("?")!=-1))
 	   {
 		   replymsg="怎麼吶??";
@@ -170,6 +173,9 @@ public class controller {
 	   }else if ((ggf.indexOf("不理你")!=-1))
 	   {
 		   replymsg="愛妳";
+	   }else if ((ggf.indexOf("照顧")!=-1))
+	   {
+		   replymsg="我會呵護妳的";
 	   }else if ((ggf.indexOf("不理")!=-1))
 	   {
 		   replymsg="可以不理我，不要不理life吶";
@@ -324,7 +330,7 @@ public class controller {
 }else if (statusnow.equals("4")){
 	if ((ggf.indexOf("4")!=-1))
 	{
-		replymsg="答案是4~因為是妳的幸運數字。 下一題00~99選一個數字(我們都有的)";
+		replymsg="妳的幸運數字4。 下一題00~99選一個數字";
 		 rep2.sett("5");
 	}else {
 		replymsg="很可惜答錯了，已離開隱藏模式";
@@ -336,7 +342,7 @@ public class controller {
 	//回答32
 	if ((ggf.indexOf("32")!=-1))
 	{
-		replymsg="好聰明吶 ，答案是32~因為我們名字的筆畫都是32。 下一題000~999選一組數字";
+		replymsg="我們名字的筆畫都是32。 下一題000~999選一組數字";
 		 rep2.sett("6");
 	}else {
 		replymsg="很可惜答錯了，已離開隱藏模式";
@@ -346,7 +352,7 @@ public class controller {
 	//回答520
 	if ((ggf.indexOf("520")!=-1))
 	{
-		replymsg="答對了，答案是520~因為是情人節嘛////。  最後一題0000~9999選一組數字";
+		replymsg="答案是520 520 520。  最後一題0000~9999選一組數字";
 		 rep2.sett("7");
 	}else {
 		replymsg="很可惜答錯了，已離開隱藏模式";

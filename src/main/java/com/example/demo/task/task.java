@@ -31,7 +31,7 @@ void ppp() throws IOException
 
 	List<playplannlist> playplannl=new ArrayList<playplannlist>();
 	playplannl=rep4.wwstat1();
-	
+	System.out.println(playplannl.size()+"WW");
 	for (int ii=0;ii<playplannl.size();ii++)
 	{
 	   LineMessagingClient client = LineMessagingClient.builder("siyTXOs4UvFs4axEaIzKNPwfKupC0vWU3gC0ij7+vCHtX5gDgHe/5L8uIBaYHj0/wYE0iLP0ibgCv7m83ZBxhI9t06UVMDlNe7qx8xs/SSMnLnF6FnVPES2aEJBrWpMEJKDxKy+rhKOWYeTRiYP7/QdB04t89/1O/w1cDnyilFU=").build();
