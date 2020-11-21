@@ -14,16 +14,16 @@ public class appservice {
 	 
 		
 		
-		if (account.equals("Shulife")&&password.equals("417"))
+		if ((account.equals("LUNLUN")||account.equals("life"))&&password.equals("1121"))
 		{
 			return "yes";
 		}
-		else if (account.equals("Shulife")&&(!password.equals("417"))) 
+		else if ((account.equals("LUNLUN")||account.equals("life"))&&(!password.equals("1121"))) 
 {
 		return "wrorng password"; 
 
 }
-else if (!account.equals("Shulife"))
+else if (!account.equals("LUNLUN"))
 {
 	return "wrong account";
 }else 
