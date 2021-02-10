@@ -571,18 +571,24 @@ public class controller {
 		model.addAttribute("errormsg", "question1");
 		
 		int qqw=(int)(Math.random()*17);
-		if(qqw==9||qqw==10)
+		if(qqw==1||qqw==2||qqw==0)
 		{
 			qqw=3;
-		}else if(qqw==11||qqw==12)
+		}else if(qqw==3||qqw==4||qqw==5)
 		{
 			qqw=4;
-		}else if (qqw==13||qqw==14)
+		}else if (qqw==6||qqw==7||qqw==8)
 		{
 			qqw=7;
-		}else if (qqw==15||qqw==16)
+		}else if (qqw==9||qqw==10||qqw==11)
+		{
+			qqw=8;
+		}else if (qqw==12||qqw==13||qqw==14)
 		{
 			qqw=6;
+		}else if (qqw==15||qqw==16)
+		{
+			qqw=1;
 		}else {}
 		
 		return "inind"+qqw;

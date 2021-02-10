@@ -36,7 +36,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "LUNLUN目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Maggie喵目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{ }
 
@@ -50,7 +50,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "LUNLUN目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "MaggieMeow目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -64,7 +64,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "LUNLUN目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "MaggieMeow目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -77,7 +77,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "LUNLUN目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "MaggieMeow目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -91,7 +91,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "LUNLUN目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "MaggieMeow目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -104,7 +104,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "LUNLUN目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "MaggieMeow目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -117,7 +117,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "LUNLUN目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "MaggieMeow目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -131,7 +131,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "LUNLUN目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "MaggieMeow目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -145,7 +145,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "LUNLUN目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "MaggieMeow目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -159,7 +159,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "LUNLUN目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "MaggieMeow目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -260,18 +260,24 @@ public class hintindedecontroller {
 				{			
 					
 					int qqw=(int)(Math.random()*17);
-					if(qqw==9||qqw==10)
+					if(qqw==1||qqw==2||qqw==0)
 					{
 						qqw=3;
-					}else if(qqw==11||qqw==12)
+					}else if(qqw==3||qqw==4||qqw==5)
 					{
 						qqw=4;
-					}else if (qqw==13||qqw==14)
+					}else if (qqw==6||qqw==7||qqw==8)
 					{
 						qqw=7;
-					}else if (qqw==15||qqw==16)
+					}else if (qqw==9||qqw==10||qqw==11)
+					{
+						qqw=8;
+					}else if (qqw==12||qqw==13||qqw==14)
 					{
 						qqw=6;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=1;
 					}else {}
 								
 				 ww=qqw+"";
@@ -303,7 +309,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "LUNLUN目前答錯"+count+"次");
+				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
 				
 				return "inind0";
 			}
@@ -335,18 +341,24 @@ public class hintindedecontroller {
 				{			
 
 					int qqw=(int)(Math.random()*17);
-					if(qqw==9||qqw==10)
+					if(qqw==1||qqw==2||qqw==0)
 					{
 						qqw=3;
-					}else if(qqw==11||qqw==12)
+					}else if(qqw==3||qqw==4||qqw==5)
 					{
 						qqw=4;
-					}else if (qqw==13||qqw==14)
+					}else if (qqw==6||qqw==7||qqw==8)
 					{
 						qqw=7;
-					}else if (qqw==15||qqw==16)
+					}else if (qqw==9||qqw==10||qqw==11)
+					{
+						qqw=8;
+					}else if (qqw==12||qqw==13||qqw==14)
 					{
 						qqw=6;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=1;
 					}else {}
 								
 				 ww=qqw+"";
@@ -378,7 +390,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "LUNLUN目前答錯"+count+"次");
+				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
 				
 				return "inind1";
 			}
@@ -409,18 +421,24 @@ public class hintindedecontroller {
 				{			
 
 					int qqw=(int)(Math.random()*17);
-					if(qqw==9||qqw==10)
+					if(qqw==1||qqw==2||qqw==0)
 					{
 						qqw=3;
-					}else if(qqw==11||qqw==12)
+					}else if(qqw==3||qqw==4||qqw==5)
 					{
 						qqw=4;
-					}else if (qqw==13||qqw==14)
+					}else if (qqw==6||qqw==7||qqw==8)
 					{
 						qqw=7;
-					}else if (qqw==15||qqw==16)
+					}else if (qqw==9||qqw==10||qqw==11)
+					{
+						qqw=8;
+					}else if (qqw==12||qqw==13||qqw==14)
 					{
 						qqw=6;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=1;
 					}else {}
 								
 				 ww=qqw+"";
@@ -452,7 +470,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "LUNLUN目前答錯"+count+"次");
+				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
 				
 				return "inind2";
 			}
@@ -483,18 +501,24 @@ public class hintindedecontroller {
 				{			
 
 					int qqw=(int)(Math.random()*17);
-					if(qqw==9||qqw==10)
+					if(qqw==1||qqw==2||qqw==0)
 					{
 						qqw=3;
-					}else if(qqw==11||qqw==12)
+					}else if(qqw==3||qqw==4||qqw==5)
 					{
 						qqw=4;
-					}else if (qqw==13||qqw==14)
+					}else if (qqw==6||qqw==7||qqw==8)
 					{
 						qqw=7;
-					}else if (qqw==15||qqw==16)
+					}else if (qqw==9||qqw==10||qqw==11)
+					{
+						qqw=8;
+					}else if (qqw==12||qqw==13||qqw==14)
 					{
 						qqw=6;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=1;
 					}else {}
 								
 				 ww=qqw+"";
@@ -526,7 +550,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "LUNLUN目前答錯"+count+"次");
+				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
 				
 				return "inind3";
 			}
@@ -557,18 +581,24 @@ public class hintindedecontroller {
 				{			
 
 					int qqw=(int)(Math.random()*17);
-					if(qqw==9||qqw==10)
+					if(qqw==1||qqw==2||qqw==0)
 					{
 						qqw=3;
-					}else if(qqw==11||qqw==12)
+					}else if(qqw==3||qqw==4||qqw==5)
 					{
 						qqw=4;
-					}else if (qqw==13||qqw==14)
+					}else if (qqw==6||qqw==7||qqw==8)
 					{
 						qqw=7;
-					}else if (qqw==15||qqw==16)
+					}else if (qqw==9||qqw==10||qqw==11)
+					{
+						qqw=8;
+					}else if (qqw==12||qqw==13||qqw==14)
 					{
 						qqw=6;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=1;
 					}else {}
 								
 				 ww=qqw+"";
@@ -600,7 +630,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "LUNLUN目前答錯"+count+"次");
+				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
 				
 				return "inind4";
 			}
@@ -631,18 +661,24 @@ public class hintindedecontroller {
 				{			
 
 					int qqw=(int)(Math.random()*17);
-					if(qqw==9||qqw==10)
+					if(qqw==1||qqw==2||qqw==0)
 					{
 						qqw=3;
-					}else if(qqw==11||qqw==12)
+					}else if(qqw==3||qqw==4||qqw==5)
 					{
 						qqw=4;
-					}else if (qqw==13||qqw==14)
+					}else if (qqw==6||qqw==7||qqw==8)
 					{
 						qqw=7;
-					}else if (qqw==15||qqw==16)
+					}else if (qqw==9||qqw==10||qqw==11)
+					{
+						qqw=8;
+					}else if (qqw==12||qqw==13||qqw==14)
 					{
 						qqw=6;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=1;
 					}else {}
 								
 				 ww=qqw+"";
@@ -674,7 +710,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "LUNLUN目前答錯"+count+"次");
+				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
 				
 				return "inind5";
 			}
@@ -705,18 +741,24 @@ public class hintindedecontroller {
 				{			
 
 					int qqw=(int)(Math.random()*17);
-					if(qqw==9||qqw==10)
+					if(qqw==1||qqw==2||qqw==0)
 					{
 						qqw=3;
-					}else if(qqw==11||qqw==12)
+					}else if(qqw==3||qqw==4||qqw==5)
 					{
 						qqw=4;
-					}else if (qqw==13||qqw==14)
+					}else if (qqw==6||qqw==7||qqw==8)
 					{
 						qqw=7;
-					}else if (qqw==15||qqw==16)
+					}else if (qqw==9||qqw==10||qqw==11)
+					{
+						qqw=8;
+					}else if (qqw==12||qqw==13||qqw==14)
 					{
 						qqw=6;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=1;
 					}else {}
 								
 				 ww=qqw+"";
@@ -748,7 +790,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "LUNLUN目前答錯"+count+"次");
+				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
 				
 				return "inind6";
 			}
@@ -779,18 +821,24 @@ public class hintindedecontroller {
 				{			
 
 					int qqw=(int)(Math.random()*17);
-					if(qqw==9||qqw==10)
+					if(qqw==1||qqw==2||qqw==0)
 					{
 						qqw=3;
-					}else if(qqw==11||qqw==12)
+					}else if(qqw==3||qqw==4||qqw==5)
 					{
 						qqw=4;
-					}else if (qqw==13||qqw==14)
+					}else if (qqw==6||qqw==7||qqw==8)
 					{
 						qqw=7;
-					}else if (qqw==15||qqw==16)
+					}else if (qqw==9||qqw==10||qqw==11)
+					{
+						qqw=8;
+					}else if (qqw==12||qqw==13||qqw==14)
 					{
 						qqw=6;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=1;
 					}else {}
 								
 				 ww=qqw+"";
@@ -822,7 +870,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "LUNLUN目前答錯"+count+"次");
+				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
 				
 				return "inind7";
 			}
@@ -853,18 +901,24 @@ public class hintindedecontroller {
 				{			
 
 					int qqw=(int)(Math.random()*17);
-					if(qqw==9||qqw==10)
+					if(qqw==1||qqw==2||qqw==0)
 					{
 						qqw=3;
-					}else if(qqw==11||qqw==12)
+					}else if(qqw==3||qqw==4||qqw==5)
 					{
 						qqw=4;
-					}else if (qqw==13||qqw==14)
+					}else if (qqw==6||qqw==7||qqw==8)
 					{
 						qqw=7;
-					}else if (qqw==15||qqw==16)
+					}else if (qqw==9||qqw==10||qqw==11)
+					{
+						qqw=8;
+					}else if (qqw==12||qqw==13||qqw==14)
 					{
 						qqw=6;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=1;
 					}else {}
 								
 				 ww=qqw+"";
@@ -896,7 +950,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "LUNLUN目前答錯"+count+"次");
+				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
 				
 				return "inind8";
 			}
@@ -927,18 +981,24 @@ public class hintindedecontroller {
 				{			
 
 					int qqw=(int)(Math.random()*17);
-					if(qqw==9||qqw==10)
+					if(qqw==1||qqw==2||qqw==0)
 					{
 						qqw=3;
-					}else if(qqw==11||qqw==12)
+					}else if(qqw==3||qqw==4||qqw==5)
 					{
 						qqw=4;
-					}else if (qqw==13||qqw==14)
+					}else if (qqw==6||qqw==7||qqw==8)
 					{
 						qqw=7;
-					}else if (qqw==15||qqw==16)
+					}else if (qqw==9||qqw==10||qqw==11)
+					{
+						qqw=8;
+					}else if (qqw==12||qqw==13||qqw==14)
 					{
 						qqw=6;
+					}else if (qqw==15||qqw==16)
+					{
+						qqw=1;
 					}else {}
 				 ww=qqw+"";
 				if(qq.indexOf(ww)!=-1)
@@ -969,7 +1029,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "LUNLUN目前答錯"+count+"次");
+				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
 				
 				return "inind9";
 			}
