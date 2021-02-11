@@ -553,7 +553,7 @@ public class controller {
 	}
 	@RequestMapping("/index")
 	public String helloThymeleaf(Model model){
-		model.addAttribute("name11", "login");
+		model.addAttribute("name11", "MeowMeow");
 		return "index";
 	}
 	
