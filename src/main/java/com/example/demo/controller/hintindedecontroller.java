@@ -324,7 +324,7 @@ public class hintindedecontroller {
 		
 	String songname=request.getParameter("歌曲名");
 	rep.sett("gcheck1",songname);
-		if (songname.indexOf("愛灌溉")!=-1)
+		if (songname.indexOf("泡沫")!=-1)
 		{
 			if(playstatus.getStatus2().length()>=4)
 			{
