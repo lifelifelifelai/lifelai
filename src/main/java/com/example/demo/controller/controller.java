@@ -100,33 +100,33 @@ public class controller {
 
  
   // String [] uu= {"寶貝我最愛妳了","綸綸是我的公主","綸綸是我的女神",events.getEvents().get(0).getMessage().getText(),"沒有不學妳，笨笨"};
-   String [] uu1= {"真的嗎??","想妳~","無此資料","抱歉~我還不太聰明，不知道怎麼回答",events.getEvents().get(0).getMessage().getText()
-		   ,events.getEvents().get(0).getMessage().getText(),"書岑秀氣可愛又善良","好的"
-		   ,"開始挑戰https://salty-forest-88943.herokuapp.com/g/index","怎麼會這樣","出去玩https://salty-forest-88943.herokuapp.com/g/date"
+   String [] uu1= {"真的嗎??","想妳了~","無此資料","抱歉~我還不太聰明，不知道怎麼回答",events.getEvents().get(0).getMessage().getText()
+		   ,events.getEvents().get(0).getMessage().getText(),"Maggie人美可愛又善良","好的"
+		   ,"開始挑戰https://maggiemeow.herokuapp.com/g/index","怎麼會這樣","出去玩https://maggiemeow.herokuapp.com/g/date"
    
    };
   
     
     
-    if((ggf.indexOf("喜歡妳")!=-1)||(ggf.indexOf("愛妳")!=-1||(ggf.indexOf("想你")!=-1))
-    		||(ggf.indexOf("喜歡你")!=-1)||(ggf.indexOf("愛你")!=-1)||(ggf.indexOf("抱抱")!=-1)) {
+    if((ggf.indexOf("愛你")!=-1)||(ggf.indexOf("生日")!=-1)) {
     	
-    	replymsg="我也想妳，0~9選一個數字";
+    	replymsg="0~999選一個數字";
     	rep2.sett("4");
     }
    else if (statusnow.equals("0"))
 {
 	//沒事狀太
-	   if((ggf.indexOf("開始闖關...")!=-1))
+	   if((ggf.indexOf("禮物")!=-1))
 	   {
-		   int ii=(int)( Math.random()*100);
-		   if(ii>33 &&ii<67) {
-			  replymsg="開始問答闖關瞜!!第一題，妳知道一年中總共有幾個情人節可以慶祝呢?(若要退出請打離開)";
-		   }else if (ii<=33) {
-		   replymsg="開始問答闖關瞜!!第一題，全世界中過最多情人節的是哪個國家?(若要退出請打離開)";
-		   }else {
-			   replymsg="開始問答闖關瞜!!第一題，情人節其實是在公元496年開始訂立的，那情人節的前身是甚麼節日呢?(若要退出請打離開)";
-		   }
+//		   int ii=(int)( Math.random()*100);
+//		   if(ii>33 &&ii<67) {
+//			  replymsg="開始問答闖關瞜!!第一題，妳知道一年中總共有幾個情人節可以慶祝呢?(若要退出請打離開)";
+//		   }else if (ii<=33) {
+//		   replymsg="開始問答闖關瞜!!第一題，全世界中過最多情人節的是哪個國家?(若要退出請打離開)";
+//		   }else {
+//			   replymsg="開始問答闖關瞜!!第一題，情人節其實是在公元496年開始訂立的，那情人節的前身是甚麼節日呢?(若要退出請打離開)";
+//		   }
+		   replymsg="為了解救美淇的喵喵好夥伴，請通過以下試煉~0-99選一個數字";
 		   rep2.sett("1");
 	   }else if ((ggf.indexOf("誇張")!=-1)||(ggf.indexOf("哪有")!=-1)||(ggf.indexOf("啥鬼")!=-1)||(ggf.indexOf("真的")!=-1)||(ggf.indexOf("最好是")!=-1))
 	   {
@@ -136,16 +136,16 @@ public class controller {
 		   replymsg="因為喜歡妳";
 	   }else if ((ggf.indexOf("出去玩")!=-1))
 	   {
-		   replymsg="https://salty-forest-88943.herokuapp.com/g/date";
+		   replymsg="https://maggiemeow.herokuapp.com/g/date";
 	   }else if ((ggf.indexOf("取消")!=-1))
 	   {
-		   replymsg="不能取消https://salty-forest-88943.herokuapp.com/g/date";
+		   replymsg="不能取消喔";
 	   }else if ((ggf.indexOf("謝謝")!=-1))
 	   {
 		   replymsg="不客氣^^";
 	   }else if ((ggf.indexOf("開始")!=-1))
 	   {
-		   replymsg="有點聰明吶https://salty-forest-88943.herokuapp.com/g/index";
+		   replymsg="有點聰明吶https://maggiemeow.herokuapp.com/g/index";
 	   }else if ((ggf.indexOf("想妳")!=-1)||(ggf.indexOf("想你")!=-1))
 	   {
 		   replymsg="我也想妳";
@@ -160,10 +160,10 @@ public class controller {
 		   replymsg="之後再新增這功能喔";
 	   }else if ((ggf.indexOf("是誰")!=-1)||(ggf.indexOf("是什")!=-1)||(ggf.indexOf("這啥")!=-1)||(ggf.indexOf("這什麼")!=-1))
 	   {
-		   replymsg="我是life_devil_bot出生於20200214，這次229不知道弄了什麼奇怪的東東";
+		   replymsg="我是life_devil_bot出生於20210310，不知道弄了什麼奇怪的東東";
 	   }else if ((ggf.indexOf("遊戲")!=-1)||(ggf.indexOf("目標")!=-1))
 	   {
-		   replymsg="玩遊戲https://salty-forest-88943.herokuapp.com/g/index";
+		   replymsg="請打'禮物'兩個字";
 	   }else if ((ggf.indexOf("隱藏")!=-1))
 	   {
 		   replymsg="隱藏模式需要不一樣的感受";
@@ -172,7 +172,7 @@ public class controller {
 		   replymsg="QQ";
 	   }else if ((ggf.indexOf("不理你")!=-1))
 	   {
-		   replymsg="愛妳";
+		   replymsg="可以不理我，不要不理life吶";
 	   }else if ((ggf.indexOf("照顧")!=-1))
 	   {
 		   replymsg="我會呵護妳的";
@@ -181,7 +181,7 @@ public class controller {
 		   replymsg="可以不理我，不要不理life吶";
 	   }else if ((ggf.indexOf("可愛")!=-1)||(ggf.indexOf("笨")!=-1)||(ggf.indexOf("87")!=-1))
 	   {
-		   replymsg="書岑聰明又可愛";
+		   replymsg="美淇聰明又可愛";
 	   }else if ((ggf.indexOf("起床")!=-1)||(ggf.indexOf("早")!=-1))
 	   {
 		   replymsg="早安~";
@@ -190,37 +190,37 @@ public class controller {
 		   replymsg="雲林是個中部的好地方";
 	   }else if ((ggf.indexOf("住哪")!=-1)||(ggf.indexOf("住在")!=-1))
 	   {
-		   replymsg="我住在內湖國小對面(但嚴格來說我是被部屬在雲端)，現在被關進木柵了";
-	   }else if ((ggf.indexOf("無聊")!=-1)||(ggf.indexOf("動畫")!=-1)||(ggf.indexOf("看")!=-1))
+		   replymsg="我被部屬在雲端";
+	   }else if ((ggf.indexOf("無聊")!=-1)||(ggf.indexOf("看")!=-1))
 	   {
-		   replymsg="看動畫:https://ani.gamer.com.tw/animeVideo.php?sn=7612 看想見你https://pipitv.cc/detail/v9pnD.html";
+		   replymsg="來打傳說R";
 	   }else if ((ggf.indexOf("怎麼半")!=-1)||(ggf.indexOf("怎麼辦")!=-1))
 	   {
 		   replymsg="下雨天了怎麼辦 我好想妳";
 	   }else if ((ggf.indexOf("時間")!=-1)||(ggf.indexOf("今天")!=-1))
 	   {
 		   replymsg="現在的時間是"+nowtime;
-	   }else if ((ggf.indexOf("書岑")!=-1))
+	   }else if ((ggf.indexOf("美淇")!=-1))
 	   {
-		   replymsg="書岑美若天仙、沉魚落雁~";
+		   replymsg="美淇美若天仙、沉魚落雁~";
 	   }else if ((ggf.indexOf("睡覺")!=-1)||(ggf.indexOf("掰掰")!=-1))
 	   {
-		   replymsg="書岑多休息吶~";
+		   replymsg="美淇多休息吶~";
 	   }else if ((ggf.indexOf("聊天")!=-1))
 	   {
 		   replymsg="抱歉，我不善於聊天";
 	   }else if ((ggf.indexOf("好煩")!=-1))
 	   {
-		   replymsg="拍拍~吃吃零食就不煩了吶";
+		   replymsg="拍拍~吃炸炸就不煩了吶";
 	   }else if ((ggf.indexOf("生氣")!=-1))
 	   {
-		   replymsg="不要生氣嘛~給妳一個勾勾ˇ";
+		   replymsg="不要生氣嘛~給妳一個荳荳的裂嘴微笑^ vwv ^";
 	   }else if ((ggf.indexOf("吃飯")!=-1))
 	   {
 		   replymsg="我只需要充電";
 	   }else if ((ggf.indexOf("運動")!=-1))
 	   {
-		   replymsg="快來教我瑜珈";
+		   replymsg="快來陪我走樓梯";
 	   }else if ((ggf.indexOf("學我")!=-1))
 	   {
 		   replymsg="抱歉吶~太調皮了";
@@ -229,6 +229,14 @@ public class controller {
 		   replymsg="hi~妳過得好嗎";
 	   }else if ((ggf.indexOf("好慢")!=-1))
 	   {
+		   replymsg="免費的資料庫真的慢";
+	   }else if ((ggf.indexOf("穿什麼")!=-1))
+	   {
+		   
+		   String []ww= {"白色碎花長裙"};
+		   String []ee= {"白色碎花長裙"};
+		   
+		   
 		   replymsg="免費的資料庫真的慢";
 	   }else {
 		   
@@ -250,130 +258,125 @@ public class controller {
 	   {
 		replymsg="已經離開問答狀態";	
 		 rep2.sett("0");
-	   }else if ((ggf.indexOf("13")!=-1)||(ggf.indexOf("韓國")!=-1)||(ggf.indexOf("牧神節")!=-1))
+	   }else if ((ggf.indexOf("26")!=-1)||(ggf.indexOf("18")!=-1))
 	   {
 		   
 		   int ii=(int)( Math.random()*100);
 		   if(ii>50) {
-		   replymsg="nice 書岑，下一題~歌詞'你說我太過驕傲，不說也能感受彼此心跳' 是出自於彭于晏演的哪部電影的歌曲";
+		   replymsg="nice 美淇，請輸入四位數密碼0000~9999";
 		   rep2.sett("2");
 		   }else {
-		   replymsg="好聰明吶，下一題~歌詞'我們要互相虧欠，我們要藕斷絲連' 是出自於彭于晏演的哪部電影的歌曲";
+		   replymsg="好聰明的小仙女美淇，請輸入四位數密碼0000~9999";
 		   rep2.sett("2");
 		   }
 	   }else {
-		   int ii=(int)( Math.random()*100);
-		   if(ii>33 &&ii<67) {
-		   replymsg="可能要再想想喔~(若要結束問答請打離開)";
-		     }else if (ii<=33) {
-		    	 replymsg="再試試看~(若要結束問答請打離開)";
-		     }else {
-		    	 replymsg="QQ try again~(若要結束問答請打離開)";
+		  
+		   if(Integer.parseInt(ggf)>18) {
+		   replymsg="答錯~美淇有這麼老嗎??";
+		     }else if (Integer.parseInt(ggf)<=18) {
+		    	 replymsg="答錯~未成年母湯喔";
 		     }
 	   }
 	//question1
-}else if (statusnow.equals("2")){
+}
+else if (statusnow.equals("2")){
 	if((ggf.indexOf("離開")!=-1))
 	   {
 		replymsg="已經離開問答狀態";	
 		 rep2.sett("0");
-	   }else if ((ggf.indexOf("匆匆那年")!=-1)||(ggf.indexOf("聽說")!=-1)||(ggf.indexOf("讀心術")!=-1))
+	   }else if ((ggf.indexOf("1020")!=-1))
 	   {
 		   
-		   int ii=(int)( Math.random()*100);
-		   if(ii>=33&&ii<67) {
-		   replymsg="答對了~最後一題，請分享妳覺得life的三個缺點(要一次打完送出不要分開打)";
-		   rep2.sett("3");
-		   }else if (ii<33){
-		   replymsg="答對了~最後一題，請分享妳覺得喜歡的三個人格特質(要一次打完送出不要分開打)";
-		   rep2.sett("3");
-		   }else
-		   {
-			   replymsg="答對了~最後一題，請分享妳覺得最不能接受的三件事(要一次打完送出不要分開打)";
-			   rep2.sett("3");
-		   }
-	   }else {
-		   int ii=(int)( Math.random()*100);
-		   if(ii>33 &&ii<67) {
-			   replymsg="可能要再想想喔~(若要結束問答請打離開)";
-			     }else if (ii<=33) {
-			    	 replymsg="再試試看~(若要結束問答請打離開)";
-			     }else {
-			    	 replymsg="QQ try again~(若要結束問答請打離開)";
-			     }
-	   }
-}else if (statusnow.equals("3")){
-	//question3 給卡片
-	if((ggf.indexOf("離開")!=-1))
-	   {
-		replymsg="已經離開問答狀態";	
-		 rep2.sett("0");
-	   }else if (ggf.length()>6)
-	   {
-		   
+	
+		   replymsg="答對了!不過，妳的貓貓小夥伴跟我說，她現在很冷、非常冷，妳還在等什麼呢?";
 		
-			   replymsg="恭喜完成尬到不行問答(問答每次應該都會有點不一樣)~        書岑，祝妳情人節快樂，雖然這個bot一點都不ai，而且好像還蠻蠢的"
-			   		+ "  ，不過如果妳有從中得到那麼一丁點的樂趣  (對我而言就算值得了吧@@ 這樣我是不是沒顧慮到妳的感受XD)。    其實這個有隱藏版的吶，目的是為了拿到第二塊拼圖"+
-			   "，只是可能要腦洞大開才有辦法找到XDDD。 (或是隨便問些問題搞不好會有線索)";
-			   rep2.sett("0");
+		   rep2.sett("0");
 		   
 	   }else {
 		   int ii=(int)( Math.random()*100);
 		   if(ii>33 &&ii<67) {
-			   replymsg="字數不足喔~(結束問答請打離開)";
+			   replymsg="答錯~也許需要需要吃點堅果來補充腦能量了(若要結束問答請打離開)";
 			     }else if (ii<=33) {
-			    	 replymsg= "字數不足喔再試試看~(結束問答請打離開)";
+			    	 replymsg="再試試看~到每天都不得不去的地方看看吧(若要結束問答請打離開)";
 			     }else {
-			    	 replymsg="字數不足喔try again~(結束問答請打離開)";
+			    	 replymsg="不太對喔，趕快集結小夥伴們幫妳達成任務吧(若要結束問答請打離開)";
 			     }
 	   }
-}else if (statusnow.equals("4")){
-	if ((ggf.indexOf("4")!=-1))
+}
+//else if (statusnow.equals("3")){
+//	//question3 給卡片
+//	if((ggf.indexOf("離開")!=-1))
+//	   {
+//		replymsg="已經離開問答狀態";	
+//		 rep2.sett("0");
+//	   }else if (ggf.length()>6)
+//	   {
+//		   
+//		
+//			   replymsg="恭喜完成尬到不行問答(問答每次應該都會有點不一樣)~        美淇，祝妳情人節快樂，雖然這個bot一點都不ai，而且好像還蠻蠢的"
+//			   		+ "  ，不過如果妳有從中得到那麼一丁點的樂趣  (對我而言就算值得了吧@@ 這樣我是不是沒顧慮到妳的感受XD)。    其實這個有隱藏版的吶，目的是為了拿到第二塊拼圖"+
+//			   "，只是可能要腦洞大開才有辦法找到XDDD。 (或是隨便問些問題搞不好會有線索)";
+//			   rep2.sett("0");
+//		   
+//	   }else {
+//		   int ii=(int)( Math.random()*100);
+//		   if(ii>33 &&ii<67) {
+//			   replymsg="字數不足喔~(結束問答請打離開)";
+//			     }else if (ii<=33) {
+//			    	 replymsg= "字數不足喔再試試看~(結束問答請打離開)";
+//			     }else {
+//			    	 replymsg="字數不足喔try again~(結束問答請打離開)";
+//			     }
+//	   }
+//}
+else if (statusnow.equals("4")){
+	if ((ggf.indexOf("520")!=-1))
 	{
-		replymsg="妳的幸運數字4。 下一題00~99選一個數字";
-		 rep2.sett("5");
+		replymsg="生日快樂，LIFE最愛美淇喵了";
+		 rep2.sett("0");
 	}else {
 		replymsg="很可惜答錯了，已離開隱藏模式";
 		 rep2.sett("0");
 	}
 	
 	//回答4
-}else if (statusnow.equals("5")){
-	//回答32
-	if ((ggf.indexOf("32")!=-1))
-	{
-		replymsg="我們名字的筆畫都是32。 下一題000~999選一組數字";
-		 rep2.sett("6");
-	}else {
-		replymsg="很可惜答錯了，已離開隱藏模式";
-		 rep2.sett("0");
-	}
-}else if (statusnow.equals("6")){
-	//回答520
-	if ((ggf.indexOf("520")!=-1))
-	{
-		replymsg="答案是520 520 520。  最後一題0000~9999選一組數字";
-		 rep2.sett("7");
-	}else {
-		replymsg="很可惜答錯了，已離開隱藏模式";
-		 rep2.sett("0");
-	}
-}else if (statusnow.equals("7")){
-	//回答0210
-	if ((ggf.indexOf("0210")!=-1))
-	{
-		replymsg="答對了，恭喜完成隱藏關卡!!!(有沒有覺得cp值很低)   其實我也不確定當妳看到這些的時候是幾月的事了，也許是"
-				+ "2月底、也許是3月或是根本沒有機會也說不定XD  不知道妳是否還記得在2月的時候妳說我有修過聊天學，好像蠻會找話題的。"
-				+ "@@現在看到有沒有覺得根本不是這麼回是齁，會想找話題其實只是因為不希望妳就這樣消失而已XDD，我不希望未來的我會回想當初因為"
-				+ "少做點了甚麼而感到後悔~，我的生活圈很小大概就像把自己框在一個圈圈裏面，一大段時間大概只會跟一個人聊天，"
-				+ "所以當然也沒有其他人會這樣跟我說瞜。 關卡的拼圖在這~ Second puzzle is LOVE.";
-		 rep2.sett("0");
-	}else {
-		replymsg="很可惜答錯了，已離開隱藏模式";
-		 rep2.sett("0");
-	}
-	
-}
+  }
+//	else if (statusnow.equals("5")){
+//	//回答32
+//	if ((ggf.indexOf("32")!=-1))
+//	{
+//		replymsg="我們名字的筆畫都是32。 下一題000~999選一組數字";
+//		 rep2.sett("6");
+//	}else {
+//		replymsg="很可惜答錯了，已離開隱藏模式";
+//		 rep2.sett("0");
+//	}
+//}else if (statusnow.equals("6")){
+//	//回答520
+//	if ((ggf.indexOf("520")!=-1))
+//	{
+//		replymsg="答案是520 520 520。  最後一題0000~9999選一組數字";
+//		 rep2.sett("7");
+//	}else {
+//		replymsg="很可惜答錯了，已離開隱藏模式";
+//		 rep2.sett("0");
+//	}
+//}else if (statusnow.equals("7")){
+//	//回答0210
+//	if ((ggf.indexOf("0210")!=-1))
+//	{
+//		replymsg="答對了，恭喜完成隱藏關卡!!!(有沒有覺得cp值很低)   其實我也不確定當妳看到這些的時候是幾月的事了，也許是"
+//				+ "2月底、也許是3月或是根本沒有機會也說不定XD  不知道妳是否還記得在2月的時候妳說我有修過聊天學，好像蠻會找話題的。"
+//				+ "@@現在看到有沒有覺得根本不是這麼回是齁，會想找話題其實只是因為不希望妳就這樣消失而已XDD，我不希望未來的我會回想當初因為"
+//				+ "少做點了甚麼而感到後悔~，我的生活圈很小大概就像把自己框在一個圈圈裏面，一大段時間大概只會跟一個人聊天，"
+//				+ "所以當然也沒有其他人會這樣跟我說瞜。 關卡的拼圖在這~ Second puzzle is LOVE.";
+//		 rep2.sett("0");
+//	}else {
+//		replymsg="很可惜答錯了，已離開隱藏模式";
+//		 rep2.sett("0");
+//	}
+//	
+//}
 
    
    
@@ -707,7 +710,7 @@ if (result.equals("yes"))
 //	    LineMessagingClient client = LineMessagingClient.builder("siyTXOs4UvFs4axEaIzKNPwfKupC0vWU3gC0ij7+vCHtX5gDgHe/5L8uIBaYHj0/wYE0iLP0ibgCv7m83ZBxhI9t06UVMDlNe7qx8xs/SSMnLnF6FnVPES2aEJBrWpMEJKDxKy+rhKOWYeTRiYP7/QdB04t89/1O/w1cDnyilFU=").build();
 //
 //	    
-//		//Uf9ab298ecf4fd9df1c8c048dabdcf924書岑
+//		//Uf9ab298ecf4fd9df1c8c048dabdcf924美淇
 //	    TextMessage textMessage = new TextMessage(ff);
 //	    PushMessage pushMessage = new PushMessage(
 //	            "Uc6b7fd1fbe5b8b979c52055709698fbb",
