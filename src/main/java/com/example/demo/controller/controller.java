@@ -102,7 +102,7 @@ public class controller {
   // String [] uu= {"寶貝我最愛妳了","綸綸是我的公主","綸綸是我的女神",events.getEvents().get(0).getMessage().getText(),"沒有不學妳，笨笨"};
    String [] uu1= {"真的嗎??","想妳了~","無此資料","抱歉~我還不太聰明，不知道怎麼回答",events.getEvents().get(0).getMessage().getText()
 		   ,events.getEvents().get(0).getMessage().getText(),"Maggie人美可愛又善良","好的"
-		   ,"開始挑戰https://maggiemeow.herokuapp.com/g/index","怎麼會這樣","出去玩https://maggiemeow.herokuapp.com/g/date"
+		   ,"美淇喵喵喵","怎麼會這樣","出去玩https://maggiemeow.herokuapp.com/g/date"
    
    };
   
@@ -131,7 +131,7 @@ public class controller {
 	   }else if ((ggf.indexOf("誇張")!=-1)||(ggf.indexOf("哪有")!=-1)||(ggf.indexOf("啥鬼")!=-1)||(ggf.indexOf("真的")!=-1)||(ggf.indexOf("最好是")!=-1))
 	   {
 		   replymsg="真的吶";
-	   }else if ((ggf.indexOf("為什麼")!=-1))
+	   }else if ((ggf.indexOf("為什麼@@@@")!=-1))
 	   {
 		   replymsg="因為喜歡妳";
 	   }else if ((ggf.indexOf("出去玩")!=-1))
@@ -237,7 +237,7 @@ public class controller {
 		   String []ee= {"白色碎花長裙"};
 		   
 		   
-		   replymsg="免費的資料庫真的慢";
+		   replymsg="灰色毛衣配上白色庫子";
 	   }else {
 		   
 		   
