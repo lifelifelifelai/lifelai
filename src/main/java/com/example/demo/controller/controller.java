@@ -126,7 +126,7 @@ public class controller {
 //		   }else {
 //			   replymsg="開始問答闖關瞜!!第一題，情人節其實是在公元496年開始訂立的，那情人節的前身是甚麼節日呢?(若要退出請打離開)";
 //		   }
-		   replymsg="為了解救子熏的喵喵好夥伴，請通過以下試煉~0-99選一個數字";
+		   replymsg="為了解救子熏的鯊鯊好夥伴，請通過以下試煉~0-99選一個數字";
 		   rep2.sett("1");
 	   }else if ((ggf.indexOf("誇張")!=-1)||(ggf.indexOf("哪有")!=-1)||(ggf.indexOf("啥鬼")!=-1)||(ggf.indexOf("真的")!=-1)||(ggf.indexOf("最好是")!=-1))
 	   {
@@ -262,11 +262,11 @@ public class controller {
 	   {
 		   
 		   int ii=(int)( Math.random()*100);
-		   if(ii>50) {
+		   if(ii>500) {
 		   replymsg="nice 子熏，請輸入二位數密碼01~99";
 		   rep2.sett("2");
 		   }else {
-		   replymsg="好聰明的鯊鯊子熏，請輸入個位數密碼01~99";
+		   replymsg="好聰明的鯊鯊子熏，請輸入密碼01~99(跟我們相關的數字)";
 		   rep2.sett("2");
 		   }
 	   }else {
