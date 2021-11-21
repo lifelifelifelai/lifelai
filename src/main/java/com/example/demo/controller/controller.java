@@ -116,7 +116,7 @@ public class controller {
    else if (statusnow.equals("0"))
 {
 	//沒事狀太
-	   if((ggf.indexOf("禮物")!=-1))
+	   if((ggf.indexOf("禮物")!=-1)||ggf.indexOf("開始")!=-1)
 	   {
 //		   int ii=(int)( Math.random()*100);
 //		   if(ii>33 &&ii<67) {
