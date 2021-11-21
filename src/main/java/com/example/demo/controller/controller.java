@@ -284,7 +284,7 @@ else if (statusnow.equals("2")){
 	   {
 		replymsg="已經離開問答狀態";	
 		 rep2.sett("0");
-	   }else if ((ggf.indexOf("34")!=-1))
+	   }else if ((ggf.indexOf("32")!=-1))
 	   {
 		   
 	
