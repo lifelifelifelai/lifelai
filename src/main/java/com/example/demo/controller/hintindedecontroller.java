@@ -14,7 +14,7 @@ import com.example.demo.repository.repository;
 import com.example.demo.repository.repositoryplaystatus;
 import com.example.demo.entity.playstatus;
 @Controller
-@RequestMapping("/ggg")
+//@RequestMapping("/ggg")
 public class hintindedecontroller {
 
 	
@@ -42,7 +42,7 @@ public class hintindedecontroller {
 
 
 		
-		return "playyy";
+		return "index";
 	}
 	
 	
