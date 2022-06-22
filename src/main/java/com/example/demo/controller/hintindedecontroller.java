@@ -28,6 +28,26 @@ public class hintindedecontroller {
 	playstatus playstatus;
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	@RequestMapping("/playplayplay")
+	
+	public String testing00dfsf(Model model) {
+		
+
+
+		
+		return "playyy";
+	}
+	
+	
+	
+	
 	@RequestMapping("/inind0")
 		
 	public String testing00(Model model) {

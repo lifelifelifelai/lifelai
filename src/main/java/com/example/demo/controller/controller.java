@@ -84,7 +84,7 @@ public class controller {
 	@RequestMapping(value="/gg")
 	  public String hello2(@RequestBody eventwraper events) throws IOException, ExecutionException {	
 	String gg=null;
-	  LineMessagingClient client = LineMessagingClient.builder("y1rPwfajEG8/g1E/dO7/GUhTmM893lNcikcV6U8PJo24EWEtfK3u4gi3R5+ZRPU0+WoCyg0GLK/zMgVUDyZ3uENaAvCi8jyBmkEyTaKVUaWPtXxllghbo697rWNogi2mg7hsJignqpxGNCrXwXLF3QdB04t89/1O/w1cDnyilFU=").build();
+	  LineMessagingClient client = LineMessagingClient.builder("n4xYgKh1Gi9aQSnL/UoSSRklKeJFh4Ipn2EkV10LjEX9MdQSMdg9zAbbH+77+jzb2L2YqX9o1lPoWTSDUdsVYdNKomqHZu7p6emYii1XoFNlNMXu1wkc7Mn09Xon3vEpeofNJgoJcz1+2WcbCSug2gdB04t89/1O/w1cDnyilFU=").build();
 	  SimpleDateFormat smd =new SimpleDateFormat("yyyy/MM/dd HH:mm:ss.SSS");
 	  Date date =new Date();
 	//  System.out.println();
