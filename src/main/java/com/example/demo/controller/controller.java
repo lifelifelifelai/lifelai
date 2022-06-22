@@ -82,7 +82,7 @@ public class controller {
 //  }
 //	
 	@RequestMapping(value="/gg")
-	  public String hello2(@RequestBody eventwraper events) throws IOException, ExecutionException {	
+	  public void hello2(@RequestBody eventwraper events) throws IOException, ExecutionException {	
 	String gg=null;
 	  LineMessagingClient client = LineMessagingClient.builder("n4xYgKh1Gi9aQSnL/UoSSRklKeJFh4Ipn2EkV10LjEX9MdQSMdg9zAbbH+77+jzb2L2YqX9o1lPoWTSDUdsVYdNKomqHZu7p6emYii1XoFNlNMXu1wkc7Mn09Xon3vEpeofNJgoJcz1+2WcbCSug2gdB04t89/1O/w1cDnyilFU=").build();
 	  SimpleDateFormat smd =new SimpleDateFormat("yyyy/MM/dd HH:mm:ss.SSS");
@@ -416,7 +416,7 @@ else if (statusnow.equals("4")){
    
 //   System.out.println(jsonString);
 //   sentpost(jsonString);
-	    return(gg); // 根據view resolver mapping至hello.jsp
+	//    return(gg); // 根據view resolver mapping至hello.jsp
 	  }
 		
 	
@@ -555,8 +555,8 @@ else if (statusnow.equals("4")){
 	}
 	@RequestMapping("/index")
 	public String helloThymeleaf(Model model){
-		model.addAttribute("name11", "Ivy");
-		return "index";
+		//model.addAttribute("name11", "Ivy");
+		return "start";
 	}
 	
 	
