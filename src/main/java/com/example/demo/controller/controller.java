@@ -100,15 +100,15 @@ public class controller {
 
  
   // String [] uu= {"寶貝我最愛妳了","綸綸是我的公主","綸綸是我的女神",events.getEvents().get(0).getMessage().getText(),"沒有不學妳，笨笨"};
-   String [] uu1= {"真的嗎??","想妳了~","無此資料","抱歉~我還不太聰明，不知道怎麼回答",events.getEvents().get(0).getMessage().getText()
-		   ,events.getEvents().get(0).getMessage().getText(),"子熏可愛又善良","好的"
-		   ,"子熏喵喵喵","怎麼會這樣"
+   String [] uu1= {"真的嗎??","到底是誰在搞!","無此資料","不知道怎麼回答",events.getEvents().get(0).getMessage().getText()
+		   ,events.getEvents().get(0).getMessage().getText(),"姿蓉氣質又優雅","好喔"
+		   ,"Ivy來單挑R","怎麼會這樣","別走~"
    
    };
   
     
     
-    if((ggf.indexOf("愛你")!=-1)||(ggf.indexOf("生日")!=-1)) {
+    if((ggf.indexOf("愛你")!=-1)) {
     	
     	replymsg="0~999選一個數字";
     	rep2.sett("4");
@@ -116,7 +116,7 @@ public class controller {
    else if (statusnow.equals("0"))
 {
 	//沒事狀太
-	   if((ggf.indexOf("禮物")!=-1)||ggf.indexOf("開始")!=-1)
+	   if((ggf.indexOf("畢業")!=-1)||ggf.indexOf("開始")!=-1)
 	   {
 //		   int ii=(int)( Math.random()*100);
 //		   if(ii>33 &&ii<67) {
@@ -126,14 +126,14 @@ public class controller {
 //		   }else {
 //			   replymsg="開始問答闖關瞜!!第一題，情人節其實是在公元496年開始訂立的，那情人節的前身是甚麼節日呢?(若要退出請打離開)";
 //		   }
-		   replymsg="為了解救子熏的鯊鯊好夥伴，請通過以下試煉~0-99選一個數字";
+		   replymsg="為了拿到畢業證書，請通過以下試煉~0-99選一個數字";
 		   rep2.sett("1");
 	   }else if ((ggf.indexOf("誇張")!=-1)||(ggf.indexOf("哪有")!=-1)||(ggf.indexOf("啥鬼")!=-1)||(ggf.indexOf("真的")!=-1)||(ggf.indexOf("最好是")!=-1))
 	   {
-		   replymsg="真的吶";
+		   replymsg="真的喔";
 	   }else if ((ggf.indexOf("為什麼")!=-1))
 	   {
-		   replymsg="因為喜歡妳";
+		   replymsg="因為喜歡妳(???";
 	   }else if ((ggf.indexOf("出去玩21321321")!=-1))
 	   {
 		   replymsg="https://mw.herokuapp.com/g/date";
@@ -142,28 +142,28 @@ public class controller {
 		   replymsg="不能取消喔";
 	   }else if ((ggf.indexOf("謝謝")!=-1))
 	   {
-		   replymsg="不客氣^^";
+		   replymsg="不客氣";
 	   }else if ((ggf.indexOf("開始")!=-1))
 	   {
-		   replymsg="有點聰明吶https:/ex";
+		   replymsg="有點聰明";
 	   }else if ((ggf.indexOf("想妳")!=-1)||(ggf.indexOf("想你")!=-1))
 	   {
-		   replymsg="我也想妳";
+		   replymsg="我也想妳了";
 	   }else if ((ggf.indexOf("..")!=-1)&&(ggf.indexOf("吼")!=-1))
 	   {
-		   replymsg="是我太笨了嗎";
+		   replymsg="機器人太笨了嗎";
 	   }else if((ggf.indexOf("?")!=-1))
 	   {
-		   replymsg="怎麼吶??";
+		   replymsg="怎麼了??";
 	   }else if((ggf.indexOf("天氣")!=-1))
 	   {
 		   replymsg="之後再新增這功能喔";
 	   }else if ((ggf.indexOf("是誰")!=-1)||(ggf.indexOf("是什")!=-1)||(ggf.indexOf("這啥")!=-1)||(ggf.indexOf("這什麼")!=-1))
 	   {
-		   replymsg="我是life_devil_bot出生於20211121，不知道弄了什麼奇怪的東東";
+		   replymsg="我是life_devil_bot出生於20220618，不知道弄了什麼奇怪的東東";
 	   }else if ((ggf.indexOf("遊戲")!=-1)||(ggf.indexOf("目標")!=-1))
 	   {
-		   replymsg="請打'禮物'兩個字";
+		   replymsg="請打'畢業'兩個字";
 	   }else if ((ggf.indexOf("隱藏")!=-1))
 	   {
 		   replymsg="隱藏模式需要不一樣的感受";
@@ -172,16 +172,16 @@ public class controller {
 		   replymsg="QQ";
 	   }else if ((ggf.indexOf("不理你")!=-1))
 	   {
-		   replymsg="可以不理我，不要不理life吶";
+		   replymsg="https://ivyyyyyyyyyyyyyyyy.herokuapp.com/ggg/playplayplay";
 	   }else if ((ggf.indexOf("照顧")!=-1))
 	   {
-		   replymsg="我會呵護妳的";
+		   replymsg="加油好嗎";
 	   }else if ((ggf.indexOf("不理")!=-1))
 	   {
 		   replymsg="可以不理我，不要不理life吶";
 	   }else if ((ggf.indexOf("可愛")!=-1)||(ggf.indexOf("笨")!=-1)||(ggf.indexOf("87")!=-1))
 	   {
-		   replymsg="子熏聰明又可愛";
+		   replymsg="Ivy聰明又可愛";
 	   }else if ((ggf.indexOf("起床")!=-1)||(ggf.indexOf("早")!=-1))
 	   {
 		   replymsg="早安~";
@@ -193,51 +193,48 @@ public class controller {
 		   replymsg="我被部屬在雲端";
 	   }else if ((ggf.indexOf("無聊")!=-1)||(ggf.indexOf("看")!=-1))
 	   {
-		   replymsg="來打傳說R";
+		   replymsg="來打傳說R還是玩姿蓉大冒險https://ivyyyyyyyyyyyyyyyy.herokuapp.com/ggg/playplayplay";
 	   }else if ((ggf.indexOf("怎麼半")!=-1)||(ggf.indexOf("怎麼辦")!=-1))
 	   {
-		   replymsg="下雨天了怎麼辦 我好想妳";
+		   replymsg="下雨天了怎麼辦 ";
 	   }else if ((ggf.indexOf("時間")!=-1)||(ggf.indexOf("今天")!=-1))
 	   {
 		   replymsg="現在的時間是"+nowtime;
-	   }else if ((ggf.indexOf("子熏")!=-1))
+	   }else if ((ggf.indexOf("Ivy")!=-1))
 	   {
-		   replymsg="子熏美若天仙、沉魚落雁~";
+		   replymsg="Ivy氣質出眾";
 	   }else if ((ggf.indexOf("睡覺")!=-1)||(ggf.indexOf("掰掰")!=-1))
 	   {
-		   replymsg="子熏多休息吶~";
+		   replymsg="Ivy晚安";
 	   }else if ((ggf.indexOf("聊天")!=-1))
 	   {
-		   replymsg="抱歉，我不善於聊天";
+		   replymsg="我不善於聊天";
 	   }else if ((ggf.indexOf("好煩")!=-1))
 	   {
-		   replymsg="拍拍~吃甜點就不煩了吶";
+		   replymsg="吃甜點就不煩了";
 	   }else if ((ggf.indexOf("生氣")!=-1))
 	   {
-		   replymsg="不要生氣嘛~";
+		   replymsg="不要生氣";
 	   }else if ((ggf.indexOf("吃飯")!=-1))
 	   {
 		   replymsg="我只需要充電";
 	   }else if ((ggf.indexOf("運動")!=-1))
 	   {
-		   replymsg="快來陪我走樓梯";
+		   replymsg="來打羽球R";
 	   }else if ((ggf.indexOf("學我")!=-1))
 	   {
-		   replymsg="抱歉吶~太調皮了";
+		   replymsg="太調皮了";
 	   }else if ((ggf.indexOf("妳好")!=-1)||(ggf.indexOf("你好")!=-1)||(ggf.indexOf("嗨")!=-1))
 	   {
-		   replymsg="hi~妳過得好嗎";
+		   replymsg="Hello";
 	   }else if ((ggf.indexOf("好慢")!=-1))
 	   {
 		   replymsg="免費的資料庫真的慢";
-	   }else if ((ggf.indexOf("穿什麼")!=-1))
+	   }else if ((ggf.indexOf("走開")!=-1))
 	   {
 		   
-		   String []ww= {"白色碎花長裙"};
-		   String []ee= {"白色碎花長裙"};
 		   
-		   
-		   replymsg="禮服";
+		   replymsg="妳才是走開的那個QQ";
 	   }else {
 		   
 		   
@@ -258,22 +255,22 @@ public class controller {
 	   {
 		replymsg="已經離開問答狀態";	
 		 rep2.sett("0");
-	   }else if ((ggf.indexOf("21")!=-1))
+	   }else if ((ggf.indexOf("24")!=-1)||(ggf.indexOf("25")!=-1)||(ggf.indexOf("26")!=-1))
 	   {
 		   
 		   int ii=(int)( Math.random()*100);
 		   if(ii>500) {
-		   replymsg="nice 子熏，請輸入二位數密碼01~99";
+		   replymsg="nice Ivy，請輸入3位數密碼001~999";
 		   rep2.sett("2");
 		   }else {
-		   replymsg="好聰明的鯊鯊子熏，請輸入密碼01~99(跟我們相關的數字)";
+		   replymsg="好聰明的Ivy，請輸入3位數密碼001~999";
 		   rep2.sett("2");
 		   }
 	   }else {
 		  
-		   if(Integer.parseInt(ggf)>21) {
-		   replymsg="答錯~子熏有這麼老嗎??";
-		     }else if (Integer.parseInt(ggf)<=21) {
+		   if(Integer.parseInt(ggf)>26) {
+		   replymsg="Ivy有這麼老嗎??";
+		     }else if (Integer.parseInt(ggf)<=23) {
 		    	 replymsg="答錯~未成年母湯喔";
 		     }
 	   }
@@ -284,22 +281,24 @@ else if (statusnow.equals("2")){
 	   {
 		replymsg="已經離開問答狀態";	
 		 rep2.sett("0");
-	   }else if ((ggf.indexOf("32")!=-1))
+	   }else if ((ggf.indexOf("622")!=-1))
 	   {
 		   
 	
-		   replymsg="答對了呢!我們的筆劃一樣喔~子熏生日快樂，我喜歡妳勇於做自己，平凡卻又獨特。另外....子熏的鯊鯊好朋友被life給綁走了等著妳來解救，趕快去拯救鯊鯊吧";
+		   replymsg="答對了呢!開始進入今天的主題吧>>https://ivyyyyyyyyyyyyyyyy.herokuapp.com/g/restart";
 		
 		   rep2.sett("0");
 		   
 	   }else {
+		   
+		   
 		   int ii=(int)( Math.random()*100);
 		   if(ii>33 &&ii<67) {
-			   replymsg="答錯~這個數字很特別，是我們共通的數字(若要結束問答請打離開)";
+			   replymsg="答錯~這是妳的最後一天嗎";
 			     }else if (ii<=33) {
-			    	 replymsg="再試試看~跟中文有關的數字(若要結束問答請打離開)";
+			    	 replymsg="再試試看~妳的結業日阿...";
 			     }else {
-			    	 replymsg="不太對喔，是個加起來相等的數字(若要結束問答請打離開)";
+			    	 replymsg="不太對喔，3個數字加起來等於10(第一個數字是6)";
 			     }
 	   }
 }
@@ -313,7 +312,7 @@ else if (statusnow.equals("2")){
 //	   {
 //		   
 //		
-//			   replymsg="恭喜完成尬到不行問答(問答每次應該都會有點不一樣)~        子熏，祝妳情人節快樂，雖然這個bot一點都不ai，而且好像還蠻蠢的"
+//			   replymsg="恭喜完成尬到不行問答(問答每次應該都會有點不一樣)~        Ivy，祝妳情人節快樂，雖然這個bot一點都不ai，而且好像還蠻蠢的"
 //			   		+ "  ，不過如果妳有從中得到那麼一丁點的樂趣  (對我而言就算值得了吧@@ 這樣我是不是沒顧慮到妳的感受XD)。    其實這個有隱藏版的吶，目的是為了拿到第二塊拼圖"+
 //			   "，只是可能要腦洞大開才有辦法找到XDDD。 (或是隨便問些問題搞不好會有線索)";
 //			   rep2.sett("0");
@@ -332,7 +331,7 @@ else if (statusnow.equals("2")){
 else if (statusnow.equals("4")){
 	if ((ggf.indexOf("520")!=-1))
 	{
-		replymsg="生日快樂，最愛子熏了";
+		replymsg="真的假的~只好跟妳告白了，我喜歡妳";
 		 rep2.sett("0");
 	}else {
 		replymsg="很可惜答錯了，已離開隱藏模式";
@@ -556,7 +555,7 @@ else if (statusnow.equals("4")){
 	}
 	@RequestMapping("/index")
 	public String helloThymeleaf(Model model){
-		model.addAttribute("name11", "MeowMeow");
+		model.addAttribute("name11", "Ivy");
 		return "index";
 	}
 	
@@ -710,7 +709,7 @@ if (result.equals("yes"))
 //	    LineMessagingClient client = LineMessagingClient.builder("siyTXOs4UvFs4axEaIzKNPwfKupC0vWU3gC0ij7+vCHtX5gDgHe/5L8uIBaYHj0/wYE0iLP0ibgCv7m83ZBxhI9t06UVMDlNe7qx8xs/SSMnLnF6FnVPES2aEJBrWpMEJKDxKy+rhKOWYeTRiYP7/QdB04t89/1O/w1cDnyilFU=").build();
 //
 //	    
-//		//Uf9ab298ecf4fd9df1c8c048dabdcf924子熏
+//		//Uf9ab298ecf4fd9df1c8c048dabdcf924Ivy
 //	    TextMessage textMessage = new TextMessage(ff);
 //	    PushMessage pushMessage = new PushMessage(
 //	            "Uc6b7fd1fbe5b8b979c52055709698fbb",

@@ -56,7 +56,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "Maggie喵目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ivy呆目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{ }
 
@@ -70,7 +70,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "MaggieMeow目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ivy呆目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -84,7 +84,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "MaggieMeow目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ivy呆目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -97,7 +97,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "MaggieMeow目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ivy呆目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -111,7 +111,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "MaggieMeow目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ivy呆目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -124,7 +124,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "MaggieMeow目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ivy呆目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -137,7 +137,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "MaggieMeow目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ivy呆目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -151,7 +151,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "MaggieMeow目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ivy呆目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -165,7 +165,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "MaggieMeow目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ivy呆目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -179,7 +179,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "MaggieMeow目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ivy呆目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -329,7 +329,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ivy呆目前答錯"+count+"次");
 				
 				return "inind0";
 			}
@@ -410,7 +410,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ivy呆目前答錯"+count+"次");
 				
 				return "inind1";
 			}
@@ -490,7 +490,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ivy呆目前答錯"+count+"次");
 				
 				return "inind2";
 			}
@@ -570,7 +570,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ivy呆目前答錯"+count+"次");
 				
 				return "inind3";
 			}
@@ -650,7 +650,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ivy呆目前答錯"+count+"次");
 				
 				return "inind4";
 			}
@@ -730,7 +730,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ivy呆目前答錯"+count+"次");
 				
 				return "inind5";
 			}
@@ -810,7 +810,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ivy呆目前答錯"+count+"次");
 				
 				return "inind6";
 			}
@@ -890,7 +890,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ivy呆目前答錯"+count+"次");
 				
 				return "inind7";
 			}
@@ -904,7 +904,8 @@ public class hintindedecontroller {
 		playstatus =rep4.getstatus();
 	String songname=request.getParameter("歌曲名");
 	rep.sett("gcheck8",songname);
-		if (songname.indexOf("life")!=-1||songname.indexOf("你")!=-1||songname.indexOf("勁甫")!=-1)
+		if (songname.indexOf("life")!=-1||songname.indexOf("你")!=-1||songname.indexOf("勁甫")!=-1||songname.indexOf("LIFE")!=-1
+				||songname.indexOf("賴甫")!=-1||songname.indexOf("Life")!=-1)
 		{
 			if(playstatus.getStatus2().length()>=4)
 			{
@@ -970,7 +971,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ivy呆目前答錯"+count+"次");
 				
 				return "inind8";
 			}
@@ -1049,7 +1050,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "MaggieMeow目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ivy呆目前答錯"+count+"次");
 				
 				return "inind9";
 			}
