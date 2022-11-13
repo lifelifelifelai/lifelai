@@ -11,23 +11,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import com.linecorp.bot.client.LineMessagingClient;
-import com.linecorp.bot.model.PushMessage;
-import com.linecorp.bot.model.message.TextMessage;
-import com.linecorp.bot.model.response.BotApiResponse;
-import com.example.demo.repository.*;
-import com.example.demo.entity.playplannlist;
+
 @Component
 public class task {
 	
-	@Autowired	
-	repositoryplay rep4;
-	@Autowired	
-	repository rep;
+
 @Scheduled(initialDelay = 1000, fixedDelay = 600000)
 void ppp() throws IOException
 {
-	Document doc = Jsoup.connect("https://ivyyyyyyyyyyyyyyyy.herokuapp.com/g/index").get();
+	Document doc = Jsoup.connect("https://jennyoxy.herokuapp.com/lifelife").get();
 System.out.println("newcode");
 //	List<playplannlist> playplannl=new ArrayList<playplannlist>();
 //	playplannl=rep4.wwstat1();
