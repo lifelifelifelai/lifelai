@@ -30,6 +30,19 @@ public class hintindedecontroller {
 	
 	
 	
+	
+	
+	@RequestMapping("/endend")
+	
+	public String tsesting00dfs2f(Model model) {
+		
+
+
+		
+		return "succes";
+	}
+	
+	
 	@RequestMapping("/playplayplay2")
 	
 	public String testing00dfs2f(Model model) {
