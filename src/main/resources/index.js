@@ -800,7 +800,7 @@
             if (this.distanceRan > this.highestScore) {
                 this.highestScore = Math.ceil(this.distanceRan);
                 this.distanceMeter.setHighScore(this.highestScore);
-                fetch("https://lifelifelaines.herokuapp.com/ggg/y25/"+this.highestScore)
+                fetch("https://localhost/ggg/y25/"+this.highestScore)
                 .then(response => response.json()) 
                 .then(data => console.log("獲取的資料:", data))
                 .catch(error => console.error("請求錯誤:", error));
