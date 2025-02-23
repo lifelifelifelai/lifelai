@@ -82,7 +82,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "鯊鯊目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ines目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{ }
 
@@ -96,7 +96,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "鯊鯊目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ines目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -110,7 +110,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "鯊鯊目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ines目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -123,7 +123,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "鯊鯊目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ines目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -137,7 +137,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "鯊鯊目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ines目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -150,7 +150,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "鯊鯊目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ines目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -163,7 +163,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "鯊鯊目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ines目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -177,7 +177,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "鯊鯊目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ines目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -191,7 +191,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "鯊鯊目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ines目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -205,7 +205,7 @@ public class hintindedecontroller {
 		
 		model.addAttribute("nowrate", playstatus.getStatus2().length()+"/5");
 		if (playstatus.getStatus1().equals("0"))
-		{model.addAttribute("errormsg", "鯊鯊目前答錯"+playstatus.getStatus1()+"次");}
+		{model.addAttribute("errormsg", "Ines目前答錯"+playstatus.getStatus1()+"次");}
 		else 
 		{model.addAttribute("errormsg",""); }
 
@@ -355,7 +355,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "鯊鯊目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ines目前答錯"+count+"次");
 				
 				return "inind0";
 			}
@@ -436,7 +436,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "鯊鯊目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ines目前答錯"+count+"次");
 				
 				return "inind1";
 			}
@@ -516,7 +516,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "鯊鯊目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ines目前答錯"+count+"次");
 				
 				return "inind2";
 			}
@@ -596,7 +596,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "鯊鯊目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ines目前答錯"+count+"次");
 				
 				return "inind3";
 			}
@@ -676,7 +676,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "鯊鯊目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ines目前答錯"+count+"次");
 				
 				return "inind4";
 			}
@@ -756,7 +756,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "鯊鯊目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ines目前答錯"+count+"次");
 				
 				return "inind5";
 			}
@@ -836,7 +836,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "鯊鯊目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ines目前答錯"+count+"次");
 				
 				return "inind6";
 			}
@@ -916,7 +916,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "鯊鯊目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ines目前答錯"+count+"次");
 				
 				return "inind7";
 			}
@@ -997,7 +997,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "鯊鯊目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ines目前答錯"+count+"次");
 				
 				return "inind8";
 			}
@@ -1076,7 +1076,7 @@ public class hintindedecontroller {
 				String count2=playstatus.getStatus2().length()+"";
 				rep4.updates1(count);
 				model.addAttribute("nowrate", count2+"/5");
-				model.addAttribute("errormsg", "鯊鯊目前答錯"+count+"次");
+				model.addAttribute("errormsg", "Ines目前答錯"+count+"次");
 				
 				return "inind9";
 			}

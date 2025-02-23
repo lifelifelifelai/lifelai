@@ -570,6 +570,7 @@
                         this.currentSpeed += this.config.ACCELERATION;
                     }
                 } else {
+                	
                     this.gameOver();
                 }
 
@@ -800,6 +801,10 @@
             if (this.distanceRan > this.highestScore) {
                 this.highestScore = Math.ceil(this.distanceRan);
                 this.distanceMeter.setHighScore(this.highestScore);
+                fetch("http://localhost:8080/ggg/y25/"+this.highestScore)
+                .then(response => response.json()) 
+                .then(data => console.log("獲取的資料:", data))
+                .catch(error => console.error("請求錯誤:", error));
             }
 
             // Reset the time clock.
