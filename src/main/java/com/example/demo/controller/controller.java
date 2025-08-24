@@ -8,6 +8,8 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -607,6 +609,72 @@ public class controller {
 //		}else {}
 		
 		return "succes";
+	}
+	
+	
+	
+	
+	@RequestMapping("/card")
+	//@ResponseBody
+	public String card(HttpServletRequest request,Model model) {
+		
+		   
+	    // 設定台灣時區
+	    ZoneId taiwanZone = ZoneId.of("Asia/Taipei");
+	    LocalTime now = LocalTime.now(taiwanZone);
+	    
+	    // 定義時間範圍：早上5:20到晚上17:20 (5:20 PM)
+	    LocalTime startTime = LocalTime.of(5, 20);  // 05:20
+	    LocalTime endTime = LocalTime.of(17, 20);   // 17:20
+	    
+	    // 判斷當前時間是否在指定範圍內
+	    if (now.isAfter(startTime) && now.isBefore(endTime)) {
+	    	
+	     
+	            // 在背景播放音樂，不阻塞頁面返回
+	            new Thread(() -> {
+	                try {
+	                    // 先播放3333.mp3
+	                    AePlayWave player1 = new AePlayWave("3333.wav");
+	                    player1.start();
+	                    player1.join(); // 等待第一個音檔播放完
+	                    
+	                    // 再播放4444.mp3
+	                    AePlayWave player2 = new AePlayWave("4444.wav");
+	                    player2.start();
+	                    
+	                } catch (InterruptedException e) {
+	                    Thread.currentThread().interrupt();
+	                    e.printStackTrace();
+	                } catch (Exception e) {
+	                    e.printStackTrace();
+	                }
+	            }).start();
+	        return "succes5";  // 早上5:20到晚上17:20顯示succes5
+	    } else {
+	    	   
+            // 在背景播放音樂，不阻塞頁面返回
+            new Thread(() -> {
+                try {
+                    // 先播放3333.mp3
+                    AePlayWave player1 = new AePlayWave("3333.wav");
+                    player1.start();
+                    player1.join(); // 等待第一個音檔播放完
+                    
+                    // 再播放4444.mp3
+                    AePlayWave player2 = new AePlayWave("4444.wav");
+                    player2.start();
+                    
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                    e.printStackTrace();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }).start();
+	        return "succes5";  // 其他時間顯示succes4
+	    }
+		
 	}
 	
 	
