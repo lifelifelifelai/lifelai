@@ -96,6 +96,47 @@
             }
         }
 
+        /* 播放按鈕樣式 */
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #ff1744, #ff4569);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            box-shadow: 
+                0 8px 30px rgba(255, 23, 68, 0.4),
+                inset 0 2px 10px rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .play-button:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 
+                0 12px 40px rgba(255, 23, 68, 0.6),
+                inset 0 2px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .play-button:active {
+            transform: translate(-50%, -50%) scale(0.95);
+        }
+
+        .play-button.hidden {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0);
+            pointer-events: none;
+        }
+
         /* 立可白瓶裝飾 */
         .correction-pen {
             position: absolute;
@@ -122,30 +163,32 @@
             border-radius: 50%;
         }
 
-
+        /* 播放圖示 */
+        .play-icon {
+            margin-left: 5px;
+        }
     </style>
 </head>
 <body>
-    
     
     <table align="center">
         <tr>
             <td>
                 <div class="container">
                     <div class="writing-area">
+                        <!-- 播放按鈕 -->
+                        <button class="play-button" id="playButton" onclick="startExperience()">
+                            <span class="play-icon">▶</span>
+                        </button>
+                        
                         <div class="text-line" id="line1"></div>
                         <div class="text-line" id="line2"></div>
                         <div class="correction-pen"></div>
                         
                         <!-- 音檔播放 -->
                         <audio id="audio1" preload="auto" style="display: none;">
-                            <source th:src="@{/3333.mp3}" type="audio/wav">
-                            <source th:src="@{/3333.mp3}" type="audio/mpeg">
-                        </audio>
-                        
-                        <audio id="audio2" preload="auto" style="display: none;">
-                            <source th:src="@{/4444.mp3}" type="audio/wav">
-                            <source th:src="@{/4444.mp3}" type="audio/mpeg">
+                            <source th:src="@{/3333.wav}" type="audio/wav">
+                            <source th:src="@{/3333.wav}" type="audio/mpeg">
                         </audio>
                     </div>
                 </div>
@@ -177,8 +220,6 @@
             'w': [
                 [0,1], [6,1], [0,2], [6,2], [0,3], [6,3], [0,4], [3,4], [6,4], [0,5], [3,5], [6,5], [1,6], [2,6], [4,6], [5,6]
             ],
-            // 加寬w字母的字符容器
-            'w_wide': true,
             'heart': [ // 愛心
                 [2,0], [4,0], [1,1], [3,1], [5,1], [0,2], [4,2], [6,2], [0,3], [4,3], [6,3], [1,4], [5,4], [2,5], [4,5], [3,6]
             ],
@@ -188,27 +229,40 @@
             'y': [
                 [0,1], [4,1], [0,2], [4,2], [1,3], [3,3], [2,4], [2,5], [2,6], [1,7], [2,7]
             ],
+            'n': [
+                [0,1], [0,2], [0,3], [0,4], [0,5], [0,6], [0,7], [1,2], [2,3], [3,4], [4,1], [4,2], [4,3], [4,4], [4,5], [4,6], [4,7]
+            ],
+            's': [
+                [1,1], [2,1], [3,1], [0,2], [0,3], [1,4], [2,4], [4,5], [4,6], [0,7], [1,7], [2,7], [3,7]
+            ],
+            // 大寫字母
+            'I': [
+                [1,1], [2,1], [3,1], [2,2], [2,3], [2,4], [2,5], [2,6], [1,7], [2,7], [3,7]
+            ],
+            'N': [
+                [0,1], [0,2], [0,3], [0,4], [0,5], [0,6], [0,7], [1,2], [2,3], [3,4], [4,1], [4,2], [4,3], [4,4], [4,5], [4,6], [4,7]
+            ],
+            'E': [
+                [0,1], [0,2], [0,3], [0,4], [0,5], [0,6], [0,7], [1,1], [2,1], [3,1], [1,4], [2,4], [1,7], [2,7], [3,7]
+            ],
+            'S': [
+                [1,1], [2,1], [3,1], [0,2], [0,3], [1,4], [2,4], [3,4], [4,5], [4,6], [0,7], [1,7], [2,7], [3,7]
+            ],
             'm': [
                 [0,1], [0,2], [0,3], [0,4], [0,5], [0,6], [0,7], [1,2], [2,3], [3,2], [4,1], [4,2], [4,3], [4,4], [4,5], [4,6], [4,7]
-            ],
-            'g': [
-                [1,1], [2,1], [3,1], [0,2], [0,3], [0,4], [0,5], [0,6], [1,7], [2,7], [3,7], [4,7], [4,6], [4,5], [3,4], [2,4]
-            ],
-            'f': [
-                [0,0], [0,1], [0,2], [0,3], [0,4], [0,5], [0,6], [0,7], [1,1], [2,1], [3,1], [1,4], [2,4]
             ]
         };
 
         const messages = [
             { 
-                text: 'i love u',
-                content: ['i', 'space', 'l', 'o', 'v', 'e', 'space', 'heart', 'space', 'u'], 
+                text: 'i love u INES',
+                content: ['i', 'space', 'heart', 'space', 'u', 'space', 'I', 'N', 'E', 'S'], 
                 lineId: "line1", 
                 delay: 500 
             },
             { 
-                text: 'will u be my gf',
-                content: ['w', 'i', 'l', 'l', 'space', 'u', 'space', 'b', 'e', 'space', 'm', 'y', 'space', 'g', 'f'], 
+                text: 'will u love me',
+                content: ['w', 'i', 'l', 'l', 'space', 'u', 'space', 'heart', 'space', 'm', 'e'], 
                 lineId: "line2", 
                 delay: 6000 
             }
@@ -298,43 +352,39 @@
             });
         }
 
-        // 頁面載入時開始動畫
-        window.onload = function() {
-            startAnimation();
-            playAudioSequence();
-        };
-        
-        // 音檔播放控制
-        function playAudioSequence() {
-            // 檢查是否已經播放過（防止F5重複播放）
-            if (sessionStorage.getItem('audioPlayed')) {
-                console.log('本次會話已播放過音檔，跳過');
-                return;
-            }
-            
+        // 點擊播放按鈕開始體驗
+        function startExperience() {
+            const playButton = document.getElementById('playButton');
             const audio1 = document.getElementById('audio1');
-            const audio2 = document.getElementById('audio2');
             
-            if (audio1 && audio2) {
-                console.log('開始播放第一個音檔');
-                audio1.play().catch(e => console.error('播放第一個音檔失敗:', e));
-                
-                // 標記已播放
-                sessionStorage.setItem('audioPlayed', 'true');
-                
-                // 第一個音檔播放完後播放第二個
-                audio1.addEventListener('ended', function() {
-                    console.log('第一個音檔播放完成，開始播放第二個');
-                    audio2.play().catch(e => console.error('播放第二個音檔失敗:', e));
-                });
-                
-                audio2.addEventListener('ended', function() {
-                    console.log('第二個音檔播放完成');
-                });
+            console.log('點擊播放按鈕');
+            
+            // 隱藏播放按鈕
+            playButton.classList.add('hidden');
+            
+            // 立即開始動畫
+            console.log('開始動畫');
+            startAnimation();
+            
+            // 播放音樂
+            if (audio1) {
+                console.log('開始播放音檔');
+                audio1.play()
+                    .then(() => {
+                        console.log('音檔播放成功');
+                    })
+                    .catch(e => {
+                        console.error('播放音檔失敗:', e);
+                    });
             } else {
                 console.log('找不到音檔元素');
             }
         }
+
+        // 頁面載入完成，等待用戶點擊
+        window.onload = function() {
+            console.log('頁面載入完成，等待用戶點擊播放按鈕');
+        };
     </script>
 </body>
 </html>

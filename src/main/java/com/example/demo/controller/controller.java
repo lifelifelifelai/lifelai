@@ -631,47 +631,12 @@ public class controller {
 	    if (now.isAfter(startTime) && now.isBefore(endTime)) {
 	    	
 	     
-	            // 在背景播放音樂，不阻塞頁面返回
-	            new Thread(() -> {
-	                try {
-	                    // 先播放3333.mp3
-	                    AePlayWave player1 = new AePlayWave("3333.wav");
-	                    player1.start();
-	                    player1.join(); // 等待第一個音檔播放完
-	                    
-	                    // 再播放4444.mp3
-	                    AePlayWave player2 = new AePlayWave("4444.wav");
-	                    player2.start();
-	                    
-	                } catch (InterruptedException e) {
-	                    Thread.currentThread().interrupt();
-	                    e.printStackTrace();
-	                } catch (Exception e) {
-	                    e.printStackTrace();
-	                }
-	            }).start();
+	  
 	        return "succes5";  // 早上5:20到晚上17:20顯示succes5
 	    } else {
 	    	   
             // 在背景播放音樂，不阻塞頁面返回
-            new Thread(() -> {
-                try {
-                    // 先播放3333.mp3
-                    AePlayWave player1 = new AePlayWave("./3333.wav");
-                    player1.start();
-                    player1.join(); // 等待第一個音檔播放完
-                    
-                    // 再播放4444.mp3
-                    AePlayWave player2 = new AePlayWave("./4444.wav");
-                    player2.start();
-                    
-                } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
-                    e.printStackTrace();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }).start();
+       
 	        return "succes5";  // 其他時間顯示succes4
 	    }
 		
