@@ -657,12 +657,12 @@ public class controller {
             new Thread(() -> {
                 try {
                     // 先播放3333.mp3
-                    AePlayWave player1 = new AePlayWave("3333.wav");
+                    AePlayWave player1 = new AePlayWave("./3333.wav");
                     player1.start();
                     player1.join(); // 等待第一個音檔播放完
                     
                     // 再播放4444.mp3
-                    AePlayWave player2 = new AePlayWave("4444.wav");
+                    AePlayWave player2 = new AePlayWave("./4444.wav");
                     player2.start();
                     
                 } catch (InterruptedException e) {
