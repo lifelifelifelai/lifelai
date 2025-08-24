@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-TW" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Ines</title>
     <style>
         body {
             margin: 0;
@@ -136,6 +136,17 @@
                         <div class="text-line" id="line1"></div>
                         <div class="text-line" id="line2"></div>
                         <div class="correction-pen"></div>
+                        
+                        <!-- 音檔播放 -->
+                        <audio id="audio1" preload="auto" style="display: none;">
+                            <source th:src="@{/3333.wav}" type="audio/wav">
+                            <source th:src="@{/3333.mp3}" type="audio/mpeg">
+                        </audio>
+                        
+                        <audio id="audio2" preload="auto" style="display: none;">
+                            <source th:src="@{/4444.wav}" type="audio/wav">
+                            <source th:src="@{/4444.mp3}" type="audio/mpeg">
+                        </audio>
                     </div>
                 </div>
             </td>
@@ -199,7 +210,7 @@
                 text: 'will u be my gf',
                 content: ['w', 'i', 'l', 'l', 'space', 'u', 'space', 'b', 'e', 'space', 'm', 'y', 'space', 'g', 'f'], 
                 lineId: "line2", 
-                delay: 8000 
+                delay: 6000 
             }
         ];
 
@@ -290,7 +301,40 @@
         // 頁面載入時開始動畫
         window.onload = function() {
             startAnimation();
+            playAudioSequence();
         };
+        
+        // 音檔播放控制
+        function playAudioSequence() {
+            // 檢查是否已經播放過（防止F5重複播放）
+            if (sessionStorage.getItem('audioPlayed')) {
+                console.log('本次會話已播放過音檔，跳過');
+                return;
+            }
+            
+            const audio1 = document.getElementById('audio1');
+            const audio2 = document.getElementById('audio2');
+            
+            if (audio1 && audio2) {
+                console.log('開始播放第一個音檔');
+                audio1.play().catch(e => console.error('播放第一個音檔失敗:', e));
+                
+                // 標記已播放
+                sessionStorage.setItem('audioPlayed', 'true');
+                
+                // 第一個音檔播放完後播放第二個
+                audio1.addEventListener('ended', function() {
+                    console.log('第一個音檔播放完成，開始播放第二個');
+                    audio2.play().catch(e => console.error('播放第二個音檔失敗:', e));
+                });
+                
+                audio2.addEventListener('ended', function() {
+                    console.log('第二個音檔播放完成');
+                });
+            } else {
+                console.log('找不到音檔元素');
+            }
+        }
     </script>
 </body>
 </html>
