@@ -632,13 +632,29 @@ public class controller {
 	    	
 	     
 	  
-	        return "succes5";  // 早上5:20到晚上17:20顯示succes5
+	        return "succes6";  // 早上5:20到晚上17:20顯示succes5
 	    } else {
 	    	   
             // 在背景播放音樂，不阻塞頁面返回
        
-	        return "succes5";  // 其他時間顯示succes4
+	        return "succes6";  // 其他時間顯示succes4
 	    }
+		
+	}
+	
+	
+	
+	@RequestMapping("/card2")
+	//@ResponseBody
+	public String card2(HttpServletRequest request,Model model) {
+		
+		   
+
+	    	
+	     
+	  
+	        return "succes4";  // 早上5:20到晚上17:20顯示succes5
+
 		
 	}
 	
